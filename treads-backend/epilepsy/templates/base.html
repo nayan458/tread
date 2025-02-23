@@ -1,0 +1,188 @@
+{% load static %}
+<!doctype html>
+<html>
+
+
+
+<style>
+.footer {
+    bottom: 0;
+    color: #707070;
+	background-color: white;
+    height: 290px;
+    left: 0;
+    position: relative; //changed to relative from fixed also works if position is not there colour for background #E0E0E0;
+    font-size: small;
+    width:100%;
+    margin-top: 200px;
+    padding: 43px;
+	padding-left:4em;
+    opacity: 0.7;
+   }
+
+.logo{
+	padding: 60px;
+	padding-top: 20px;
+}
+
+.mydiv
+{
+    font-size:28px;
+	color:black !important;
+	font-weight:bold;
+	font-family: 'Zilla Slab', serif;
+	margin-left:60px;
+}
+.mydiv v
+{
+    font-size:33px;
+	color: 	purple;						// Turquoise; // #CC0000; (red)		
+	font-weight:bold;
+}
+
+default_font{
+	font-size:20px;
+	color:black;
+	font-weight:bold;
+	font-family: Zilla Slab, serif !important;
+}
+
+.footer-bottom {
+	color:black;	
+    margin-top: 5em;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	border-color:black;
+}
+
+#parent {
+  display: flex;
+  font-weight:bold !important;
+  font-family: 'Zilla Slab', serif;
+  font-size:1.8em;
+}
+#first {
+  color:black;
+ margin-left:8em;
+}
+#second {
+  flex: 1;
+  color:black;
+   padding-left:5em;
+  /* Grow to rest of container */
+
+}
+#third {
+  flex:2;
+  color:black;
+   padding-left:5em;
+ 
+}
+
+#third t {
+  font-size:0.7em;
+ 
+}
+
+</style>
+
+
+
+  <head>
+  
+  <!-- DO NOT change the order of links present below since the layout would change -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+		
+		
+		
+		<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+		
+        <header style='font-family: Zilla Slab, serif !important; font-weight:bold; font-size:135%; height:130px'>
+
+          <div >
+			  <img src='/static/cdac_logo.png' style='padding-left:10px' >
+			  <div style='padding-top: 100px'>
+			  <a href="/"><sp>Home</sp></a> | 
+			  <div class="dropdown_container default_font">
+				  <select class='my_dropdown, default_font' name='Search'  onChange="window.location.href=this.value"  method="POST" >
+				  <option value= "Search" SELECTED>Search</option>"
+				  <option value= "/search/UniprotID">UniProt ID</option>"
+				  <option value= "/search/GeneName">Gene Name</option>"
+				  <option value= "/search/EnsembleID">Ensemble ID</option>"
+				  <option value= "/search/Sequence">Sequence</option>" </select>
+			  </div>
+			  | 
+			  <div class="dropdown_container default_font">
+				  <select class='my_dropdown default_font' name='Browse'  onChange="window.location.href=this.value"  method="POST" >
+				  <option value= "Browse" SELECTED>Browse</option>"
+				  <option value= "/aedpage">AED</option>"
+				  <option value= "/drugtarget">Drug Targets</option>"</select>
+			  </div>
+		      | <a href= "/ml_predictions">ML Predictions</a>
+			  </div>
+			</div>
+			<div class="mydiv"><v>T</v>arget <v>RE</v>search for <v>A</v>nti-epileptic drugs using <v>D</v>ata <v>S</v>cience <v>[TREADS]</v></div>
+		  
+        </header>
+    {% block head %}
+    <link rel="stylesheet" href='/static/style.css' />
+    {% block title %}{% endblock %}
+    {% endblock %}
+  </head>
+  <body>
+ 
+
+  
+  
+  
+  
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      {% endblock %}
+    </div>
+	
+	
+	
+	
+  </body>
+ 
+	<div class="footer">
+
+		<div id='parent'>
+		<div id='first' class='mydiv' style='padding:50px;'>
+			<v>[TREADS]</v>
+				
+		</div>
+		<div id='second'>
+			<!--
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/aedpage">AED</a></li>
+				<li><a href="/drugtarget">Drug Targets</a></li>
+				<li><a href="/ml_predictions">ML Predictions</a></li>
+			</ul>
+			-->
+		</div>
+		<div id='third' >
+			<b>Contact</b><br>
+			<b>&#128231;</b><t><a href="mailto:janki@cdac.in"> janaki@cdac.in </a> </t><br>
+			<b>&#9990;</b><t> +91 080-2509-3412 </t><br>
+			📍 <t>CDAC, Knowledge Park, Old Madras Road, Bangalore 560038.</t>
+		</div>
+		
+		</div>
+		<!--
+		
+		-->
+		<div class="footer-bottom">
+			<center>Copyright © 2019 C-DAC. All rights reserved.</center>
+		</div>
+	
+	</div>
+ 
+  
+</html>

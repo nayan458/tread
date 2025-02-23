@@ -1,0 +1,31 @@
+
+
+{% extends "base_copy.html" %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href='/static/style.css' />
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+<div style="margin-top:250px;">
+	<center>
+	<div class="flexsearch" style='font-family: Zilla Slab, serif !important;'>
+			<div class="flexsearch--wrapper">
+			
+				<form class="flexsearch--form" action='ml_page/' method="post">
+					{% csrf_token %}
+					<div class="flexsearch--input-wrapper">
+						<input class="flexsearch--input" name="gene" type="search"  required placeholder="Enter a gene for prediction">
+					</div>
+					<input class="flexsearch--submit" type="submit" value="&#10140;"/>
+				</form>
+			</div>
+	</div>
+	</center>
+ </div>
+{% endblock %}

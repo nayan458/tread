@@ -1,0 +1,167 @@
+{% extends "base_copy.html" %}
+
+{% load static %}
+
+<!-- The link below is not being read by the html since it is out of the block head and therefore the old bootstrap is working-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+
+{% block title %}Index{% endblock %}
+{% block head %}
+
+
+
+ 
+  
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+<link rel="stylesheet" href='/static/style.css' />
+ <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+<style>
+	
+	.medium {
+	  background-color: white;
+	  color: black;
+	 
+	  margin-top: 10px;
+	  margin-bottom:10px;
+	  
+	  padding: 20px;
+
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	<!--  width: 80%;-->
+	
+	  opacity: 1;
+	}
+	
+	
+</style>
+
+
+<style>
+	.ScrollStyle
+	{
+		max-height: 720px;
+		overflow-y: scroll;
+	}
+</style>
+
+
+<div class='homepage_big'>
+	<center><h1>Anti-Epileptic Drug Targets </h1></center>
+
+	<div style="background-color:white; padding:20px;">
+		<table class="table table-bordered table-striped" id='aed_target_table'>
+			<thead>
+				<tr>
+					<th>Protein</th>	
+					<th>Anti-Epileptic Drug</th>
+					<th>DrugBank ID</th>
+					<th>Status</th>
+			    </tr>
+			</thead>
+			<tbody>
+				{% for key,value in dt_df.iterrows %}
+					<tr>
+						<td>
+							<form action='result/GeneName/' method="post">{% csrf_token %}
+								<!-- THE BELOW DIV IS TO SHOW THE GENE NAME WHEN THE DATA IS DOWNLOADED IN ANY FORMAT -->
+								<div style="display:none">
+										{{ value.uniprotid__genename }}
+								</div>	
+								<input name="gene" type='submit' value='{{ value.uniprotid__genename }}' >
+							
+							</form> 
+						</td>
+						<td>
+							{{ value.aedname }}
+						</td>
+						<td>
+							<a target="_blank" href='https://www.drugbank.ca/drugs/{{value.aedname__drugbankid}}'><b> {{ value.aedname__drugbankid }} </b></a>
+						</td>
+						<td>
+							{{ value.aedname__status }}
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>	
+	</div>
+</div>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/datatables.min.js"></script>
+<!-- THE BELOW LINK IS TO IMPLEMENT ROWSGROUP IN OUR TABLE WHICH IS VERY ESSENTIAL -->
+<script type="text/javascript" src="https://cdn.rawgit.com/ashl1/datatables-rowsgroup/fbd569b8768155c7a9a62568e66a64115887d7d0/dataTables.rowsGroup.js"></script>
+
+
+<script>
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+	$('#aed_target_table').DataTable( {
+	    dom: 'Bfrtipl',
+	    'rowsGroup': [0],
+
+    buttons: [
+         {
+            extend: 'copy',
+            text: 'Copy',
+            title: 'AED Targets'
+        },{
+            extend: 'csv',
+            text: 'CSV',
+            extension: '.csv',
+            title: 'AED Targets'
+        }, 
+        {
+            extend: 'pdf',
+            text: 'PDF',
+            extension: '.pdf',
+            title: 'AED Targets'
+        }, 
+        {
+            extend: 'print',
+            text: 'Print',
+            title: 'AED Targets'
+        },
+        {
+            extend: 'excel',
+            text: 'Excel',
+            extension: '.xlsx',
+            title: 'AED Targets'
+        }
+    ]
+} );
+});
+
+
+
+
+</script>
+
+{% endblock %}

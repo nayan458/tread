@@ -1,0 +1,123 @@
+{% extends "base_copy.html" %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href='/static/style.css' />
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+
+<div class='homepage_big'>
+
+
+	<center><h1> miRNAs and their Target Genes (Epilepsy Associated)</h1></center>
+	
+	<div  style="background-color:white; padding:20px;">
+				
+		<table class="table table-bordered table-striped" id="epilepsy_associated_mirnas">
+			<thead>
+				<tr>
+					<th>miRNA</th>
+					<th>Target Genes</th>
+										
+					<th>Experiment</th>
+					
+					<th>Reference</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for key,value in mirna_data.iterrows %}
+					<tr>
+						<td> <a target="_blank" href="http://mirtarbase.cuhk.edu.cn/php/search.php?org=hsa&opt=mirna_id&kw={{ grpname }}"><b>{{ value.miRNA }}</b></a>
+						</td>
+						<td>
+							<form action='result/GeneName/' method="post">{% csrf_token %}
+							<!-- THE BELOW DIV IS TO SHOW THE GENE NAME WHEN THE DATA IS DOWNLOADED IN ANY FORMAT -->
+								<div style="display:none">
+									{{ value.Target_Gene }}
+								</div>	
+								<input name="gene" type='submit' value='{{ value.Target_Gene }}'>
+							</form>
+						</td>
+						<td>
+							{{ value.Experiments }}<br/>
+						</td>
+						<td>
+							<a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/{{ value.References }}"><b>PMID: {{ value.References }}</b></a>;	
+						</td>
+					</tr>	
+				{% endfor %}		
+			</tbody>
+		</table>
+	</div>
+	
+	
+	
+	
+</div>
+
+<!--  -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/datatables.min.js"></script>
+<!-- THE BELOW LINK IS TO IMPLEMENT ROWSGROUP IN OUR TABLE WHICH IS VERY ESSENTIAL -->
+<script type="text/javascript" src="https://cdn.rawgit.com/ashl1/datatables-rowsgroup/fbd569b8768155c7a9a62568e66a64115887d7d0/dataTables.rowsGroup.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+	$('#epilepsy_associated_mirnas').DataTable( {
+	    dom: 'Bfrtipl',
+	    'rowsGroup': [0],
+
+
+    buttons: [
+         {
+            extend: 'copy',
+            text: 'Copy',
+            title: 'miRNAs and their Target Genes (Epilepsy Associated)'
+        },{
+            extend: 'csv',
+            text: 'CSV',
+            extension: '.csv',
+            title: 'miRNAs and their Target Genes (Epilepsy Associated)'
+        }, 
+        {
+            extend: 'pdf',
+            text: 'PDF',
+            extension: '.pdf',
+            title: 'miRNAs and their Target Genes (Epilepsy Associated)'
+        }, 
+        {
+            extend: 'print',
+            text: 'Print',
+            title: 'miRNAs and their Target Genes (Epilepsy Associated)'
+        },
+        {
+            extend: 'excel',
+            text: 'Excel',
+            extension: '.xlsx',
+            title: 'miRNAs and their Target Genes (Epilepsy Associated)'
+        }
+    ]
+} );
+});
+
+
+
+
+</script>
+
+
+{% endblock %}

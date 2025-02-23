@@ -1,0 +1,881 @@
+uniprotid,genename,uniprotname,proteinname
+P15289,ARSA,ARSA_HUMAN,Arylsulfatase A
+Q12887,COX10,COX10_HUMAN,"Protoheme IX farnesyltransferase, mitochondrial"
+Q9UHK6,AMACR,AMACR_HUMAN,Alpha-methylacyl-CoA racemase
+Q8TD86,CALML6,CALL6_HUMAN,Calmodulin-like protein 6
+Q9H8M5,CNNM2,CNNM2_HUMAN,Metal transporter CNNM2
+Q15822,CHRNA2,ACHA2_HUMAN,Neuronal acetylcholine receptor subunit alpha-2
+P31946,YWHAB,1433B_HUMAN,14-3-3 protein beta/alpha
+P10589,NR2F1,COT1_HUMAN,COUP transcription factor 1
+Q9NW15,ANO10,ANO10_HUMAN,Anoctamin-10
+Q99798,ACO2,ACON_HUMAN,"Aconitate hydratase, mitochondrial"
+Q8IXJ9,ASXL1,ASXL1_HUMAN,Putative Polycomb group protein ASXL1
+Q9UKL4,GJD2,CXD2_HUMAN,Gap junction delta-2 protein
+P12110,COL6A2,CO6A2_HUMAN,Collagen alpha-2(VI) chain
+O75072,FKTN,FKTN_HUMAN,Fukutin
+Q9H936,SLC25A22,GHC1_HUMAN,Mitochondrial glutamate carrier 1
+O15228,GNPAT,GNPAT_HUMAN,Dihydroxyacetone phosphate acyltransferase
+P27348,YWHAQ,1433T_HUMAN,14-3-3 protein theta
+P63261,ACTG1,ACTG_HUMAN,"Actin, cytoplasmic 2"
+Q2TAA5,ALG11,ALG11_HUMAN,"GDP-Man:Man(3)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase"
+P48751,SLC4A3,B3A3_HUMAN,Anion exchange protein 3
+Q2NKJ3,CTC1,CTC1_HUMAN,CST complex subunit CTC1
+Q99622,C12orf57,C10_HUMAN,Protein C10
+P49419,ALDH7A1,AL7A1_HUMAN,Alpha-aminoadipic semialdehyde dehydrogenase
+Q02246,CNTN2,CNTN2_HUMAN,Contactin-2
+Q9Y2E4,DIP2C,DIP2C_HUMAN,Disco-interacting protein 2 homolog C
+O00154,ACOT7,BACH_HUMAN,Cytosolic acyl coenzyme A thioester hydrolase
+Q9H553,ALG2,ALG2_HUMAN,"Alpha-1,3/1,6-mannosyltransferase ALG2"
+Q6V0L0,CYP26C1,CP26C_HUMAN,Cytochrome P450 26C1
+P08908,HTR1A,5HT1A_HUMAN,5-hydroxytryptamine receptor 1A
+Q9NYY8,FASTKD2,FAKD2_HUMAN,"FAST kinase domain-containing protein 2, mitochondrial"
+Q96CU9,FOXRED1,FXRD1_HUMAN,FAD-dependent oxidoreductase domain-containing protein 1
+P0DP24,CALM2,CALM2_HUMAN,Calmodulin-2
+Q9H2P0,ADNP,ADNP_HUMAN,Activity-dependent neuroprotector homeobox protein
+P29274,ADORA2A,AA2AR_HUMAN,Adenosine receptor A2a
+P11532,DMD,DMD_HUMAN,Dystrophin
+Q9HCJ1,ANKH,ANKH_HUMAN,Progressive ankylosis protein homolog
+P43681,CHRNA4,ACHA4_HUMAN,Neuronal acetylcholine receptor subunit alpha-4
+Q9UQ16,DNM3,DYN3_HUMAN,Dynamin-3
+Q9Y6D5,ARFGEF2,BIG2_HUMAN,Brefeldin A-inhibited guanine nucleotide-exchange protein 2
+P25440,BRD2,BRD2_HUMAN,Bromodomain-containing protein 2
+P27482,CALML3,CALL3_HUMAN,Calmodulin-like protein 3
+Q9BV10,ALG12,ALG12_HUMAN,"Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase"
+Q07912,TNK2,ACK1_HUMAN,Activated CDC42 kinase 1
+P31150,GDI1,GDIA_HUMAN,Rab GDP dissociation inhibitor alpha
+P51572,BCAP31,BAP31_HUMAN,B-cell receptor-associated protein 31
+O00116,AGPS,ADAS_HUMAN,"Alkyldihydroxyacetonephosphate synthase, peroxisomal"
+Q9Y243,AKT3,AKT3_HUMAN,RAC-gamma serine/threonine-protein kinase
+Q09428,ABCC8,ABCC8_HUMAN,ATP-binding cassette sub-family C member 8
+Q9Y6Y1,CAMTA1,CMTA1_HUMAN,Calmodulin-binding transcription activator 1
+P36544,CHRNA7,ACHA7_HUMAN,Neuronal acetylcholine receptor subunit alpha-7
+Q8N465,D2HGDH,D2HDH_HUMAN,"D-2-hydroxyglutarate dehydrogenase, mitochondrial"
+P10176,COX8A,COX8A_HUMAN,"Cytochrome c oxidase subunit 8A, mitochondrial"
+F7VJQ1,PRNP,APRIO_HUMAN,Alternative prion protein
+Q8NI60,COQ8A,COQ8A_HUMAN,"Atypical kinase COQ8A, mitochondrial"
+Q13825,AUH,AUHM_HUMAN,"Methylglutaconyl-CoA hydratase, mitochondrial"
+Q8NB90,SPATA5,AFG2H_HUMAN,ATPase family protein 2 homolog
+Q9Y4W6,AFG3L2,AFG32_HUMAN,AFG3-like protein 2
+P13637,ATP1A3,AT1A3_HUMAN,Sodium/potassium-transporting ATPase subunit alpha-3
+P98175,RBM10,RBM10_HUMAN,RNA-binding protein 10
+P30518,AVPR2,V2R_HUMAN,Vasopressin V2 receptor
+P02766,TTR,TTHY_HUMAN,Transthyretin
+P17025,ZNF182,ZN182_HUMAN,Zinc finger protein 182
+P57059,SIK1,SIK1_HUMAN,Serine/threonine-protein kinase SIK1
+Q8TAD8,SNIP1,SNIP1_HUMAN,Smad nuclear-interacting protein 1
+Q9NUW8,TDP1,TYDP1_HUMAN,Tyrosyl-DNA phosphodiesterase 1
+Q9P283,SEMA5B,SEM5B_HUMAN,Semaphorin-5B
+Q8NB59,SYT14,SYT14_HUMAN,Synaptotagmin-14
+P61266,STX1B,STX1B_HUMAN,Syntaxin-1B
+P48029,SLC6A8,SC6A8_HUMAN,Sodium- and chloride-dependent creatine transporter 1
+P35270,SPR,SPRE_HUMAN,Sepiapterin reductase
+Q14108,SCARB2,SCRB2_HUMAN,Lysosome membrane protein 2
+Q9HCJ5,ZSWIM6,ZSWM6_HUMAN,Zinc finger SWIM domain-containing protein 6
+P35916,FLT4,VGFR3_HUMAN,Vascular endothelial growth factor receptor 3
+P78381,SLC35A2,S35A2_HUMAN,UDP-galactose translocator
+Q99757,TXN2,THIOM_HUMAN,"Thioredoxin, mitochondrial"
+Q15831,STK11,STK11_HUMAN,Serine/threonine-protein kinase STK11
+P08247,SYP,SYPH_HUMAN,Synaptophysin
+Q9C0A6,SETD5,SETD5_HUMAN,Histone-lysine N-methyltransferase SETD5
+Q96PV0,SYNGAP1,SYGP1_HUMAN,Ras/Rap GTPase-activating protein SynGAP
+Q8IUC6,TICAM1,TCAM1_HUMAN,TIR domain-containing adapter molecule 1
+Q15326,ZMYND11,ZMY11_HUMAN,Zinc finger MYND domain-containing protein 11
+Q11203,ST3GAL3,SIAT6_HUMAN,"CMP-N-acetylneuraminate-beta-1,4-galactoside alpha-2,3-sialyltransferase"
+P19634,SLC9A1,SL9A1_HUMAN,Sodium/hydrogen exchanger 1
+Q8IVB4,SLC9A9,SL9A9_HUMAN,Sodium/hydrogen exchanger 9
+O95551,TDP2,TYDP2_HUMAN,Tyrosyl-DNA phosphodiesterase 2
+Q9NZC7,WWOX,WWOX_HUMAN,WW domain-containing oxidoreductase
+P98066,TNFAIP6,TSG6_HUMAN,Tumor necrosis factor-inducible gene 6 protein
+Q9H2B4,SLC26A1,S26A1_HUMAN,Sulfate anion transporter 1
+Q93008,USP9X,USP9X_HUMAN,Probable ubiquitin carboxyl-terminal hydrolase FAF-X
+Q68DK2,ZFYVE26,ZFY26_HUMAN,Zinc finger FYVE domain-containing protein 26
+P49815,TSC2,TSC2_HUMAN,Tuberin
+Q01433,AMPD2,AMPD2_HUMAN,AMP deaminase 2
+Q9UBR1,UPB1,BUP1_HUMAN,Beta-ureidopropionase
+O76039,CDKL5,CDKL5_HUMAN,Cyclin-dependent kinase-like 5
+O75462,CRLF1,CRLF1_HUMAN,Cytokine receptor-like factor 1
+Q96B23,C18orf25,CR025_HUMAN,Uncharacterized protein C18orf25
+P22003,BMP5,BMP5_HUMAN,Bone morphogenetic protein 5
+Q6RI45,BRWD3,BRWD3_HUMAN,Bromodomain and WD repeat-containing protein 3
+P23786,CPT2,CPT2_HUMAN,"Carnitine O-palmitoyltransferase 2, mitochondrial"
+O15528,CYP27B1,CP27B_HUMAN,"25-hydroxyvitamin D-1 alpha hydroxylase, mitochondrial"
+P31146,CORO1A,COR1A_HUMAN,Coronin-1A
+Q53S33,BOLA3,BOLA3_HUMAN,BolA-like protein 3
+P51788,CLCN2,CLCN2_HUMAN,Chloride channel protein 2
+Q9Y6B7,AP4B1,AP4B1_HUMAN,AP-4 complex subunit beta-1
+Q9UEY8,ADD3,ADDG_HUMAN,Gamma-adducin
+Q9NQ11,ATP13A2,AT132_HUMAN,Cation-transporting ATPase 13A2
+O95831,AIFM1,AIFM1_HUMAN,"Apoptosis-inducing factor 1, mitochondrial"
+P50993,ATP1A2,AT1A2_HUMAN,Sodium/potassium-transporting ATPase subunit alpha-2
+P07333,CSF1R,CSF1R_HUMAN,Macrophage colony-stimulating factor 1 receptor
+P39060,COL18A1,COIA1_HUMAN,Collagen alpha-1(XVIII) chain
+Q8N5M1,ATPAF2,ATPF2_HUMAN,ATP synthase mitochondrial F1 complex assembly factor 2
+Q8TDX5,ACMSD,ACMSD_HUMAN,2-amino-3-carboxymuconate-6-semialdehyde decarboxylase
+Q9Y3A0,COQ4,COQ4_HUMAN,"Ubiquinone biosynthesis protein COQ4 homolog, mitochondrial"
+Q9Y587,AP4S1,AP4S1_HUMAN,AP-4 complex subunit sigma-1
+O14936,CASK,CSKP_HUMAN,Peripheral plasma membrane protein CASK
+P18089,ADRA2B,ADA2B_HUMAN,Alpha-2B adrenergic receptor
+O00305,CACNB4,CACB4_HUMAN,Voltage-dependent L-type calcium channel subunit beta-4
+P28223,HTR2A,5HT2A_HUMAN,5-hydroxytryptamine receptor 2A
+O14617,AP3D1,AP3D1_HUMAN,AP-3 complex subunit delta-1
+Q9UPM8,AP4E1,AP4E1_HUMAN,AP-4 complex subunit epsilon-1
+P16615,ATP2A2,AT2A2_HUMAN,Sarcoplasmic/endoplasmic reticulum calcium ATPase 2
+P56539,CAV3,CAV3_HUMAN,Caveolin-3
+Q9UPV0,CEP164,CE164_HUMAN,Centrosomal protein of 164 kDa
+P27544,CERS1,CERS1_HUMAN,Ceramide synthase 1
+Q9H2C2,ARV1,ARV1_HUMAN,Protein ARV1
+Q9Y672,ALG6,ALG6_HUMAN,"Dolichyl pyrophosphate Man9GlcNAc2 alpha-1,3-glucosyltransferase"
+B3EWF7,EPM2A,EP2A2_HUMAN,"Laforin, isoform 9"
+Q9UBX1,CTSF,CATF_HUMAN,Cathepsin F
+Q8N2K0,ABHD12,ABD12_HUMAN,Lysophosphatidylserine lipase ABHD12
+P08572,COL4A2,CO4A2_HUMAN,Collagen alpha-2(IV) chain
+Q03154,ACY1,ACY1_HUMAN,Aminoacylase-1
+Q9H9E3,COG4,COG4_HUMAN,Conserved oligomeric Golgi complex subunit 4
+O75208,COQ9,COQ9_HUMAN,"Ubiquinone biosynthesis protein COQ9, mitochondrial"
+Q1MSJ5,CSPP1,CSPP1_HUMAN,Centrosome and spindle pole-associated protein 1
+Q9Y2Z9,COQ6,COQ6_HUMAN,"Ubiquinone biosynthesis monooxygenase COQ6, mitochondrial"
+Q9UQB3,CTNND2,CTND2_HUMAN,Catenin delta-2
+Q9Y698,CACNG2,CCG2_HUMAN,Voltage-dependent calcium channel gamma-2 subunit
+Q16740,CLPP,CLPP_HUMAN,"ATP-dependent Clp protease proteolytic subunit, mitochondrial"
+P08243,ASNS,ASNS_HUMAN,Asparagine synthetase [glutamine-hydrolyzing]
+Q6V0I7,FAT4,FAT4_HUMAN,Protocadherin Fat 4
+Q03468,ERCC6,ERCC6_HUMAN,DNA excision repair protein ERCC-6
+P01116,KRAS,RASK_HUMAN,GTPase KRas
+P52945,PDX1,PDX1_HUMAN,Pancreas/duodenum homeobox protein 1
+O00330,PDHX,ODPX_HUMAN,"Pyruvate dehydrogenase protein X component, mitochondrial"
+P13533,MYH6,MYH6_HUMAN,Myosin-6
+Q9UHJ9,PGAP2,PGAP2_HUMAN,Post-GPI attachment to proteins factor 2
+Q96AA3,RFT1,RFT1_HUMAN,Protein RFT1 homolog
+Q13459,MYO9B,MYO9B_HUMAN,Unconventional myosin-IXb
+P40855,PEX19,PEX19_HUMAN,Peroxisomal biogenesis factor 19
+P63252,KCNJ2,KCNJ2_HUMAN,Inward rectifier potassium channel 2
+Q9NWB1,RBFOX1,RFOX1_HUMAN,RNA binding protein fox-1 homolog 1
+Q8N2Q7,NLGN1,NLGN1_HUMAN,Neuroligin-1
+O00628,PEX7,PEX7_HUMAN,Peroxisomal targeting signal 2 receptor
+Q9UHX1,PUF60,PUF60_HUMAN,Poly(U)-binding-splicing factor PUF60
+P18583,SON,SON_HUMAN,Protein SON
+Q8IV31,TMEM139,TM139_HUMAN,Transmembrane protein 139
+Q13114,TRAF3,TRAF3_HUMAN,TNF receptor-associated factor 3
+Q9UPW6,SATB2,SATB2_HUMAN,DNA-binding protein SATB2
+Q5ST30,VARS2,SYVM_HUMAN,"Valine--tRNA ligase, mitochondrial"
+P27635,RPL10,RL10_HUMAN,60S ribosomal protein L10
+O43556,SGCE,SGCE_HUMAN,Epsilon-sarcoglycan
+O14656,TOR1A,TOR1A_HUMAN,Torsin-1A
+P63162,SNRPN,RSMN_HUMAN,Small nuclear ribonucleoprotein-associated protein N
+Q9UQD0,SCN8A,SCN8A_HUMAN,Sodium channel protein type 8 subunit alpha
+G3V0H7,SLCO1B7,SO1B7_HUMAN,Putative solute carrier organic anion transporter family member 1B7
+O95630,STAMBP,STABP_HUMAN,STAM-binding protein
+Q9Y2Y9,KLF13,KLF13_HUMAN,Krueppel-like factor 13
+Q13224,GRIN2B,NMDE2_HUMAN,"Glutamate receptor ionotropic, NMDA 2B"
+O15399,GRIN2D,NMDE4_HUMAN,"Glutamate receptor ionotropic, NMDA 2D"
+Q05586,GRIN1,NMDZ1_HUMAN,"Glutamate receptor ionotropic, NMDA 1"
+Q8WZA1,POMGNT1,PMGT1_HUMAN,"Protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1"
+P35372,OPRM1,OPRM_HUMAN,Mu-type opioid receptor
+P50542,PEX5,PEX5_HUMAN,Peroxisomal targeting signal 1 receptor
+Q00839,HNRNPU,HNRPU_HUMAN,Heterogeneous nuclear ribonucleoprotein U
+P49840,GSK3A,GSK3A_HUMAN,Glycogen synthase kinase-3 alpha
+Q03252,LMNB2,LMNB2_HUMAN,Lamin-B2
+Q9NPA1,KCNMB3,KCMB3_HUMAN,Calcium-activated potassium channel subunit beta-3
+Q14CZ8,HEPACAM,HECAM_HUMAN,Hepatocyte cell adhesion molecule
+P02753,RBP4,RET4_HUMAN,Retinol-binding protein 4
+Q15738,NSDHL,NSDHL_HUMAN,"Sterol-4-alpha-carboxylate 3-dehydrogenase, decarboxylating"
+P48380,RFX3,RFX3_HUMAN,Transcription factor RFX3
+O14807,MRAS,RASM_HUMAN,Ras-related protein M-Ras
+P37287,PIGA,PIGA_HUMAN,Phosphatidylinositol N-acetylglucosaminyltransferase subunit A
+Q96QU1,PCDH15,PCD15_HUMAN,Protocadherin-15
+Q8TAB3,PCDH19,PCD19_HUMAN,Protocadherin-19
+P31939,ATIC,PUR9_HUMAN,Bifunctional purine biosynthesis protein PURH
+P10114,RAP2A,RAP2A_HUMAN,Ras-related protein Rap-2a
+Q7Z7B1,PIGW,PIGW_HUMAN,Phosphatidylinositol-glycan biosynthesis class W protein
+P43034,PAFAH1B1,LIS1_HUMAN,Platelet-activating factor acetylhydrolase IB subunit alpha
+Q9Y5U9,IER3IP1,IR3IP_HUMAN,Immediate early response 3-interacting protein 1
+O60282,KIF5C,KIF5C_HUMAN,Kinesin heavy chain isoform 5C
+Q86XA0,METTL23,MET23_HUMAN,Methyltransferase-like protein 23
+Q14643,ITPR1,ITPR1_HUMAN,"Inositol 1,4,5-trisphosphate receptor type 1"
+P51610,HCFC1,HCFC1_HUMAN,Host cell factor 1
+P08559,PDHA1,ODPA_HUMAN,"Pyruvate dehydrogenase E1 component subunit alpha, somatic form, mitochondrial"
+Q96NT5,SLC46A1,PCFT_HUMAN,Proton-coupled folate transporter
+Q5T2T1,MPP7,MPP7_HUMAN,MAGUK p55 subfamily member 7
+Q16625,OCLN,OCLN_HUMAN,Occludin
+P60484,PTEN,PTEN_HUMAN,"Phosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN"
+Q13724,MOGS,MOGS_HUMAN,Mannosyl-oligosaccharide glucosidase
+Q13702,RAPSN,RAPSN_HUMAN,43 kDa receptor-associated protein of the synapse
+Q99519,NEU1,NEUR1_HUMAN,Sialidase-1
+O00592,PODXL,PODXL_HUMAN,Podocalyxin
+P35548,MSX2,MSX2_HUMAN,Homeobox protein MSX-2
+Q7Z5J4,RAI1,RAI1_HUMAN,Retinoic acid-induced protein 1
+P48544,KCNJ5,KCNJ5_HUMAN,G protein-activated inward rectifier potassium channel 4
+P49792,RANBP2,RBP2_HUMAN,E3 SUMO-protein ligase RanBP2
+Q8NFW5,DMBX1,DMBX1_HUMAN,Diencephalon/mesencephalon homeobox protein 1
+Q9UHC9,NPC1L1,NPCL1_HUMAN,NPC1-like intracellular cholesterol transporter 1
+Q96DA2,RAB39B,RB39B_HUMAN,Ras-related protein Rab-39B
+P31751,AKT2,AKT2_HUMAN,RAC-beta serine/threonine-protein kinase
+P48728,AMT,GCST_HUMAN,"Aminomethyltransferase, mitochondrial"
+Q9Y6A1,POMT1,POMT1_HUMAN,Protein O-mannosyl-transferase 1
+Q7LGA3,HS2ST1,HS2ST_HUMAN,Heparan sulfate 2-O-sulfotransferase 1
+Q9BZV2,SLC19A3,S19A3_HUMAN,Thiamine transporter 2
+P98160,HSPG2,PGBM_HUMAN,Basement membrane-specific heparan sulfate proteoglycan core protein
+P11498,PC,PYC_HUMAN,"Pyruvate carboxylase, mitochondrial"
+Q9Y5F0,PCDHB13,PCDBD_HUMAN,Protocadherin beta-13
+O95427,PIGN,PIGN_HUMAN,GPI ethanolamine phosphate transferase 1
+Q3MUY2,PIGY,PIGY_HUMAN,Phosphatidylinositol N-acetylglucosaminyltransferase subunit Y
+P46060,RANGAP1,RAGP1_HUMAN,Ran GTPase-activating protein 1
+Q7Z3Z2,RD3,RD3_HUMAN,Protein RD3
+P78330,PSPH,SERB_HUMAN,Phosphoserine phosphatase
+Q92581,SLC9A6,SL9A6_HUMAN,Sodium/hydrogen exchanger 6
+Q9BZK7,TBL1XR1,TBL1R_HUMAN,F-box-like/WD repeat-containing protein TBL1XR1
+Q96D31,ORAI1,CRCM1_HUMAN,Calcium release-activated calcium channel protein 1
+P53985,SLC16A1,MOT1_HUMAN,Monocarboxylate transporter 1
+Q00604,NDP,NDP_HUMAN,Norrin
+P49768,PSEN1,PSN1_HUMAN,Presenilin-1
+Q8NHS3,MFSD8,MFSD8_HUMAN,Major facilitator superfamily domain-containing protein 8
+Q14653,IRF3,IRF3_HUMAN,Interferon regulatory factor 3
+Q9Y3Q4,HCN4,HCN4_HUMAN,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4
+Q00577,PURA,PURA_HUMAN,Transcriptional activator protein Pur-alpha
+Q8NC96,NECAP1,NECP1_HUMAN,Adaptin ear-binding coat-associated protein 1
+Q8WXI9,GATAD2B,P66B_HUMAN,Transcriptional repressor p66-beta
+O43272,PRODH,PROD_HUMAN,"Proline dehydrogenase 1, mitochondrial"
+O43678,NDUFA2,NDUA2_HUMAN,NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 2
+O00217,NDUFS8,NDUS8_HUMAN,"NADH dehydrogenase [ubiquinone] iron-sulfur protein 8, mitochondrial"
+O60403,OR10H2,O10H2_HUMAN,Olfactory receptor 10H2
+Q9Y2B2,PIGL,PIGL_HUMAN,N-acetylglucosaminyl-phosphatidylinositol de-N-acetylase
+Q8TEU7,RAPGEF6,RPGF6_HUMAN,Rap guanine nucleotide exchange factor 6
+Q04671,OCA2,P_HUMAN,P protein
+Q13308,PTK7,PTK7_HUMAN,Inactive tyrosine-protein kinase 7
+P42704,LRPPRC,LPPRC_HUMAN,"Leucine-rich PPR motif-containing protein, mitochondrial"
+Q68CP4,HGSNAT,HGNAT_HUMAN,Heparan-alpha-glucosaminide N-acetyltransferase
+P15884,TCF4,ITF2_HUMAN,Transcription factor 4
+Q9H0V9,LMAN2L,LMA2L_HUMAN,VIP36-like protein
+Q9UK17,KCND3,KCND3_HUMAN,Potassium voltage-gated channel subfamily D member 3
+Q5JPH6,EARS2,SYEM_HUMAN,"Probable glutamate--tRNA ligase, mitochondrial"
+P35498,SCN1A,SCN1A_HUMAN,Sodium channel protein type 1 subunit alpha
+P60228,EIF3E,EIF3E_HUMAN,Eukaryotic translation initiation factor 3 subunit E
+Q9Y664,KPTN,KPTN_HUMAN,KICSTOR complex protein kaptin
+Q92832,NELL1,NELL1_HUMAN,Protein kinase C-binding protein NELL1
+Q99574,SERPINI1,NEUS_HUMAN,Neuroserpin
+Q01453,PMP22,PMP22_HUMAN,Peripheral myelin protein 22
+Q8TCY5,MRAP,MRAP_HUMAN,Melanocortin-2 receptor accessory protein
+Q92968,PEX13,PEX13_HUMAN,Peroxisomal membrane protein PEX13
+Q8TCJ2,STT3B,STT3B_HUMAN,Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3B
+O60682,MSC,MUSC_HUMAN,Musculin
+Q9NWS8,RMND1,RMND1_HUMAN,Required for meiotic nuclear division protein 1 homolog
+Q9NZV8,KCND2,KCND2_HUMAN,Potassium voltage-gated channel subfamily D member 2
+Q12980,NPRL3,NPRL3_HUMAN,GATOR complex protein NPRL3
+Q8IZQ8,MYOCD,MYCD_HUMAN,Myocardin
+P01111,NRAS,RASN_HUMAN,GTPase NRas
+P61764,STXBP1,STXB1_HUMAN,Syntaxin-binding protein 1
+P02511,CRYAB,CRYAB_HUMAN,Alpha-crystallin B chain
+P61073,CXCR4,CXCR4_HUMAN,C-X-C chemokine receptor type 4
+P24043,LAMA2,LAMA2_HUMAN,Laminin subunit alpha-2
+Q9ULG1,INO80,INO80_HUMAN,Chromatin-remodeling ATPase INO80
+P01270,PTH,PTHY_HUMAN,Parathyroid hormone
+P51787,KCNQ1,KCNQ1_HUMAN,Potassium voltage-gated channel subfamily KQT member 1
+P41227,NAA10,NAA10_HUMAN,N-alpha-acetyltransferase 10
+P27708,CAD,PYR1_HUMAN,CAD protein
+Q9BZE2,PUS3,PUS3_HUMAN,tRNA pseudouridine(38/39) synthase
+Q9UET6,FTSJ1,TRM7_HUMAN,Putative tRNA (cytidine(32)/guanosine(34)-2'-O)-methyltransferase
+O60315,ZEB2,ZEB2_HUMAN,Zinc finger E-box-binding homeobox 2
+Q9NY65,TUBA8,TBA8_HUMAN,Tubulin alpha-8 chain
+Q71U36,TUBA1A,TBA1A_HUMAN,Tubulin alpha-1A chain
+P21817,RYR1,RYR1_HUMAN,Ryanodine receptor 1
+Q13885,TUBB2A,TBB2A_HUMAN,Tubulin beta-2A chain
+Q12824,SMARCB1,SNF5_HUMAN,SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily B member 1
+P20226,TBP,TBP_HUMAN,TATA-box-binding protein
+P15621,ZNF44,ZNF44_HUMAN,Zinc finger protein 44
+Q9UPY5,SLC7A11,XCT_HUMAN,Cystine/glutamate transporter
+Q96MV8,ZDHHC15,ZDH15_HUMAN,Palmitoyltransferase ZDHHC15
+P51571,SSR4,SSRD_HUMAN,Translocon-associated protein subunit delta
+Q9NU63,ZFP57,ZFP57_HUMAN,Zinc finger protein 57 homolog
+P53007,SLC25A1,TXTP_HUMAN,"Tricarboxylate transport protein, mitochondrial"
+O96007,MOCS2,MOC2B_HUMAN,Molybdopterin synthase catalytic subunit
+Q9Y4R8,TELO2,TELO2_HUMAN,Telomere length regulation protein TEL2 homolog
+O94855,SEC24D,SC24D_HUMAN,Protein transport protein Sec24D
+O95071,UBR5,UBR5_HUMAN,E3 ubiquitin-protein ligase UBR5
+P07947,YES1,YES_HUMAN,Tyrosine-protein kinase Yes
+Q9BRT2,UQCC2,UQCC2_HUMAN,Ubiquinol-cytochrome-c reductase complex assembly factor 2
+Q6P4I2,WDR73,WDR73_HUMAN,WD repeat-containing protein 73
+Q9Y484,WDR45,WIPI4_HUMAN,WD repeat domain phosphoinositide-interacting protein 4
+O43526,KCNQ2,KCNQ2_HUMAN,Potassium voltage-gated channel subfamily KQT member 2
+P31645,SLC6A4,SC6A4_HUMAN,Sodium-dependent serotonin transporter
+Q9BUB7,TMEM70,TMM70_HUMAN,"Transmembrane protein 70, mitochondrial"
+Q9NVH6,TMLHE,TMLH_HUMAN,"Trimethyllysine dioxygenase, mitochondrial"
+P60201,PLP1,MYPR_HUMAN,Myelin proteolipid protein
+P58400,NRXN1,NRX1B_HUMAN,Neurexin-1-beta
+O96033,MOCS2,MOC2A_HUMAN,Molybdopterin synthase sulfur carrier subunit
+Q92753,RORB,RORB_HUMAN,Nuclear receptor ROR-beta
+Q99250,SCN2A,SCN2A_HUMAN,Sodium channel protein type 2 subunit alpha
+Q9NR45,NANS,SIAS_HUMAN,Sialic acid synthase
+Q8WZ42,TTN,TITIN_HUMAN,Titin
+O15040,TECPR2,TCPR2_HUMAN,Tectonin beta-propeller repeat-containing protein 2
+Q96I59,NARS2,SYNM_HUMAN,"Probable asparagine--tRNA ligase, mitochondrial"
+Q9NRC1,ST7,ST7_HUMAN,Suppressor of tumorigenicity 7 protein
+Q8IYL2,TRMT44,TRM44_HUMAN,Probable tRNA (uracil-O(2)-)-methyltransferase
+Q9BYB0,SHANK3,SHAN3_HUMAN,SH3 and multiple ankyrin repeat domains protein 3
+O60687,SRPX2,SRPX2_HUMAN,Sushi repeat-containing protein SRPX2
+Q96Q05,TRAPPC9,TPPC9_HUMAN,Trafficking protein particle complex subunit 9
+O15270,SPTLC2,SPTC2_HUMAN,Serine palmitoyltransferase 2
+Q13813,SPTAN1,SPTN1_HUMAN,"Spectrin alpha chain, non-erythrocytic 1"
+Q9BZR6,RTN4R,RTN4R_HUMAN,Reticulon-4 receptor
+Q7Z392,TRAPPC11,TPC11_HUMAN,Trafficking protein particle complex subunit 11
+Q5JUK3,KCNT1,KCNT1_HUMAN,Potassium channel subfamily T member 1
+Q9UL68,MYT1L,MYT1L_HUMAN,Myelin transcription factor 1-like protein
+Q8N9F0,NAT8L,NAT8L_HUMAN,N-acetylaspartate synthetase
+Q13635,PTCH1,PTC1_HUMAN,Protein patched homolog 1
+O60890,OPHN1,OPHN1_HUMAN,Oligophrenin-1
+Q96IV0,NGLY1,NGLY1_HUMAN,Peptide-N(4)-(N-acetyl-beta-glucosaminyl)asparagine amidase
+Q969N2,PIGT,PIGT_HUMAN,GPI transamidase component PIG-T
+P10828,THRB,THB_HUMAN,Thyroid hormone receptor beta
+Q9NZN1,IL1RAPL1,IRPL1_HUMAN,Interleukin-1 receptor accessory protein-like 1
+Q8NCM2,KCNH5,KCNH5_HUMAN,Potassium voltage-gated channel subfamily H member 5
+O00533,CHL1,NCHL1_HUMAN,Neural cell adhesion molecule L1-like protein
+Q9NY46,SCN3A,SCN3A_HUMAN,Sodium channel protein type 3 subunit alpha
+Q7RTN6,STRADA,STRAA_HUMAN,STE20-related kinase adapter protein alpha
+Q9BX84,TRPM6,TRPM6_HUMAN,Transient receptor potential cation channel subfamily M member 6
+Q6UVJ0,SASS6,SAS6_HUMAN,Spindle assembly abnormal protein 6 homolog
+P35711,SOX5,SOX5_HUMAN,Transcription factor SOX-5
+P52788,SMS,SPSY_HUMAN,Spermine synthase
+Q15413,RYR3,RYR3_HUMAN,Ryanodine receptor 3
+Q13501,SQSTM1,SQSTM_HUMAN,Sequestosome-1
+Q96CW6,SLC7A6OS,S7A6O_HUMAN,Probable RNA polymerase II nuclear localization protein SLC7A6OS
+O95425,SVIL,SVIL_HUMAN,Supervillin
+Q9Y5W7,SNX14,SNX14_HUMAN,Sorting nexin-14
+Q92622,RUBCN,RUBIC_HUMAN,Run domain Beclin-1-interacting and cysteine-rich domain-containing protein
+Q96MP8,KCTD7,KCTD7_HUMAN,BTB/POZ domain-containing protein KCTD7
+P49810,PSEN2,PSN2_HUMAN,Presenilin-2
+Q9BTW9,TBCD,TBCD_HUMAN,Tubulin-specific chaperone D
+P23258,TUBG1,TBG1_HUMAN,Tubulin gamma-1 chain
+P0DJ07,PET100,PT100_HUMAN,"Protein PET100 homolog, mitochondrial"
+Q9H7P9,PLEKHG2,PKHG2_HUMAN,Pleckstrin homology domain-containing family G member 2
+Q9BVA1,TUBB2B,TBB2B_HUMAN,Tubulin beta-2B chain
+Q9C0K1,SLC39A8,S39A8_HUMAN,Zinc transporter ZIP8
+Q9P2R7,SUCLA2,SUCB1_HUMAN,"Succinate--CoA ligase [ADP-forming] subunit beta, mitochondrial"
+Q06330,RBPJ,SUH_HUMAN,Recombining binding protein suppressor of hairless
+Q8TEA7,TBCK,TBCK_HUMAN,TBC domain-containing protein kinase-like protein
+Q9Y617,PSAT1,SERC_HUMAN,Phosphoserine aminotransferase
+Q9UHW9,SLC12A6,S12A6_HUMAN,Solute carrier family 12 member 6
+Q7L0J3,SV2A,SV2A_HUMAN,Synaptic vesicle glycoprotein 2A
+Q9HD40,SEPSECS,SPCS_HUMAN,O-phosphoseryl-tRNA(Sec) selenium transferase
+Q8N8D7,NKAIN3,NKAI3_HUMAN,Sodium/potassium-transporting ATPase subunit beta-1-interacting protein 3
+Q8IWS0,PHF6,PHF6_HUMAN,PHD finger protein 6
+Q15046,KARS,SYK_HUMAN,Lysine--tRNA ligase
+Q8WWV3,RTN4IP1,RT4I1_HUMAN,"Reticulon-4-interacting protein 1, mitochondrial"
+P14543,NID1,NID1_HUMAN,Nidogen-1
+O75787,ATP6AP2,RENR_HUMAN,Renin receptor
+P10636,MAPT,TAU_HUMAN,Microtubule-associated protein tau
+P12755,SKI,SKI_HUMAN,Ski oncogene
+P82650,MRPS22,RT22_HUMAN,"28S ribosomal protein S22, mitochondrial"
+Q13164,MAPK7,MK07_HUMAN,Mitogen-activated protein kinase 7
+Q9UBX0,HESX1,HESX1_HUMAN,Homeobox expressed in ES cells 1
+Q4G0N4,NADK2,NAKD2_HUMAN,"NAD kinase 2, mitochondrial"
+Q7Z4N2,TRPM1,TRPM1_HUMAN,Transient receptor potential cation channel subfamily M member 1
+O00141,SGK1,SGK1_HUMAN,Serine/threonine-protein kinase Sgk1
+Q9Y6X0,SETBP1,SETBP_HUMAN,SET-binding protein
+Q6U841,SLC4A10,S4A10_HUMAN,Sodium-driven chloride bicarbonate exchanger
+P28062,PSMB8,PSB8_HUMAN,Proteasome subunit beta type-8
+Q9BU61,NDUFAF3,NDUF3_HUMAN,NADH dehydrogenase [ubiquinone] 1 alpha subcomplex assembly factor 3
+Q15031,LARS2,SYLM_HUMAN,"Probable leucine--tRNA ligase, mitochondrial"
+Q6PI48,DARS2,SYDM_HUMAN,"Aspartate--tRNA ligase, mitochondrial"
+Q9BYW2,SETD2,SETD2_HUMAN,Histone-lysine N-methyltransferase SETD2
+Q99592,ZBTB18,ZBT18_HUMAN,Zinc finger and BTB domain-containing protein 18
+Q8TBZ6,TRMT10A,TM10A_HUMAN,tRNA methyltransferase 10 homolog A
+P17014,ZNF12,ZNF12_HUMAN,Zinc finger protein 12
+Q9H3S7,PTPN23,PTN23_HUMAN,Tyrosine-protein phosphatase non-receptor type 23
+Q6PEY2,TUBA3E,TBA3E_HUMAN,Tubulin alpha-3E chain
+Q969G3,SMARCE1,SMCE1_HUMAN,SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily E member 1
+Q63HN8,RNF213,RN213_HUMAN,E3 ubiquitin-protein ligase RNF213
+Q9Y2D2,SLC35A3,S35A3_HUMAN,UDP-N-acetylglucosamine transporter
+P31629,HIVEP2,ZEP2_HUMAN,Transcription factor HIVEP2
+O43426,SYNJ1,SYNJ1_HUMAN,Synaptojanin-1
+Q9UJV3,MID2,TRIM1_HUMAN,Probable E3 ubiquitin-protein ligase MID2
+Q13509,TUBB3,TBB3_HUMAN,Tubulin beta-3 chain
+Q9UBS9,SUCO,SUCO_HUMAN,SUN domain-containing ossification factor
+Q86YT5,SLC13A5,S13A5_HUMAN,Solute carrier family 13 member 5
+Q99726,SLC30A3,ZNT3_HUMAN,Zinc transporter 3
+Q5T011,SZT2,SZT2_HUMAN,KICSTOR complex protein SZT2
+P51531,SMARCA2,SMCA2_HUMAN,Probable global transcription activator SNF2L2
+Q8NEZ3,WDR19,WDR19_HUMAN,WD repeat-containing protein 19
+Q9Y5E5,PCDHB4,PCDB4_HUMAN,Protocadherin beta-4
+O75970,MPDZ,MPDZ_HUMAN,Multiple PDZ domain protein
+Q9UPP1,PHF8,PHF8_HUMAN,Histone lysine demethylase PHF8
+Q92730,RND1,RND1_HUMAN,Rho-related GTP-binding protein Rho6
+O43181,NDUFS4,NDUS4_HUMAN,"NADH dehydrogenase [ubiquinone] iron-sulfur protein 4, mitochondrial"
+Q9BRB3,PIGQ,PIGQ_HUMAN,Phosphatidylinositol N-acetylglucosaminyltransferase subunit Q
+Q9NW08,POLR3B,RPC2_HUMAN,DNA-directed RNA polymerase III subunit RPC2
+Q9GZN7,ROGDI,ROGDI_HUMAN,Protein rogdi homolog
+Q03518,TAP1,TAP1_HUMAN,Antigen peptide transporter 1
+Q8IVH4,MMAA,MMAA_HUMAN,"Methylmalonic aciduria type A protein, mitochondrial"
+Q5H8A4,PIGG,PIGG_HUMAN,GPI ethanolamine phosphate transferase 2
+P48551,IFNAR2,INAR2_HUMAN,Interferon alpha/beta receptor 2
+Q9NZJ4,SACS,SACS_HUMAN,Sacsin
+Q9ULP9,TBC1D24,TBC24_HUMAN,TBC1 domain family member 24
+P21675,TAF1,TAF1_HUMAN,Transcription initiation factor TFIID subunit 1
+Q53EL9,SEZ6,SEZ6_HUMAN,Seizure protein 6 homolog
+O95363,FARS2,SYFM_HUMAN,"Phenylalanine--tRNA ligase, mitochondrial"
+Q9BZR9,TRIM8,TRIM8_HUMAN,E3 ubiquitin-protein ligase TRIM8
+P30531,SLC6A1,SC6A1_HUMAN,Sodium- and chloride-dependent GABA transporter 1
+P47897,QARS,SYQ_HUMAN,Glutamine--tRNA ligase
+Q8N2C7,UNC80,UNC80_HUMAN,Protein unc-80 homolog
+Q9H270,VPS11,VPS11_HUMAN,Vacuolar protein sorting-associated protein 11 homolog
+Q9H3S4,TPK1,TPK1_HUMAN,Thiamin pyrophosphokinase 1
+P49588,AARS,SYAC_HUMAN,"Alanine--tRNA ligase, cytoplasmic"
+Q08357,SLC20A2,S20A2_HUMAN,Sodium-dependent phosphate transporter 2
+Q9HA77,CARS2,SYCM_HUMAN,"Probable cysteine--tRNA ligase, mitochondrial"
+P60880,SNAP25,SNP25_HUMAN,Synaptosomal-associated protein 25
+Q6VVB1,NHLRC1,NHLC1_HUMAN,E3 ubiquitin-protein ligase NHLRC1
+O14841,OPLAH,OPLA_HUMAN,5-oxoprolinase
+O75381,PEX14,PEX14_HUMAN,Peroxisomal membrane protein PEX14
+P46977,STT3A,STT3A_HUMAN,Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3A
+Q9Y597,KCTD3,KCTD3_HUMAN,BTB/POZ domain-containing protein KCTD3
+P56589,PEX3,PEX3_HUMAN,Peroxisomal biogenesis factor 3
+Q9Y2Z2,MTO1,MTO1_HUMAN,"Protein MTO1 homolog, mitochondrial"
+P06400,RB1,RB_HUMAN,Retinoblastoma-associated protein
+A6NFN3,RBFOX3,RFOX3_HUMAN,RNA binding protein fox-1 homolog 3
+Q9H2X9,SLC12A5,S12A5_HUMAN,Solute carrier family 12 member 5
+O14773,TPP1,TPP1_HUMAN,Tripeptidyl-peptidase 1
+Q7Z6J9,TSEN54,SEN54_HUMAN,tRNA-splicing endonuclease subunit Sen54
+P00734,F2,THRB_HUMAN,Prothrombin
+Q86VV8,RTTN,RTTN_HUMAN,Rotatin
+Q9NRA2,SLC17A5,S17A5_HUMAN,Sialin
+O43819,SCO2,SCO2_HUMAN,"Protein SCO2 homolog, mitochondrial"
+P07602,PSAP,SAP_HUMAN,Prosaposin
+Q01959,SLC6A3,SC6A3_HUMAN,Sodium-dependent dopamine transporter
+Q9BWG6,SCNM1,SCNM1_HUMAN,Sodium channel modifier 1
+O75044,SRGAP2,SRGP2_HUMAN,SLIT-ROBO Rho GTPase-activating protein 2
+Q96QK1,VPS35,VPS35_HUMAN,Vacuolar protein sorting-associated protein 35
+Q9Y487,ATP6V0A2,VPP2_HUMAN,V-type proton ATPase 116 kDa subunit a isoform 2
+Q9H115,NAPB,SNAB_HUMAN,Beta-soluble NSF attachment protein
+A7XYQ1,SOBP,SOBP_HUMAN,Sine oculis-binding protein homolog
+Q9ULL8,SHROOM4,SHRM4_HUMAN,Protein Shroom4
+Q8NCE0,TSEN2,SEN2_HUMAN,tRNA-splicing endonuclease subunit Sen2
+Q92574,TSC1,TSC1_HUMAN,Hamartin
+P01213,PDYN,PDYN_HUMAN,Proenkephalin-B
+Q9NX14,NDUFB11,NDUBB_HUMAN,"NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 11, mitochondrial"
+Q07699,SCN1B,SCN1B_HUMAN,Sodium channel subunit beta-1
+P35499,SCN4A,SCN4A_HUMAN,Sodium channel protein type 4 subunit alpha
+Q9H5K3,POMK,SG196_HUMAN,Protein O-mannose kinase
+Q9NT68,TENM2,TEN2_HUMAN,Teneurin-2
+P41732,TSPAN7,TSN7_HUMAN,Tetraspanin-7
+P50897,PPT1,PPT1_HUMAN,Palmitoyl-protein thioesterase 1
+P11233,RALA,RALA_HUMAN,Ras-related protein Ral-A
+P43007,SLC1A4,SATT_HUMAN,Neutral amino acid transporter A
+Q92186,ST8SIA2,SIA8B_HUMAN,"Alpha-2,8-sialyltransferase 8B"
+Q03164,KMT2A,KMT2A_HUMAN,Histone-lysine N-methyltransferase 2A
+Q9UKY4,POMT2,POMT2_HUMAN,Protein O-mannosyl-transferase 2
+Q15029,EFTUD2,U5S1_HUMAN,116 kDa U5 small nuclear ribonucleoprotein component
+Q7Z6L0,PRRT2,PRRT2_HUMAN,Proline-rich transmembrane protein 2
+P51817,PRKX,PRKX_HUMAN,cAMP-dependent protein kinase catalytic subunit PRKX
+Q9HC29,NOD2,NOD2_HUMAN,Nucleotide-binding oligomerization domain-containing protein 2
+P51532,SMARCA4,SMCA4_HUMAN,Transcription activator BRG1
+O43379,WDR62,WDR62_HUMAN,WD repeat-containing protein 62
+Q9GZZ9,UBA5,UBA5_HUMAN,Ubiquitin-like modifier-activating enzyme 5
+P46937,YAP1,YAP1_HUMAN,Transcriptional coactivator YAP1
+Q9NVV9,THAP1,THAP1_HUMAN,THAP domain-containing protein 1
+Q6ICL3,TANGO2,TNG2_HUMAN,Transport and Golgi organization protein 2 homolog
+P48431,SOX2,SOX2_HUMAN,Transcription factor SOX-2
+Q9NQZ6,ZC4H2,ZC4H2_HUMAN,Zinc finger C4H2 domain-containing protein
+Q14524,SCN5A,SCN5A_HUMAN,Sodium channel protein type 5 subunit alpha
+Q15858,SCN9A,SCN9A_HUMAN,Sodium channel protein type 9 subunit alpha
+Q9Y6J8,STYXL1,STYL1_HUMAN,Serine/threonine/tyrosine-interacting-like protein 1
+P04350,TUBB4A,TBB4A_HUMAN,Tubulin beta-4A chain
+Q15904,ATP6AP1,VAS1_HUMAN,V-type proton ATPase subunit S1
+Q9UJ04,TSPYL4,TSYL4_HUMAN,Testis-specific Y-encoded-like protein 4
+P27449,ATP6V0C,VATL_HUMAN,V-type proton ATPase 16 kDa proteolipid subunit
+Q9Y566,SHANK1,SHAN1_HUMAN,SH3 and multiple ankyrin repeat domains protein 1
+Q9NQH7,XPNPEP3,XPP3_HUMAN,Xaa-Pro aminopeptidase 3
+O43175,PHGDH,SERA_HUMAN,D-3-phosphoglycerate dehydrogenase
+Q8WW01,TSEN15,SEN15_HUMAN,tRNA-splicing endonuclease subunit Sen15
+Q96NA8,TSNARE1,TSNA1_HUMAN,t-SNARE domain-containing protein 1
+Q9UNP4,ST3GAL5,SIAT9_HUMAN,"Lactosylceramide alpha-2,3-sialyltransferase"
+P30566,ADSL,PUR8_HUMAN,Adenylosuccinate lyase
+Q8IZF0,NALCN,NALCN_HUMAN,Sodium leak channel non-selective protein
+Q9H3S5,PIGM,PIGM_HUMAN,GPI mannosyltransferase 1
+P07225,PROS1,PROS_HUMAN,Vitamin K-dependent protein S
+P41229,KDM5C,KDM5C_HUMAN,Lysine-specific demethylase 5C
+O43525,KCNQ3,KCNQ3_HUMAN,Potassium voltage-gated channel subfamily KQT member 3
+Q75T13,PGAP1,PGAP1_HUMAN,GPI inositol-deacylase
+Q96FM1,PGAP3,PGAP3_HUMAN,Post-GPI attachment to proteins factor 3
+Q8WTW4,NPRL2,NPRL2_HUMAN,GATOR complex protein NPRL2
+Q9NPG4,PCDH12,PCD12_HUMAN,Protocadherin-12
+Q6T4R5,NHS,NHS_HUMAN,Nance-Horan syndrome protein
+Q99453,PHOX2B,PHX2B_HUMAN,Paired mesoderm homeobox protein 2B
+P06213,INSR,INSR_HUMAN,Insulin receptor
+Q9Y5U8,MPC1,MPC1_HUMAN,Mitochondrial pyruvate carrier 1
+Q8TEQ8,PIGO,PIGO_HUMAN,GPI ethanolamine phosphate transferase 3
+Q7LG56,RRM2B,RIR2B_HUMAN,Ribonucleoside-diphosphate reductase subunit M2 B
+Q9BX67,JAM3,JAM3_HUMAN,Junctional adhesion molecule C
+O75352,MPDU1,MPU1_HUMAN,Mannose-P-dolichol utilization defect 1 protein
+P00558,PGK1,PGK1_HUMAN,Phosphoglycerate kinase 1
+O60245,PCDH7,PCDH7_HUMAN,Protocadherin-7
+O00584,RNASET2,RNT2_HUMAN,Ribonuclease T2
+Q9BV20,MRI1,MTNA_HUMAN,Methylthioribose-1-phosphate isomerase
+P00374,DHFR,DYR_HUMAN,Dihydrofolate reductase
+Q96RP9,GFM1,EFGM_HUMAN,"Elongation factor G, mitochondrial"
+P32418,SLC8A1,NAC1_HUMAN,Sodium/calcium exchanger 1
+Q9H3L0,MMADHC,MMAD_HUMAN,"Methylmalonic aciduria and homocystinuria type D protein, mitochondrial"
+Q9ULU4,ZMYND8,PKCB1_HUMAN,Protein kinase C-binding protein 1
+P49821,NDUFV1,NDUV1_HUMAN,"NADH dehydrogenase [ubiquinone] flavoprotein 1, mitochondrial"
+Q9NQ66,PLCB1,PLCB1_HUMAN,"1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-1"
+P28328,PEX2,PEX2_HUMAN,Peroxisome biogenesis factor 2
+Q9BYX4,IFIH1,IFIH1_HUMAN,Interferon-induced helicase C domain-containing protein 1
+O00142,TK2,KITM_HUMAN,"Thymidine kinase 2, mitochondrial"
+Q9NVS9,PNPO,PNPO_HUMAN,Pyridoxine-5'-phosphate oxidase
+Q9NUD9,PIGV,PIGV_HUMAN,GPI mannosyltransferase 2
+Q9GZR5,ELOVL4,ELOV4_HUMAN,Elongation of very long chain fatty acids protein 4
+Q9NY47,CACNA2D2,CA2D2_HUMAN,Voltage-dependent calcium channel subunit alpha-2/delta-2
+O75746,SLC25A12,CMC1_HUMAN,Calcium-binding mitochondrial carrier protein Aralar1
+P51659,HSD17B4,DHB4_HUMAN,Peroxisomal multifunctional enzyme type 2
+Q92793,CREBBP,CBP_HUMAN,CREB-binding protein
+Q06787,FMR1,FMR1_HUMAN,Synaptic functional regulator FMR1
+Q9HCE0,EPG5,EPG5_HUMAN,Ectopic P granules protein 5 homolog
+Q8NHY3,GAS2L2,GA2L2_HUMAN,GAS2-like protein 2
+O94989,ARHGEF15,ARHGF_HUMAN,Rho guanine nucleotide exchange factor 15
+P09417,QDPR,DHPR_HUMAN,Dihydropteridine reductase
+O60610,DIAPH1,DIAP1_HUMAN,Protein diaphanous homolog 1
+Q9NQT5,EXOSC3,EXOS3_HUMAN,Exosome complex component RRP40
+P02792,FTL,FRIL_HUMAN,Ferritin light chain
+Q8NF50,DOCK8,DOCK8_HUMAN,Dedicator of cytokinesis protein 8
+Q14117,DPYS,DPYS_HUMAN,Dihydropyrimidinase
+Q92562,FIG4,FIG4_HUMAN,Polyphosphoinositide phosphatase
+Q9UKD1,GMEB2,GMEB2_HUMAN,Glucocorticoid modulatory element-binding protein 2
+Q15392,DHCR24,DHC24_HUMAN,Delta(24)-sterol reductase
+P02458,COL2A1,CO2A1_HUMAN,Collagen alpha-1(II) chain
+P42568,MLLT3,AF9_HUMAN,Protein AF-9
+P20930,FLG,FILA_HUMAN,Filaggrin
+O75140,DEPDC5,DEPD5_HUMAN,GATOR complex protein DEPDC5
+O95394,PGM3,AGM1_HUMAN,Phosphoacetylglucosamine mutase
+Q96MW5,COG8,COG8_HUMAN,Conserved oligomeric Golgi complex subunit 8
+O75503,CLN5,CLN5_HUMAN,Ceroid-lipofuscinosis neuronal protein 5
+Q9H3H5,DPAGT1,GPT_HUMAN,UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase
+P35573,AGL,GDE_HUMAN,Glycogen debranching enzyme
+O14521,SDHD,DHSD_HUMAN,"Succinate dehydrogenase [ubiquinone] cytochrome b small subunit, mitochondrial"
+P14854,COX6B1,CX6B1_HUMAN,Cytochrome c oxidase subunit 6B1
+Q15067,ACOX1,ACOX1_HUMAN,Peroxisomal acyl-coenzyme A oxidase 1
+Q9H078,CLPB,CLPB_HUMAN,Caseinolytic peptidase B protein homolog
+P02461,COL3A1,CO3A1_HUMAN,Collagen alpha-1(III) chain
+O14647,CHD2,CHD2_HUMAN,Chromodomain-helicase-DNA-binding protein 2
+O15247,CLIC2,CLIC2_HUMAN,Chloride intracellular channel protein 2
+P54289,CACNA2D1,CA2D1_HUMAN,Voltage-dependent calcium channel subunit alpha-2/delta-1
+Q9UBB4,ATXN10,ATX10_HUMAN,Ataxin-10
+Q9P2K1,CC2D2A,C2D2A_HUMAN,Coiled-coil and C2 domain-containing protein 2A
+P21333,FLNA,FLNA_HUMAN,Filamin-A
+Q13948,CUX1,CASP_HUMAN,Protein CASP
+Q04656,ATP7A,ATP7A_HUMAN,Copper-transporting ATPase 1
+Q14353,GAMT,GAMT_HUMAN,Guanidinoacetate N-methyltransferase
+Q9UBS5,GABBR1,GABR1_HUMAN,Gamma-aminobutyric acid type B receptor subunit 1
+P55075,FGF8,FGF8_HUMAN,Fibroblast growth factor 8
+P51608,MECP2,MECP2_HUMAN,Methyl-CpG-binding protein 2
+P05161,ISG15,ISG15_HUMAN,Ubiquitin-like protein ISG15
+Q5JTC6,AMER1,AMER1_HUMAN,APC membrane recruitment protein 1
+P81274,GPSM2,GPSM2_HUMAN,G-protein-signaling modulator 2
+Q14204,DYNC1H1,DYHC1_HUMAN,Cytoplasmic dynein 1 heavy chain 1
+Q969Y2,GTPBP3,GTPB3_HUMAN,"tRNA modification GTPase GTPBP3, mitochondrial"
+O43307,ARHGEF9,ARHG9_HUMAN,Rho guanine nucleotide exchange factor 9
+P26358,DNMT1,DNMT1_HUMAN,DNA (cytosine-5)-methyltransferase 1
+P28472,GABRB3,GBRB3_HUMAN,Gamma-aminobutyric acid receptor subunit beta-3
+P15104,GLUL,GLNA_HUMAN,Glutamine synthetase
+P54756,EPHA5,EPHA5_HUMAN,Ephrin type-A receptor 5
+Q9NVC6,MED17,MED17_HUMAN,Mediator of RNA polymerase II transcription subunit 17
+Q96PE3,INPP4A,INP4A_HUMAN,Inositol polyphosphate-4-phosphatase type I A
+P35557,GCK,HXK4_HUMAN,Hexokinase-4
+Q96DP5,MTFMT,FMT_HUMAN,"Methionyl-tRNA formyltransferase, mitochondrial"
+Q99259,GAD1,DCE1_HUMAN,Glutamate decarboxylase 1
+Q7Z429,GRINA,LFG1_HUMAN,Protein lifeguard 1
+Q9BU40,CHRDL1,CRDL1_HUMAN,Chordin-like protein 1
+Q9H6U8,ALG9,ALG9_HUMAN,"Alpha-1,2-mannosyltransferase ALG9"
+Q14738,PPP2R5D,2A5D_HUMAN,Serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit delta isoform
+P09471,GNAO1,GNAO_HUMAN,Guanine nucleotide-binding protein G(o) subunit alpha
+P98174,FGD1,FGD1_HUMAN,"FYVE, RhoGEF and PH domain-containing protein 1"
+Q92794,KAT6A,KAT6A_HUMAN,Histone acetyltransferase KAT6A
+Q494W8,CHRFAM7A,CRFM7_HUMAN,CHRNA7-FAM7A fusion protein
+Q4G176,ACSF3,ACSF3_HUMAN,"Malonate--CoA ligase ACSF3, mitochondrial"
+Q05901,CHRNB3,ACHB3_HUMAN,Neuronal acetylcholine receptor subunit beta-3
+P05067,APP,A4_HUMAN,Amyloid-beta precursor protein
+P50052,AGTR2,AGTR2_HUMAN,Type-2 angiotensin II receptor
+Q12882,DPYD,DPYD_HUMAN,Dihydropyrimidine dehydrogenase [NADP(+)]
+Q9HCC0,MCCC2,MCCB_HUMAN,"Methylcrotonoyl-CoA carboxylase beta chain, mitochondrial"
+Q9Y5P4,COL4A3BP,C43BP_HUMAN,Collagen type IV alpha-3-binding protein
+O14497,ARID1A,ARI1A_HUMAN,AT-rich interactive domain-containing protein 1A
+Q9NWW5,CLN6,CLN6_HUMAN,Ceroid-lipofuscinosis neuronal protein 6
+P21397,MAOA,AOFA_HUMAN,Amine oxidase [flavin-containing] A
+Q9P0K9,FRRS1L,FRS1L_HUMAN,DOMON domain-containing protein FRRS1L
+P56377,AP1S2,AP1S2_HUMAN,AP-1 complex subunit sigma-2
+Q9Y3R0,GRIP1,GRIP1_HUMAN,Glutamate receptor-interacting protein 1
+Q9Y5P6,GMPPB,GMPPB_HUMAN,Mannose-1-phosphate guanyltransferase beta
+Q9HCP0,CSNK1G1,KC1G1_HUMAN,Casein kinase I isoform gamma-1
+Q330K2,NDUFAF6,NDUF6_HUMAN,"NADH dehydrogenase (ubiquinone) complex I, assembly factor 6"
+Q8N4C6,NIN,NIN_HUMAN,Ninein
+P20929,NEB,NEBU_HUMAN,Nebulin
+Q9H8H0,NOL11,NOL11_HUMAN,Nucleolar protein 11
+Q7Z3G6,PRICKLE2,PRIC2_HUMAN,Prickle-like protein 2
+Q5JSZ5,PRRC2B,PRC2B_HUMAN,Protein PRRC2B
+Q7RTP0,NIPA1,NIPA1_HUMAN,Magnesium transporter NIPA1
+Q7Z3K3,POGZ,POGZ_HUMAN,Pogo transposable element with ZNF domain
+Q8N8Q9,NIPA2,NIPA2_HUMAN,Magnesium transporter NIPA2
+P12694,BCKDHA,ODBA_HUMAN,"2-oxoisovalerate dehydrogenase subunit alpha, mitochondrial"
+Q9ULI3,HEG1,HEG1_HUMAN,Protein HEG homolog 1
+P48051,KCNJ6,KCNJ6_HUMAN,G protein-activated inward rectifier potassium channel 2
+Q9UQK1,PPP1R3C,PPR3C_HUMAN,Protein phosphatase 1 regulatory subunit 3C
+Q9Y233,PDE10A,PDE10_HUMAN,"cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A"
+Q8NA29,MFSD2A,NLS1_HUMAN,Sodium-dependent lysophosphatidylcholine symporter 1
+Q96T60,PNKP,PNKP_HUMAN,Bifunctional polynucleotide phosphatase/kinase
+O43772,SLC25A20,MCAT_HUMAN,Mitochondrial carnitine/acylcarnitine carrier protein
+Q15233,NONO,NONO_HUMAN,Non-POU domain-containing octamer-binding protein
+P32243,OTX2,OTX2_HUMAN,Homeobox protein OTX2
+Q96PU5,NEDD4L,NED4L_HUMAN,E3 ubiquitin-protein ligase NEDD4-like
+O15239,NDUFA1,NDUA1_HUMAN,NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 1
+Q99714,HSD17B10,HCD2_HUMAN,3-hydroxyacyl-CoA dehydrogenase type-2
+Q9Y6N6,LAMC3,LAMC3_HUMAN,Laminin subunit gamma-3
+P06865,HEXA,HEXA_HUMAN,Beta-hexosaminidase subunit alpha
+Q8TDN2,KCNV2,KCNV2_HUMAN,Potassium voltage-gated channel subfamily V member 2
+Q9Y619,SLC25A15,ORNT1_HUMAN,Mitochondrial ornithine transporter 1
+O15031,PLXNB2,PLXB2_HUMAN,Plexin-B2
+Q12879,GRIN2A,NMDE1_HUMAN,"Glutamate receptor ionotropic, NMDA 2A"
+Q8N4T0,CPA6,CBPA6_HUMAN,Carboxypeptidase A6
+Q9Y2D4,EXOC6B,EXC6B_HUMAN,Exocyst complex component 6B
+Q14232,EIF2B1,EI2BA_HUMAN,Translation initiation factor eIF-2B subunit alpha
+Q9NP80,PNPLA8,PLPL8_HUMAN,Calcium-independent phospholipase A2-gamma
+P11166,SLC2A1,GTR1_HUMAN,"Solute carrier family 2, facilitated glucose transporter member 1"
+Q5JU85,IQSEC2,IQEC2_HUMAN,IQ motif and SEC7 domain-containing protein 2
+P00450,CP,CERU_HUMAN,Ceruloplasmin
+P15382,KCNE1,KCNE1_HUMAN,Potassium voltage-gated channel subfamily E member 1
+Q9NYQ7,CELSR3,CELR3_HUMAN,Cadherin EGF LAG seven-pass G-type receptor 3
+Q9NQX3,GPHN,GEPH_HUMAN,Gephyrin
+Q8NFD5,ARID1B,ARI1B_HUMAN,AT-rich interactive domain-containing protein 1B
+Q9P219,CCDC88C,DAPLE_HUMAN,Protein Daple
+P43003,SLC1A3,EAA1_HUMAN,Excitatory amino acid transporter 1
+Q16760,DGKD,DGKD_HUMAN,Diacylglycerol kinase delta
+Q8WXX7,AUTS2,AUTS2_HUMAN,Autism susceptibility gene 2 protein
+O95180,CACNA1H,CAC1H_HUMAN,Voltage-dependent T-type calcium channel subunit alpha-1H
+Q8WVX9,FAR1,FACR1_HUMAN,Fatty acyl-CoA reductase 1
+Q9NXL9,MCM9,MCM9_HUMAN,DNA helicase MCM9
+P35680,HNF1B,HNF1B_HUMAN,Hepatocyte nuclear factor 1-beta
+Q05639,EEF1A2,EF1A2_HUMAN,Elongation factor 1-alpha 2
+P32004,L1CAM,L1CAM_HUMAN,Neural cell adhesion molecule L1
+O75398,DEAF1,DEAF1_HUMAN,Deformed epidermal autoregulatory factor 1 homolog
+P40939,HADHA,ECHA_HUMAN,"Trifunctional enzyme subunit alpha, mitochondrial"
+P39880,CUX1,CUX1_HUMAN,Homeobox protein cut-like 1
+P43005,SLC1A1,EAA3_HUMAN,Excitatory amino acid transporter 3
+Q9NVF7,FBXO28,FBX28_HUMAN,F-box only protein 28
+Q8IVS8,GLYCTK,GLCTK_HUMAN,Glycerate kinase
+P30153,PPP2R1A,2AAA_HUMAN,Serine/threonine-protein phosphatase 2A 65 kDa regulatory subunit A alpha isoform
+P60709,ACTB,ACTB_HUMAN,"Actin, cytoplasmic 1"
+Q13627,DYRK1A,DYR1A_HUMAN,Dual specificity tyrosine-phosphorylation-regulated kinase 1A
+Q9Y6K1,DNMT3A,DNM3A_HUMAN,DNA (cytosine-5)-methyltransferase 3A
+P36969,GPX4,GPX4_HUMAN,Phospholipid hydroperoxide glutathione peroxidase
+P54098,POLG,DPOG1_HUMAN,DNA polymerase subunit gamma-1
+Q9H3Z4,DNAJC5,DNJC5_HUMAN,DnaJ homolog subfamily C member 5
+O43505,B4GAT1,B4GA1_HUMAN,"Beta-1,4-glucuronyltransferase 1"
+P30793,GCH1,GCH1_HUMAN,GTP cyclohydrolase 1
+Q96PZ2,FAM111A,F111A_HUMAN,Protein FAM111A
+Q04446,GBE1,GLGB_HUMAN,"1,4-alpha-glucan-branching enzyme"
+P17813,ENG,EGLN_HUMAN,Endoglin
+Q8TD30,GPT2,ALAT2_HUMAN,Alanine aminotransferase 2
+Q9UDR5,AASS,AASS_HUMAN,"Alpha-aminoadipic semialdehyde synthase, mitochondrial"
+Q9NZ56,FMN2,FMN2_HUMAN,Formin-2
+O14874,BCKDK,BCKD_HUMAN,"[3-methyl-2-oxobutanoate dehydrogenase [lipoamide]] kinase, mitochondrial"
+Q04771,ACVR1,ACVR1_HUMAN,Activin receptor type-1
+Q5T6L9,ERMARD,EMARD_HUMAN,Endoplasmic reticulum membrane-associated RNA degradation protein
+P15056,BRAF,BRAF_HUMAN,Serine/threonine-protein kinase B-raf
+P06850,CRH,CRF_HUMAN,Corticoliberin
+P31327,CPS1,CPSM_HUMAN,"Carbamoyl-phosphate synthase [ammonia], mitochondrial"
+Q14839,CHD4,CHD4_HUMAN,Chromodomain-helicase-DNA-binding protein 4
+Q8N157,AHI1,AHI1_HUMAN,Jouberin
+Q9UPQ8,DOLK,DOLK_HUMAN,Dolichol kinase
+O60832,DKC1,DKC1_HUMAN,H/ACA ribonucleoprotein complex subunit DKC1
+O15078,CEP290,CE290_HUMAN,Centrosomal protein of 290 kDa
+Q9NP73,ALG13,ALG13_HUMAN,Putative bifunctional UDP-N-acetylglucosamine transferase and deubiquitinase ALG13
+Q9BT22,ALG1,ALG1_HUMAN,Chitobiosyldiphosphodolichol beta-mannosyltransferase
+O00400,SLC33A1,ACATN_HUMAN,Acetyl-coenzyme A transporter 1
+Q16134,ETFDH,ETFD_HUMAN,"Electron transfer flavoprotein-ubiquinone oxidoreductase, mitochondrial"
+P43004,SLC1A2,EAA2_HUMAN,Excitatory amino acid transporter 2
+O95571,ETHE1,ETHE1_HUMAN,"Persulfide dioxygenase ETHE1, mitochondrial"
+Q13303,KCNAB2,KCAB2_HUMAN,Voltage-gated potassium channel subunit beta-2
+P16389,KCNA2,KCNA2_HUMAN,Potassium voltage-gated channel subfamily A member 2
+O00522,KRIT1,KRIT1_HUMAN,Krev interaction trapped protein 1
+Q9BVA0,KATNB1,KTNB1_HUMAN,Katanin p80 WD40 repeat-containing subunit B1
+O95259,KCNH1,KCNH1_HUMAN,Potassium voltage-gated channel subfamily H member 1
+O14513,NCKAP5,NCKP5_HUMAN,Nck-associated protein 5
+Q8TB37,NUBPL,NUBPL_HUMAN,Iron-sulfur protein NUBPL
+Q7Z406,MYH14,MYH14_HUMAN,Myosin-14
+Q9Y6V0,PCLO,PCLO_HUMAN,Protein piccolo
+P46531,NOTCH1,NOTC1_HUMAN,Neurogenic locus notch homolog protein 1
+P54886,ALDH18A1,P5CS_HUMAN,Delta-1-pyrroline-5-carboxylate synthase
+P00387,CYB5R3,NB5R3_HUMAN,NADH-cytochrome b5 reductase 3
+P62873,GNB1,GBB1_HUMAN,Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1
+O60936,NOL3,NOL3_HUMAN,Nucleolar protein 3
+Q5SWA1,PPP1R15B,PR15B_HUMAN,Protein phosphatase 1 regulatory subunit 15B
+O00459,PIK3R2,P85B_HUMAN,Phosphatidylinositol 3-kinase regulatory subunit beta
+P51160,PDE6C,PDE6C_HUMAN,"Cone cGMP-specific 3',5'-cyclic phosphodiesterase subunit alpha'"
+Q8TCS8,PNPT1,PNPT1_HUMAN,"Polyribonucleotide nucleotidyltransferase 1, mitochondrial"
+P18510,IL1RN,IL1RA_HUMAN,Interleukin-1 receptor antagonist protein
+Q14654,KCNJ11,KCJ11_HUMAN,ATP-sensitive inward rectifier potassium channel 11
+P22304,IDS,IDS_HUMAN,Iduronate 2-sulfatase
+P78527,PRKDC,PRKDC_HUMAN,DNA-dependent protein kinase catalytic subunit
+A4FU01,MTMR11,MTMRB_HUMAN,Myotubularin-related protein 11
+O95453,PARN,PARN_HUMAN,Poly(A)-specific ribonuclease PARN
+O60733,PLA2G6,PLPL9_HUMAN,85/88 kDa calcium-independent phospholipase A2
+Q9ULB1,NRXN1,NRX1A_HUMAN,Neurexin-1
+Q9NQV8,PRDM8,PRDM8_HUMAN,PR domain zinc finger protein 8
+Q96L73,NSD1,NSD1_HUMAN,"Histone-lysine N-methyltransferase, H3 lysine-36 and H4 lysine-20 specific"
+P04156,PRNP,PRIO_HUMAN,Major prion protein
+O60313,OPA1,OPA1_HUMAN,"Dynamin-like 120 kDa protein, mitochondrial"
+O95278,EPM2A,EPM2A_HUMAN,Laforin
+P23378,GLDC,GCSP_HUMAN,"Glycine dehydrogenase (decarboxylating), mitochondrial"
+O75444,MAF,MAF_HUMAN,Transcription factor Maf
+P00480,OTC,OTC_HUMAN,"Ornithine carbamoyltransferase, mitochondrial"
+P01189,POMC,COLI_HUMAN,Pro-opiomelanocortin
+Q96QS3,ARX,ARX_HUMAN,Homeobox protein ARX
+Q86WJ1,CHD1L,CHD1L_HUMAN,Chromodomain-helicase-DNA-binding protein 1-like
+P17787,CHRNB2,ACHB2_HUMAN,Neuronal acetylcholine receptor subunit beta-2
+P12111,COL6A3,CO6A3_HUMAN,Collagen alpha-3(VI) chain
+P55084,HADHB,ECHB_HUMAN,"Trifunctional enzyme subunit beta, mitochondrial"
+P42898,MTHFR,MTHR_HUMAN,Methylenetetrahydrofolate reductase
+Q9HBZ2,ARNT2,ARNT2_HUMAN,Aryl hydrocarbon receptor nuclear translocator 2
+Q86XL3,ANKLE2,ANKL2_HUMAN,Ankyrin repeat and LEM domain-containing protein 2
+O94985,CLSTN1,CSTN1_HUMAN,Calsyntenin-1
+Q13620,CUL4B,CUL4B_HUMAN,Cullin-4B
+O95970,LGI1,LGI1_HUMAN,Leucine-rich glioma-inactivated protein 1
+P63104,YWHAZ,1433Z_HUMAN,14-3-3 protein zeta/delta
+P23368,ME2,MAOM_HUMAN,"NAD-dependent malic enzyme, mitochondrial"
+Q12791,KCNMA1,KCMA1_HUMAN,Calcium-activated potassium channel subunit alpha-1
+Q96RQ3,MCCC1,MCCA_HUMAN,"Methylcrotonoyl-CoA carboxylase subunit alpha, mitochondrial"
+Q3V6T2,CCDC88A,GRDN_HUMAN,Girdin
+P04062,GBA,GLCM_HUMAN,Lysosomal acid glucosylceramidase
+Q9H9B1,EHMT1,EHMT1_HUMAN,Histone-lysine N-methyltransferase EHMT1
+Q93074,MED12,MED12_HUMAN,Mediator of RNA polymerase II transcription subunit 12
+Q14722,KCNAB1,KCAB1_HUMAN,Voltage-gated potassium channel subunit beta-1
+A9QM74,KPNA7,IMA8_HUMAN,Importin subunit alpha-8
+Q05193,DNM1,DYN1_HUMAN,Dynamin-1
+P21802,FGFR2,FGFR2_HUMAN,Fibroblast growth factor receptor 2
+Q9P0K1,ADAM22,ADA22_HUMAN,Disintegrin and metalloproteinase domain-containing protein 22
+Q16610,ECM1,ECM1_HUMAN,Extracellular matrix protein 1
+P61328,FGF12,FGF12_HUMAN,Fibroblast growth factor 12
+P23490,LOR,LORI_HUMAN,Loricrin
+O75061,DNAJC6,AUXI_HUMAN,Putative tyrosine-protein phosphatase auxilin
+Q9UPA5,BSN,BSN_HUMAN,Protein bassoon
+P32929,CTH,CGL_HUMAN,Cystathionine gamma-lyase
+Q5IJ48,CRB2,CRUM2_HUMAN,Protein crumbs homolog 2
+Q6ZUJ8,PIK3AP1,BCAP_HUMAN,Phosphoinositide 3-kinase adapter protein 1
+Q12873,CHD3,CHD3_HUMAN,Chromodomain-helicase-DNA-binding protein 3
+Q5JVL4,EFHC1,EFHC1_HUMAN,EF-hand domain-containing protein 1
+O95822,MLYCD,DCMC_HUMAN,"Malonyl-CoA decarboxylase, mitochondrial"
+Q8IZT6,ASPM,ASPM_HUMAN,Abnormal spindle-like microcephaly-associated protein
+Q6PJG6,BRAT1,BRAT1_HUMAN,BRCA1-associated ATM activator 1
+P05089,ARG1,ARGI1_HUMAN,Arginase-1
+Q9Y259,CHKB,CHKB_HUMAN,Choline/ethanolamine kinase
+O75899,GABBR2,GABR2_HUMAN,Gamma-aminobutyric acid type B receptor subunit 2
+Q96HY7,DHTKD1,DHTK1_HUMAN,"Probable 2-oxoglutarate dehydrogenase E1 component DHKTD1, mitochondrial"
+Q9H257,CARD9,CARD9_HUMAN,Caspase recruitment domain-containing protein 9
+Q9UKM7,MAN1B1,MA1B1_HUMAN,"Endoplasmic reticulum mannosyl-oligosaccharide 1,2-alpha-mannosidase"
+Q15049,MLC1,MLC1_HUMAN,Membrane protein MLC1
+Q9BXI2,SLC25A2,ORNT2_HUMAN,Mitochondrial ornithine transporter 2
+O60828,PQBP1,PQBP1_HUMAN,Polyglutamine-binding protein 1
+Q96MT3,PRICKLE1,PRIC1_HUMAN,Prickle-like protein 1
+P23352,ANOS1,KALM_HUMAN,Anosmin-1
+P78508,KCNJ10,KCJ10_HUMAN,ATP-sensitive inward rectifier potassium channel 10
+P48735,IDH2,IDHP_HUMAN,"Isocitrate dehydrogenase [NADP], mitochondrial"
+Q9BY32,ITPA,ITPA_HUMAN,Inosine triphosphate pyrophosphatase
+Q12809,KCNH2,KCNH2_HUMAN,Potassium voltage-gated channel subfamily H member 2
+P55316,FOXG1,FOXG1_HUMAN,Forkhead box protein G1
+O14908,GIPC1,GIPC1_HUMAN,PDZ domain-containing protein GIPC1
+Q92908,GATA6,GATA6_HUMAN,Transcription factor GATA-6
+Q92556,ELMO1,ELMO1_HUMAN,Engulfment and cell motility protein 1
+Q99707,MTR,METH_HUMAN,Methionine synthase
+O60762,DPM1,DPM1_HUMAN,Dolichol-phosphate mannosyltransferase subunit 1
+Q14721,KCNB1,KCNB1_HUMAN,Potassium voltage-gated channel subfamily B member 1
+Q6UWB1,IL27RA,I27RA_HUMAN,Interleukin-27 receptor subunit alpha
+P48547,KCNC1,KCNC1_HUMAN,Potassium voltage-gated channel subfamily C member 1
+P13807,GYS1,GYS1_HUMAN,"Glycogen [starch] synthase, muscle"
+O14713,ITGB1BP1,ITBP1_HUMAN,Integrin beta-1-binding protein 1
+Q6NVY1,HIBCH,HIBCH_HUMAN,"3-hydroxyisobutyryl-CoA hydrolase, mitochondrial"
+Q99608,NDN,NECD_HUMAN,Necdin
+Q8N442,GUF1,GUF1_HUMAN,"Translation factor GUF1, mitochondrial"
+Q04743,EMX2,EMX2_HUMAN,Homeobox protein EMX2
+Q9UJ55,MAGEL2,MAGL2_HUMAN,MAGE-like protein 2
+P62258,YWHAE,1433E_HUMAN,14-3-3 protein epsilon
+P30038,ALDH4A1,AL4A1_HUMAN,"Delta-1-pyrroline-5-carboxylate dehydrogenase, mitochondrial"
+Q9UHC6,CNTNAP2,CNTP2_HUMAN,Contactin-associated protein-like 2
+O75564,JRK,JERKY_HUMAN,Jerky protein homolog
+P0DP23,CALM1,CALM1_HUMAN,Calmodulin-1
+Q9UJA3,MCM8,MCM8_HUMAN,DNA helicase MCM8
+O95999,BCL10,BCL10_HUMAN,B-cell lymphoma/leukemia 10
+Q96HP0,DOCK6,DOCK6_HUMAN,Dedicator of cytokinesis protein 6
+Q86UL8,MAGI2,MAGI2_HUMAN,"Membrane-associated guanylate kinase, WW and PDZ domain-containing protein 2"
+Q15555,MAPRE2,MARE2_HUMAN,Microtubule-associated protein RP/EB family member 2
+Q92685,ALG3,ALG3_HUMAN,"Dol-P-Man:Man(5)GlcNAc(2)-PP-Dol alpha-1,3-mannosyltransferase"
+P45954,ACADSB,ACDSB_HUMAN,"Short/branched chain specific acyl-CoA dehydrogenase, mitochondrial"
+P49327,FASN,FAS_HUMAN,Fatty acid synthase
+Q5T442,GJC2,CXG2_HUMAN,Gap junction gamma-2 protein
+P23415,GLRA1,GLRA1_HUMAN,Glycine receptor subunit alpha-1
+P80404,ABAT,GABT_HUMAN,"4-aminobutyrate aminotransferase, mitochondrial"
+Q12904,AIMP1,AIMP1_HUMAN,Aminoacyl tRNA synthase complex-interacting multifunctional protein 1
+Q01668,CACNA1D,CAC1D_HUMAN,Voltage-dependent L-type calcium channel subunit alpha-1D
+Q96IL0,APOPT1,APOP1_HUMAN,"Apoptogenic protein 1, mitochondrial"
+P16219,ACADS,ACADS_HUMAN,"Short-chain specific acyl-CoA dehydrogenase, mitochondrial"
+P02462,COL4A1,CO4A1_HUMAN,Collagen alpha-1(IV) chain
+Q9HCK8,CHD8,CHD8_HUMAN,Chromodomain-helicase-DNA-binding protein 8
+Q96N67,DOCK7,DOCK7_HUMAN,Dedicator of cytokinesis protein 7
+P04080,CSTB,CYTB_HUMAN,Cystatin-B
+O00429,DNM1L,DNM1L_HUMAN,Dynamin-1-like protein
+P10070,GLI2,GLI2_HUMAN,Zinc finger protein GLI2
+O00555,CACNA1A,CAC1A_HUMAN,Voltage-dependent P/Q-type calcium channel subunit alpha-1A
+O94777,DPM2,DPM2_HUMAN,Dolichol phosphate-mannose biosynthesis regulatory protein
+O14764,GABRD,GBRD_HUMAN,Gamma-aminobutyric acid receptor subunit delta
+P54259,ATN1,ATN1_HUMAN,Atrophin-1
+Q5EE01,CENPW,CENPW_HUMAN,Centromere protein W
+Q9BZC1,CELF4,CELF4_HUMAN,CUGBP Elav-like family member 4
+Q9NTI2,ATP8A2,AT8A2_HUMAN,Phospholipid-transporting ATPase IB
+O43766,LIAS,LIAS_HUMAN,"Lipoyl synthase, mitochondrial"
+P55263,ADK,ADK_HUMAN,Adenosine kinase
+P09622,DLD,DLDH_HUMAN,"Dihydrolipoyl dehydrogenase, mitochondrial"
+Q9Y276,BCS1L,BCS1_HUMAN,Mitochondrial chaperone BCS1
+O43497,CACNA1G,CAC1G_HUMAN,Voltage-dependent T-type calcium channel subunit alpha-1G
+Q86YH6,PDSS2,DLP1_HUMAN,Decaprenyl-diphosphate synthase subunit 2
+P22466,GAL,GALA_HUMAN,Galanin peptides
+O94905,ERLIN2,ERLN2_HUMAN,Erlin-2
+Q8N475,FSTL5,FSTL5_HUMAN,Follistatin-related protein 5
+Q9UHN1,POLG2,DPOG2_HUMAN,"DNA polymerase subunit gamma-2, mitochondrial"
+P47870,GABRB2,GBRB2_HUMAN,Gamma-aminobutyric acid receptor subunit beta-2
+O43602,DCX,DCX_HUMAN,Neuronal migration protein doublecortin
+P14867,GABRA1,GBRA1_HUMAN,Gamma-aminobutyric acid receptor subunit alpha-1
+P49641,MAN2A2,MA2A2_HUMAN,Alpha-mannosidase 2x
+P53779,MAPK10,MK10_HUMAN,Mitogen-activated protein kinase 10
+P15529,CD46,MCP_HUMAN,Membrane cofactor protein
+P98164,LRP2,LRP2_HUMAN,Low-density lipoprotein receptor-related protein 2
+Q96H96,COQ2,COQ2_HUMAN,"4-hydroxybenzoate polyprenyltransferase, mitochondrial"
+Q9UBY8,CLN8,CLN8_HUMAN,Protein CLN8
+P18505,GABRB1,GBRB1_HUMAN,Gamma-aminobutyric acid receptor subunit beta-1
+Q9NXB0,MKS1,MKS1_HUMAN,Meckel syndrome type 1 protein
+Q71F56,MED13L,MD13L_HUMAN,Mediator of RNA polymerase II transcription subunit 13-like
+Q96G97,BSCL2,BSCL2_HUMAN,Seipin
+Q06413,MEF2C,MEF2C_HUMAN,Myocyte-specific enhancer factor 2C
+P31943,HNRNPH1,HNRH1_HUMAN,Heterogeneous nuclear ribonucleoprotein H
+Q13158,FADD,FADD_HUMAN,FAS-associated death domain protein
+Q96NI6,LRFN5,LRFN5_HUMAN,Leucine-rich repeat and fibronectin type-III domain-containing protein 5
+P54868,HMGCS2,HMCS2_HUMAN,"Hydroxymethylglutaryl-CoA synthase, mitochondrial"
+Q14003,KCNC3,KCNC3_HUMAN,Potassium voltage-gated channel subfamily C member 3
+Q969P0,IGSF8,IGSF8_HUMAN,Immunoglobulin superfamily member 8
+Q09470,KCNA1,KCNA1_HUMAN,Potassium voltage-gated channel subfamily A member 1
+Q15125,EBP,EBP_HUMAN,"3-beta-hydroxysteroid-Delta(8),Delta(7)-isomerase"
+P14136,GFAP,GFAP_HUMAN,Glial fibrillary acidic protein
+O43462,MBTPS2,MBTP2_HUMAN,Membrane-bound transcription factor site-2 protease
+P07339,CTSD,CATD_HUMAN,Cathepsin D
+Q13286,CLN3,CLN3_HUMAN,Battenin
+P15882,CHN1,CHIN_HUMAN,N-chimaerin
+Q71SY5,MED25,MED25_HUMAN,Mediator of RNA polymerase II transcription subunit 25
+Q9UGI6,KCNN3,KCNN3_HUMAN,Small conductance calcium-activated potassium channel protein 3
+P18507,GABRG2,GBRG2_HUMAN,Gamma-aminobutyric acid receptor subunit gamma-2
+P54803,GALC,GALC_HUMAN,Galactocerebrosidase
+P42858,HTT,HD_HUMAN,Huntingtin
+Q93063,EXT2,EXT2_HUMAN,Exostosin-2
+P52565,ARHGDIA,GDIR1_HUMAN,Rho GDP-dissociation inhibitor 1
+Q9P267,MBD5,MBD5_HUMAN,Methyl-CpG-binding domain protein 5
+O00165,HAX1,HAX1_HUMAN,HCLS1-associated protein X-1
+P22607,FGFR3,FGFR3_HUMAN,Fibroblast growth factor receptor 3
+P56524,HDAC4,HDAC4_HUMAN,Histone deacetylase 4
+O60741,HCN1,HCN1_HUMAN,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 1
+P10809,HSPD1,CH60_HUMAN,"60 kDa heat shock protein, mitochondrial"
+Q9C0B1,FTO,FTO_HUMAN,Alpha-ketoglutarate-dependent dioxygenase FTO
+P34998,CRHR1,CRFR1_HUMAN,Corticotropin-releasing factor receptor 1
+P32189,GK,GLPK_HUMAN,Glycerol kinase
+O95460,MATN4,MATN4_HUMAN,Matrilin-4

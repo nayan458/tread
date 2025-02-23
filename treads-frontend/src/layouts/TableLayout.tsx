@@ -1,0 +1,44 @@
+import Header from "@components/Header/Header";
+import Navbar from "@components/Navbar/Navbar";
+import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
+// import { Menu } from "lucide-react";
+
+const TableLayout: React.FC = () => {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(true);
+
+  return (
+    <div className="w-screen h-screen flex flex-col">
+      {/* Fixed Header */}
+      <Header />
+
+      <div className="flex flex-1 overflow-hidden pt-4">
+        {/* Mobile Navbar Toggle */}
+        <button
+          className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-700 text-white rounded"
+          onClick={() => setIsNavbarOpen(!isNavbarOpen)}
+        >
+          x
+        </button>
+
+        {/* Left Sidebar (Navigation) */}
+        <div
+          className={`absolute lg:relative z-40 lg:w-64 bg-background-secondary h-full overflow-y-auto transition-transform duration-300 ${
+            isNavbarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+          }`}
+        >
+          <Navbar />
+        </div>
+
+        {/* Main Content Area */}
+        <div className="flex-1 overflow-y-auto bg-background-tertiary scrollbar-hide px-4 sm:px-6 lg:px-8 ">
+        <div className="text-text-secondary py-8 sm:py-12"> 
+          <Outlet />
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TableLayout;

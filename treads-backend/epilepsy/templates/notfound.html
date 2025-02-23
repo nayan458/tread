@@ -1,0 +1,45 @@
+{% extends "base_copy.html" %}
+{% csrf_token %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+<link rel="stylesheet" href='/static/style.css' />
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+<center>
+
+  
+</center>
+
+<style>
+.big {
+  background-color: #E0E0E0;
+  color: black;
+  margin: 0 auto;
+  margin-top: 490px;
+  margin-bottom:10px;
+  padding: 20px;
+  height: 250px;
+  width:70%;
+  font-size:20px;
+	
+	font-weight:bold;
+	font-family: 'Zilla Slab', serif;
+}
+</style>
+
+<div class="big">
+
+ &#x2718;   Searched {{ search_id }} is: {{ gene_id }}
+ <center style='font-size:60px'>&#128269;</center>
+<center><br> Sorry {{ search_id }} Not Found!!! Please enter a valid {{ search_id }}. </center>
+   
+
+</div>
+
+
+{% endblock %}

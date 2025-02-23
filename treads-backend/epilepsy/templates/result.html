@@ -1,0 +1,384 @@
+{% extends "base_copy.html" %}
+{% csrf_token %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href='/static/style.css' />
+
+
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+
+
+
+<style>
+	.small {
+	  background-color: #E0E0E0;
+	  color: black;
+	  margin-top: 260px;
+	  margin-left: 15%;
+	  width: 300px;
+	  padding: 20px;
+	  font-family: 'Zilla Slab', serif !important;
+	  
+	}
+</style>
+
+<div class="small">
+
+	<h5 style='font-size: 18px'> &#10003;   Searched gene is: <b>{{ gene_id }}</b></h5>   
+
+</div>
+
+<style>
+	.big {
+	  background-color: #E0E0E0;
+	  color: black;
+	  margin-left: 5%;
+	  margin-top: 50px;
+	  margin-bottom:10px;
+	  padding: 20px;
+	  height: 750px;
+	  width: 90%;
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	}
+</style>
+
+
+<style>
+	.medium {
+	  background-color: white;
+	  color: black;
+	  margin: 30px;
+	  margin-top: 40px;
+	  margin-bottom:2%;
+	  padding: 20px;
+	  height: 90%;
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	  
+	}
+	
+	
+	.parent {
+   width: 720px !important;; 
+   height: 920px !important;;
+   font-family: 'Zilla Slab', serif !important;
+   font-size: 15px;
+}
+</style>
+
+
+
+<style>
+	.ScrollStyle
+	{
+		max-height: 500px;
+		overflow-y: scroll;
+	}
+</style>
+
+<style> 
+        table, th, td { 
+            border: 1px solid grey; 
+            border-collapse: collapse; 
+        } 
+          
+        th, td { 
+            padding: 15px; 
+        } 
+          
+        th { 
+            text-align: left; 
+        } 
+</style>
+
+<style>
+	.box1 {
+	  width: 220px;
+	  padding: 10px;
+	 
+	  margin: 0;
+	  position: absolute;
+	  left: 58%;
+	  top: 57%; 
+	}
+</style>
+
+<style>
+	.pred_table {
+	  font-family: 'Zilla Slab', serif !important;
+	  margin: 30px;
+	  margin-top: 60px;
+	  margin-bottom:100px;
+	  margin-left:100px;
+	  width:311px;
+	  border='1'
+	  padding: 20px;
+	  height: 256px;
+	}
+	
+	.bg_color{
+	background-color:#E0E0E0;
+	}
+	
+	
+</style>
+
+
+<div class="resultpage_big">
+	
+	{% if label == 'Non-Drug Target' %}
+		Searched Gene is <b>not a known Drug Target</b>
+	{% else %}
+		Searched Gene is a known <b>Drug Target</b>
+	{% endif %}
+	
+
+	<div class='resultpage_medium'>
+		<ul class="nav nav-tabs nav-justified bg_color" role="tablist"> 
+		   <li class="active"> 
+			   <a style="font-weight:bold" href="#tab-table1" data-toggle='tab'>Physico-<br>chemical<br> Properties</a>
+		   </li> 
+		   <li> <a style="font-weight:bold" href="#tab-2" data-toggle='tab'>Amino Acid<br> Frequency</a>
+		   </li> 
+		   <li><a style="font-weight:bold" href="#tab-3" data-toggle='tab'>Amino Acid <br>Properties</a>    <!-- categorized amino acids-->
+		   </li>
+		   <li> <a style="font-weight:bold" href="#tab-4" data-toggle='tab'>Post-Translational Modifications</a>
+		   </li>
+		   <li> <a style="font-weight:bold" href="#tab-5" data-toggle='tab'>Secondary<br> Structure</a>
+		   </li>
+		    {% if num %}
+				<li> <a style="font-weight:bold" href="#tab-6" data-toggle='tab'>Literature<br> Associated</a>
+				</li>
+			{% endif %}
+		    {% if length %}
+				<li> <a style="font-weight:bold" href="#tab-7" data-toggle='tab'>Related<br> AED</a>
+				</li>
+			{% endif %}
+		    {% if label == 'Non-Drug Target' %}
+				<li> <a style="font-weight:bold" href="#tab-8" data-toggle='tab'>Get<br> Predictions</a>
+				</li>
+			{% endif %}
+			<!-- The below block is being disabled since the String API call is not working as expected -->
+			<!-- <li> <a style="font-weight:bold" id='network' href="#tab-9" data-toggle='tab'>PPI Network</a> -->
+			<!-- </li> -->
+		</ul> 
+  
+		<div class="tab-content"> 
+			<div id="tab-table1" class="tab-pane active">  
+				<div class='ScrollStyle'>
+				
+					<table class="table table-bordered table-striped" id="geneTable" style="width:100%" >
+						<thead>
+							<tr>
+							  <th>Properties</th>
+							  <th>Values</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for key,value in table.iterrows %}
+								<tr>
+									<td>{{ key }}</td>
+									{% if 'Uniprot ID' == key %}
+										<td><a style="font-weight:bold" target="_blank" href='https://www.uniprot.org/uniprot/{{value.values.0}}'>{{ value.values.0 }}</a></td>
+									{% elif 'Gene Expression data (Bgee)' == key and value.values.0 is not none %}
+										<td><a style="font-weight:bold" target="_blank" href='https://bgee.org/?page=gene&gene_id={{value.values.0}}'>{{ value.values.0 }}</a></td>
+									{% elif 'Epilepsy Associated Pathways' == key %}
+										<td><a style="font-weight:bold" target="_blank" href='/epilepsy_associated_pathways/'>{{ value.values.0 }}</a></td>
+									{% else %}
+										<td>{{ value.values.0 }}</td>
+									{% endif %}
+								</tr>
+							{% endfor %}
+						</tbody>
+					 </table>
+				</div>
+			</div> 
+			
+			<div id="tab-2" class="tab-pane">  
+				<div style="width:70%; height:40%;">	
+				
+				{{ graph_div_1|safe }}
+				</div>		 
+			</div>
+			
+			<div id="tab-3" class="tab-pane">  
+						
+				{{ graph_div_2|safe }}
+						 
+			</div>
+			
+			<div id="tab-4" class="tab-pane" style="width:800px;">  
+						
+				{{ graph_div_3|safe }}
+						 
+			</div>
+			
+			<div id="tab-5" class="tab-pane">  
+						
+				{{ graph_div_4|safe }}
+						 
+			</div>
+			
+			{% if num %}
+			<div id="tab-6" class="tab-pane">  
+				<div class='ScrollStyle'>	
+					<span style='font-weight:bold'><br> {{ num }} records found. </span>
+					<ul>
+					{% for key,value in article_dict.items %}
+
+						<li> <a target="_blank" href='https://www.ncbi.nlm.nih.gov/pubmed/{{value}}'> {{ key }} :<b> {{ value}}</b></a>
+						</li>
+					
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+			{% endif %}
+			{% if length %}
+			<div id="tab-7" class="tab-pane">  
+			
+				
+					<span style="font-weight:bold"><br>Below are the Anti-Epileptic Drugs for the searched gene.</span><br><br>
+					<ul>
+					{% for key,value in aed_dict.items %}
+							
+						<li> <a target="_blank" href='https://www.drugbank.ca/drugs/{{value}}'> {{ key }} : <b>{{ value}}</b></a>
+						</li>
+				
+					{% endfor %}
+					</ul>			 
+			</div>
+			{% endif %}
+			
+			
+			
+			{% if label == 'Non-Drug Target' %}
+				
+				<div id="tab-8" class="tab-pane">  
+					
+					{{ graph_div_5|safe }}
+						 
+				</div>
+			
+			{% endif %}
+			<!-- Below mentioned tab is being disabled since currently the String API is not woking properly -->
+			<!-- <div id="tab-9" class="tab-pane">   -->
+				<!-- <center> -->
+					<!-- <div id="stringEmbedded" style="padding-top: 5%;"></div> -->
+				<!-- </center> -->
+				
+					 
+			<!-- </div> -->
+			
+			
+			
+			
+		</div>
+	
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- STRING API javascript -->
+<!-- <script type="text/javascript" src="http://string-db.org/javascript/combined_embedded_network_v2.0.2.js"></script> -->
+
+
+
+<!-- DataTable -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-flash-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/datatables.min.js"></script>
+
+
+
+<script>
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+	$('#geneTable').DataTable( {
+	    dom: 'Bfrtipl',
+    buttons: [
+         'copy','pdf','excel','csv'
+    ]
+} );
+
+// The below function is being disabled since the String API call is not working properly
+	// $('#network').click(function()
+	// {
+		// var gene="{{ gene_id }}";
+		
+		// var proteins = gene.split(' ');
+
+		/* the actual API query */
+
+		// getSTRING('https://string-db.org', {
+					// 'species':'9606',
+					// 'identifiers':proteins,
+					// 'network_flavor':'confidence', 
+					// 'caller_identity': 'www.awesome_app.org'
+		// });
+	// }
+	// );
+});
+
+
+
+
+</script>
+
+{% endblock %}
+
+
+
+<!--
+	===========================================================
+	A Quick Fix Used to make the String DB intregration working
+	===========================================================
+
+	Since the STRING API required the identifiers as arrays and not strings 
+	so it was throwing an error of .join value and to resolve that we have
+	passed the genes to the split function which in turn returns an array, 
+	and to sort the javascript function call i have declared the javascript
+	function as below using the click function for the id with tag network. 
+
+	$('#network').click(function()
+	{
+		alert('sometext for alert!!!');
+
+
+
+		/* the actual API query */
+		alert('its working dude?');
+
+		var gene="{{ gene_id }}";
+		console.log(typeof(gene));
+		console.log(gene);
+
+		var proteins = gene.split(' ');
+
+		console.log(typeof(proteins));
+		console.log(proteins);
+
+		var temp=getSTRING('https://string-db.org', {
+					'species':'9606',
+					'identifiers':proteins,
+					'network_flavor':'confidence', 
+					'caller_identity': 'www.awesome_app.org'
+		});
+		console.log(temp);
+	}
+	);
+-->

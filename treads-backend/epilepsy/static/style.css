@@ -1,0 +1,811 @@
+body {
+    background-image: url('BG_02.jpg');
+    background-size: cover;
+    color: white;
+    margin-top: 80px;
+}
+
+
+
+#mydiv
+{
+    font-size:20px;
+}
+#mydiv a
+{
+    font-size:100px;
+}
+
+
+
+
+
+.sortable tr {
+    cursor: pointer;
+}
+/* for the search bar */
+
+@import "compass/css3";
+
+/***********************
+ * Essential Structure *
+ ***********************/
+.flexsearch--wrapper {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	overflow: hidden;
+	background: transparent;
+	margin: 0;
+	position: static;
+}
+
+.flexsearch--form {
+	overflow: hidden;
+	position: relative;
+}
+
+.flexsearch--input-wrapper {
+	padding: 0 66px 0 0; /* Right padding for submit button width */
+	overflow: hidden;
+}
+
+.flexsearch--input {
+  width: 100%;
+}
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+.flexsearch {
+  padding: 250px 100px  100px 200px; /* Padding for other horizontal elements */
+}
+
+.flexsearch--input {
+  -webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+ 	height: 60px;
+  padding: 0 46px 0 10px;
+	border-color: #888;
+  border-radius: 35px; /* (height/2) + border-width */
+  border-style: solid;
+	border-width: 5px;
+  margin-top: 15px;
+  color: #333;
+  font-family: 'Zilla Slab', serif !important;
+	font-size: 26px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.flexsearch--submit {
+  position: absolute;
+	right: 65px;
+	top: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+  padding: 0;
+  border: none;
+	margin-top: 15px; /* margin-top + border-width */
+  margin-right: 5px; /* border-width */
+	background: transparent;
+  color: #888;
+  font-family: 'Zilla Slab', serif !important;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.flexsearch--input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+ 	color: #333;
+}
+
+.flexsearch--submit:hover {
+  color: #333;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+	color: #888;
+}
+
+input:-moz-placeholder {
+  color: #888
+}
+
+
+/****************
+ * Pretify demo *
+ ****************/
+.h1 {
+  float: left;
+  margin: 25px;
+  color: #333;
+  font-family: 'Zilla Slab', serif !important;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+}
+
+
+p {
+  color: black;
+  font-family: 'Zilla Slab', serif !important;
+}
+sp{
+	padding-left:3em;
+	font-family: 'Zilla Slab', serif !important;
+}
+
+/* for the line break in the lower header after ml predictions*/
+sp_clone{
+	padding-left:3em;
+	font-family: 'Zilla Slab', serif !important;
+}
+
+space {
+padding-left:20em
+}
+
+far{
+	padding-left:2000em
+}
+
+a { color:black  } /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none; color:black; font-family: 'Zilla Slab', serif !important;}
+a:hover { text-decoration: none; color:Turquoise; font-family: 'Zilla Slab', serif !important;}
+a:focus { text-decoration: none; color:Turquoise; font-family: 'Zilla Slab', serif !important;}
+a:active { text-decoration: none; color:Turquoise; font-family: 'Zilla Slab', serif !important;}
+
+img {
+	
+	max-width:100%;
+	height:auto;
+}
+
+
+
+header {
+    background-color: white;  /*   #696969 grey colour*/
+    /*background-color: white*/
+	/*background-image:url('BG_02.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;*/
+    position: absolute;  /*absolute;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+	flex-direction: column;
+	
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+	opacity: 1;
+	font-family: Zilla Slab, serif !important;
+	font-weight:bold;
+	
+}
+
+header * {
+    display: inline;
+}
+
+
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* for the scroll*/
+
+.scrollit {
+    overflow:scroll;
+    height:100px;
+}
+
+select{
+	border:0px;
+   outline:0px;
+}
+
+div.dropdown_container {
+	color:black;
+    width:100px;
+	
+	color:black;
+	font-weight:bold;
+	font-family: 'Zilla Slab', serif !important;
+}
+
+select.my_dropdown {
+    width:auto;
+	color:black;
+	cursor:pointer;
+	
+	color:black;
+	font-weight:bold;
+	font-family: 'Zilla Slab', serif !important;
+}
+
+.searchresult{
+background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
+/* +++++++++++++++++++++++++++ experimental data +++++++++++++++++++++++++ */
+
+.ScrollStyle{
+		max-height: 500px;
+		overflow-y: scroll;
+	}
+
+
+
+.website_name{
+	padding-top:40px;
+}
+
+
+
+/* div classes for homepage*/
+.homepage_big {
+  background-color: #E0E0E0;
+  color: black;
+  margin:0 auto;
+  margin-top:32vh;
+  
+  font-family: 'Zilla Slab', serif !important;
+  font-size: 1.5em;
+  padding: 30px;
+  width: 70%;
+}
+/* div classes for result page*/
+.resultpage_big {
+	  background-color: #E0E0E0;
+	  color: black;
+	  margin:0 auto;
+	  margin-top: 9vh;
+	  
+	  padding: 20px;
+	  height:780px;
+	  width: 70%;
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	}
+.resultpage_medium {
+	  background-color: white;
+	  color: black;
+	  margin: 30px;
+	  margin-top: 40px;
+	  margin-bottom:2%;
+	  padding: 20px;
+	  height: 90%;
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	  
+	}
+
+
+/* div classes for base page*/
+
+/* for lower header*/
+
+.fourth-level-menu
+{
+	position: absolute;
+	background: lightblue;
+	top: 140px;
+	left:110px;
+	width: auto;
+	list-style: none;
+	padding: 0;
+	padding-right: 10PX;
+	margin: 0;
+	display: none;
+}
+
+.fourth-level-menu > li
+{
+	
+	background: lightblue;
+}
+.fourth-level-menu > li:hover { background: #CCCCCC; }
+
+
+.third-level-menu
+{
+	position: absolute;
+	background: lightblue;
+	top: 0;
+	left:125px;
+	width: 110px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: none;
+}
+
+.third-level-menu > li
+{
+	
+	background: lightblue;
+}
+.third-level-menu > li:hover { background: #CCCCCC; }
+
+.second-level-menu
+{
+	position: absolute;
+	background: lightblue;
+	left: 10px;
+	width: 150%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: none;
+	text-align:left;
+	z-index:999;
+}
+
+.second-level-menu > li
+{
+	position: relative;
+	
+}
+
+
+.top-level-menu
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size:20px;
+}
+
+.top-level-menu > li
+{	
+	position: relative;
+	float: left;
+	margin: 0 0 0 35px;  /* this provides the left margin after every list item*/
+	background: lightblue;
+}
+
+
+.top-level-menu li:hover > ul
+{
+	/* On hover, display the next level's menu */
+	display: inline-block;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+
+	color: black;
+	text-decoration: none;
+	padding: 0 0 0 10px;
+
+	/* Make the link cover the entire list item-container */
+	display: block;
+	
+}
+.top-level-menu a:hover { color: white }
+#pp{
+color:purple;} /* for the purple color to the bars present before the nav bar elements*/
+
+
+
+
+
+
+
+
+.footer {
+	color: #707070;
+	background-color: white;
+	bottom: 0;
+	right:0;
+	left: 0;
+	height: 70%;
+	width:100%;
+	position:relative;        /*relative changed to relative from fixed also works if position is not there. colour for background #E0E0E0;*/
+	font-size: small;
+	margin-top: 200px;
+	margin-bottom:0;
+	padding: 43px;
+	padding-left:14em;
+}
+
+.footer-bottom {
+	color:black;
+	text-align:center;
+	margin-top:70px;
+	width:91%;
+	margin-left:-10px;
+	border-top: 1px solid #DDDDDD;
+	padding-top: 30px;
+	padding-bottom: 5px;
+	
+	border-color:black;
+}
+#parent {
+  display: flex;
+  font-weight:bold !important;
+  font-family: 'Zilla Slab', serif;
+  /* font-size:1.5vw; */
+  font-size:20px;
+  height:80%;
+}
+#parent special_font{
+	color: purple;                      //#CC0000;
+}
+
+#first {
+  color:black;
+
+
+}
+#second {
+  flex: 1;
+  color:black;
+  
+   padding-left:5em;
+  /* Grow to rest of container */
+
+}
+#third {
+  flex:2;
+  color:black;
+ 
+   padding-left:4%;
+ 
+}
+
+#third t {
+  font-size:20px;
+ 
+}
+	  
+   
+.fullscreen {
+	
+}   
+
+.mobile_screen {
+	display:none;
+}
+
+logo{
+	padding: 60px;
+	padding-top: 20px;
+}
+
+.mydiv
+{
+    font-size:1.8vw;    //2em;
+	color:black !important;
+	font-weight:bold;
+	font-family: 'Zilla Slab', serif;
+	display:flex;
+	flex-direction: row;
+	
+	padding:20px;
+	text-align:center;
+
+}
+
+.mydiv > div
+{
+  flex:1 1 auto;
+  
+  text-align:center;
+
+  margin:10px;  /* and that, will result in a 10px gap */
+}
+
+
+.mydiv,  v
+{
+    font-size:180%;
+	color: 	purple;						// Turquoise; // #CC0000; (red)		
+	font-weight:bold;
+}
+
+.lower_header {
+  align-self: flex-end; /* At the bottom of the parent */
+  text-align:center;
+  background-color:lightblue;
+  width:100%;
+  height:45%;
+  margin: 0 auto;
+  padding:0.5%;	
+  display: flex;
+  flex-wrap: wrap;
+  padding-left:15%;
+  padding-right:0%;
+  font-size:20%;
+}
+
+
+.mydiv fv
+{
+	font-size:10%;
+}
+
+
+.default_font{
+	font-size:75%;
+	color:black;
+	font-weight:bold;
+	font-family: Zilla Slab, serif !important;
+}
+
+.page_wrap{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+.img__wrap {
+  position: relative;
+ 
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align:center;
+  padding-top:25px;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*================================================  BREAKPOINTS ==================================================================*/
+
+
+
+/************************************** Second Breakpoint *****************************************************/
+
+@media screen and (max-width:980px){
+.footer {
+	color: #707070;
+	background-color: white;
+	bottom: 0;
+	left: 0;
+	height: 70%;
+	width:100%;
+	position: relative; /*changed to relative from fixed also works if position is not there. colour for background #E0E0E0;*/
+	font-size: small;
+	margin-top: 200px;
+	padding: 43px;
+	padding-left:10em;
+}
+   
+sp_clone{
+	
+	display:block;
+	
+}
+
+dsp{
+	padding-left:9%;
+}
+   
+.fullscreen {
+	display:none;
+}   
+
+.mobile_screen {
+	display:inline-block;
+}
+
+logo{
+	padding: 60px;
+	padding-top: 20px;
+}
+
+.mydiv
+{
+    font-size:1.8vw;    //2em;
+	color:black !important;
+	font-weight:bold;
+	font-family: 'Zilla Slab', serif;
+	display:flex;
+	flex-direction: row;
+	padding:20px;
+	text-align:center;
+
+}
+
+.website_name{
+	display:none;
+}
+
+.mydiv > div
+{
+  flex:1 1 auto;
+  
+  text-align:center;
+
+  margin:10px;  /* and that, will result in a 10px gap */
+}
+
+
+.mydiv,  v
+{
+    font-size:180%;
+	color: 	purple;						// Turquoise; // #CC0000; (red)		
+	font-weight:bold;
+}
+/* change the widht of the header for smaller screen */
+/*header{
+	height:10vh;
+}
+*/
+.lower_header {
+  align-self: flex-end; /* At the bottom of the parent */
+  text-align:center;
+  background-color:lightblue;
+  width:100%;
+  height:30%;
+  margin: 0 auto;
+  padding:0.5%;	
+  display: flex;
+  flex-wrap: wrap;
+  padding-left:15%;
+
+}
+
+.homepage_big{
+	margin-top:20vh;
+	width:auto;
+	
+}
+
+.resultpage_big{
+	width:98%;
+	margin-top: 5vh;
+}
+
+.resultpage_medium {
+	  margin: 5px;
+	  margin-top: 40px;
+	  margin-bottom:2%;
+	  padding: 10px;
+	  height: 90%;
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	  
+	}
+	
+	
+.ScrollStyle{
+		min-height: 500px;
+		overflow-y: scroll;
+	}
+	
+.mydiv fv
+{
+	font-size:10%;
+}
+
+
+.default_font{
+	font-size:75%;
+	color:black;
+	font-weight:bold;
+	font-family: Zilla Slab, serif !important;
+}
+
+.footer-bottom {
+	color:black;	
+    margin-top:2em;             /*70px;*/
+	display: block;
+	text-align:center;
+	padding-top: 2%;
+	border-top-width: 1px;
+	border-height:100%;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	border-color:black;
+}
+
+#parent {
+  display: flex;
+  flex-direction: column;
+  font-weight:bold !important;
+  font-family: 'Zilla Slab', serif;
+  /* font-size:1.5vw; */
+  font-size:20px;
+  height:80%;
+}
+#parent special_font{
+	color: purple;                      //#CC0000;
+}
+
+#first {
+  color:black;
+
+
+}
+
+#third {
+  flex:1;
+  color:black;
+  padding-left:5%;
+}
+
+#third t {
+  /* font-size:0.7em; */
+  font-size:20px;
+ 
+}
+	
+
+
+.page_wrap{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+.img__wrap {
+  position: relative;
+ 
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align:center;
+  padding-top:25px;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+}

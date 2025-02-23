@@ -1,0 +1,128 @@
+{% extends "base_copy.html" %}
+{% csrf_token %}
+{% block title %}Index{% endblock %}
+	
+	{% block head %}
+		<link rel="stylesheet" href='/static/style.css' />
+		  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+	{% endblock %}
+
+{% block content %}
+
+<style>
+	.small {
+	  background-color: white;
+	  color: black;
+	  margin: 110px;
+	  margin-top: 250px;
+	  width: 500px;
+	  padding: 20px;
+	  font-size: 15px;
+	  opacity: 0.9; 
+	}
+</style>
+<style>
+	.box1 {
+	  width: 220px;
+	  padding: 10px;
+	  
+	  margin: 0;
+	  position: absolute;
+	  left: 44%;
+	  top: 37%; 
+	}
+</style>
+
+
+
+<style>
+	.plot {
+	  width: 404px;
+	  padding: 0px;
+	  
+	 margin: 0;
+	  position: absolute;
+	  left: 58%;
+	  top: 30%; 
+	  bgcolor: gray;
+	}
+</style>
+
+
+
+
+
+
+<style>
+	.big {
+	  background-color: #E0E0E0;
+	  color: black;
+	 
+	  margin:0 auto;
+	  margin-top:60px;
+	  width:70%;
+	  padding: 20px;
+	  padding-left:40px;
+	  font-family: 'Zilla Slab', serif !important;
+	  font-size: 18px;
+	  
+	
+	  
+	}
+</style>
+
+
+<style>
+	.medium {
+	  margin: 30px;
+	  margin-top: 40px;
+	  margin-bottom:100px;
+	  margin-left:100px;
+	  width:311px;
+	  border='1'
+	  padding: 20px;
+	 
+	}
+</style>
+
+<style>
+	.far{
+	  padding-left:200em
+	}
+</style>
+
+
+
+<style> 
+        table, th, td { 
+            border: 1px solid grey; 
+            border-collapse: collapse; 
+        } 
+          
+        th, td { 
+            padding: 15px; 
+        } 
+          
+        th { 
+            text-align: left; 
+        } 
+</style>
+
+
+<div class="small">
+
+ <h5> &#10003;   Machine Learning Predictions for the gene {{ gene_id }}</h5>   
+
+</div>
+
+
+<div class='big'>
+	<div class='medium'>
+		{{ graph_div|safe }}
+	</div>
+	
+</div>
+
+{% endblock %}

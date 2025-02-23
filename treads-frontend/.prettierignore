@@ -1,0 +1,10 @@
+# Ignore node modules
+node_modules
+dist
+build
+
+# Ignore lock files
+*.lock
+
+# Ignore ESLint cache and other configurations
+.eslintcache

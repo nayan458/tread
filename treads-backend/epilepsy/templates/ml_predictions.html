@@ -1,0 +1,95 @@
+{% extends "base_copy.html" %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href='/static/style.css' />
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+
+
+
+<style>
+.topbox {
+  background-color: #E0E0E0;
+  color: black;
+  margin-top: 150px;
+  margin-left:100px;
+  width: 400px;
+  padding: 20px;
+  font-size: 15px;
+  font-family: 'Zilla Slab', serif !important;
+  opacity: 0.9; 
+}
+</style>
+
+<div class="topbox">
+
+ <h5> &#10003;   Statistics of Machine Learning Models</h5>   
+
+</div>
+
+<center>
+
+
+
+
+
+<style>
+	.big {
+	  background-color: white;
+	  color: black;
+	  margin: 300px;
+	  margin-top: 90px;
+	  margin-bottom:10px;
+	  padding: 20px;
+	  height: 550px;
+	  opacity: 1;
+	}
+</style>
+
+<style>
+	.small {
+	  background-color: gray;
+	  color: black;
+	  width:450px;
+	  position: absolute;
+	  left: 50%;
+	  top: 37%; 
+	  height: 400px;
+	  opacity: 0.9;
+	}
+	.small2 {
+	  background-color: gray;
+	  color: black;
+	  width:450px;
+	  position: absolute;
+	  left: 21%;
+	  top: 34%; 
+	  height: 400px;
+	  opacity: 0.9;
+	}
+</style>
+
+
+<div class='big'>
+
+
+	<div class='small'>
+		<img src='/static/Accuracies_of_ML_models_for_website.png' height=400px width=450px>
+		
+	</div>
+	<div class='small2'>
+		<img src='/static/Webiste_ML_Models_ROC_plot.png' height=400px width=450px>
+		
+	</div>
+</div>
+
+</center>
+
+{% endblock %}

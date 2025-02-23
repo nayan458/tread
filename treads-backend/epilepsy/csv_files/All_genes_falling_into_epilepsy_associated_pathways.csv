@@ -1,0 +1,322 @@
+uniprotid,genename,uniprotname,proteinname,pathway
+Q08828,ADCY1,ADCY1_HUMAN,Adenylate cyclase type 1,GABAergic_synapse
+Q9H598,SLC32A1,VIAAT_HUMAN,Vesicular inhibitory amino acid transporter,GABAergic_synapse
+P17252,PRKCA,KPCA_HUMAN,Protein kinase C alpha type,GABAergic_synapse
+O60296,TRAK2,TRAK2_HUMAN,Trafficking kinesin-binding protein 2,GABAergic_synapse
+Q96QD8,SLC38A2,S38A2_HUMAN,Sodium-coupled neutral amino acid transporter 2,GABAergic_synapse
+P48066,SLC6A11,S6A11_HUMAN,Sodium- and chloride-dependent GABA transporter 3,GABAergic_synapse
+P30531,SLC6A1,SC6A1_HUMAN,Sodium- and chloride-dependent GABA transporter 1,GABAergic_synapse
+Q9H2X9,SLC12A5,S12A5_HUMAN,Solute carrier family 12 member 5,GABAergic_synapse
+P12931,SRC,SRC_HUMAN,Proto-oncogene tyrosine-protein kinase Src,GABAergic_synapse
+Q99624,SLC38A3,S38A3_HUMAN,Sodium-coupled neutral amino acid transporter 3,GABAergic_synapse
+Q15111,PLCL1,PLCL1_HUMAN,Inactive phospholipase C-like protein 1,GABAergic_synapse
+Q9UBS5,GABBR1,GABR1_HUMAN,Gamma-aminobutyric acid type B receptor subunit 1,GABAergic_synapse
+Q9UI32,GLS2,GLSL_HUMAN,"Glutaminase liver isoform, mitochondrial",GABAergic_synapse
+P15104,GLUL,GLNA_HUMAN,Glutamine synthetase,GABAergic_synapse
+Q99259,GAD1,DCE1_HUMAN,Glutamate decarboxylase 1,GABAergic_synapse
+P48051,KCNJ6,KCNJ6_HUMAN,G protein-activated inward rectifier potassium channel 2,GABAergic_synapse
+P54257,HAP1,HAP1_HUMAN,Huntingtin-associated protein 1,GABAergic_synapse
+Q9NQX3,GPHN,GEPH_HUMAN,Gephyrin,GABAergic_synapse
+P46459,NSF,NSF_HUMAN,Vesicle-fusing ATPase,GABAergic_synapse
+P17612,PRKACA,KAPCA_HUMAN,cAMP-dependent protein kinase catalytic subunit alpha,GABAergic_synapse
+P80404,ABAT,GABT_HUMAN,"4-aminobutyrate aminotransferase, mitochondrial",GABAergic_synapse
+O95166,GABARAP,GBRAP_HUMAN,Gamma-aminobutyric acid receptor-associated protein,GABAergic_synapse
+O00555,CACNA1A,CAC1A_HUMAN,Voltage-dependent P/Q-type calcium channel subunit alpha-1A,GABAergic_synapse
+P14867,GABRA1,GBRA1_HUMAN,Gamma-aminobutyric acid receptor subunit alpha-1,GABAergic_synapse
+O14775,GNB5,GNB5_HUMAN,Guanine nucleotide-binding protein subunit beta-5,GABAergic_synapse
+Q06278,AOX1,AOXA_HUMAN,Aldehyde oxidase,JAK-STAT
+Q9Y243,AKT3,AKT3_HUMAN,RAC-gamma serine/threonine-protein kinase,JAK-STAT
+Q07889,SOS1,SOS1_HUMAN,Son of sevenless homolog 1,JAK-STAT
+Q06124,PTPN11,PTN11_HUMAN,Tyrosine-protein phosphatase non-receptor type 11,JAK-STAT
+P24385,CCND1,CCND1_HUMAN,G1/S-specific cyclin-D1,JAK-STAT
+P38936,CDKN1A,CDN1A_HUMAN,Cyclin-dependent kinase inhibitor 1,JAK-STAT
+Q07817,BCL2L1,B2CL1_HUMAN,Bcl-2-like protein 1,JAK-STAT
+Q00978,IRF9,IRF9_HUMAN,Interferon regulatory factor 9,JAK-STAT
+P11309,PIM1,PIM1_HUMAN,Serine/threonine-protein kinase pim-1,JAK-STAT
+P01112,HRAS,RASH_HUMAN,GTPase HRas,JAK-STAT
+P17706,PTPN2,PTN2_HUMAN,Tyrosine-protein phosphatase non-receptor type 2,JAK-STAT
+Q13007,IL24,IL24_HUMAN,Interleukin-24,JAK-STAT
+P42345,MTOR,MTOR_HUMAN,Serine/threonine-protein kinase mTOR,JAK-STAT
+P29350,PTPN6,PTN6_HUMAN,Tyrosine-protein phosphatase non-receptor type 6,JAK-STAT
+P42336,PIK3CA,PK3CA_HUMAN,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",JAK-STAT
+P04049,RAF1,RAF1_HUMAN,RAF proto-oncogene serine/threonine-protein kinase,JAK-STAT
+O75886,STAM2,STAM2_HUMAN,Signal transducing adapter molecule 2,JAK-STAT
+P42224,STAT1,STAT1_HUMAN,Signal transducer and activator of transcription 1-alpha/beta,JAK-STAT
+Q8WXH5,SOCS4,SOCS4_HUMAN,Suppressor of cytokine signaling 4,JAK-STAT
+Q9Y6X2,PIAS3,PIAS3_HUMAN,E3 SUMO-protein ligase PIAS3,JAK-STAT
+P01106,MYC,MYC_HUMAN,Myc proto-oncogene protein,JAK-STAT
+Q92793,CREBBP,CBP_HUMAN,CREB-binding protein,JAK-STAT
+Q9NSE2,CISH,CISH_HUMAN,Cytokine-inducible SH2-containing protein,JAK-STAT
+P26441,CNTF,CNTF_HUMAN,Ciliary neurotrophic factor,JAK-STAT
+P01133,EGF,EGF_HUMAN,Pro-epidermal growth factor,JAK-STAT
+P23458,JAK1,JAK1_HUMAN,Tyrosine-protein kinase JAK1,JAK-STAT
+P10415,BCL2,BCL2_HUMAN,Apoptosis regulator Bcl-2,JAK-STAT
+Q13642,FHL1,FHL1_HUMAN,Four and a half LIM domains protein 1,JAK-STAT
+Q969J5,IL22RA2,I22R2_HUMAN,Interleukin-22 receptor subunit alpha-2,JAK-STAT
+P14136,GFAP,GFAP_HUMAN,Glial fibrillary acidic protein,JAK-STAT
+P62993,GRB2,GRB2_HUMAN,Growth factor receptor-bound protein 2,JAK-STAT
+Q07820,MCL1,MCL1_HUMAN,Induced myeloid leukemia cell differentiation protein Mcl-1,JAK-STAT
+Q96B36,AKT1S1,AKTS1_HUMAN,Proline-rich AKT1 substrate 1,mTOR
+P08195,SLC3A2,4F2_HUMAN,4F2 cell-surface antigen heavy chain,mTOR
+Q9Y243,AKT3,AKT3_HUMAN,RAC-gamma serine/threonine-protein kinase,mTOR
+Q07889,SOS1,SOS1_HUMAN,Son of sevenless homolog 1,mTOR
+Q15831,STK11,STK11_HUMAN,Serine/threonine-protein kinase STK11,mTOR
+O75385,ULK1,ULK1_HUMAN,Serine/threonine-protein kinase ULK1,mTOR
+Q13131,PRKAA1,AAPK1_HUMAN,5'-AMP-activated protein kinase catalytic subunit alpha-1,mTOR
+Q5VZM2,RRAGB,RRAGB_HUMAN,Ras-related GTP-binding protein B,mTOR
+Q9C0K7,STRADB,STRAB_HUMAN,STE20-related kinase adapter protein beta,mTOR
+P23588,EIF4B,IF4B_HUMAN,Eukaryotic translation initiation factor 4B,mTOR
+P17252,PRKCA,KPCA_HUMAN,Protein kinase C alpha type,mTOR
+O15111,CHUK,IKKA_HUMAN,Inhibitor of nuclear factor kappa-B kinase subunit alpha,mTOR
+P60484,PTEN,PTEN_HUMAN,"Phosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN",mTOR
+P01112,HRAS,RASH_HUMAN,GTPase HRas,mTOR
+Q9NQL2,RRAGD,RRAGD_HUMAN,Ras-related GTP-binding protein D,mTOR
+Q15382,RHEB,RHEB_HUMAN,GTP-binding protein Rheb,mTOR
+P58004,SESN2,SESN2_HUMAN,Sestrin-2,mTOR
+Q9Y4R8,TELO2,TELO2_HUMAN,Telomere length regulation protein TEL2 homolog,mTOR
+P42345,MTOR,MTOR_HUMAN,Serine/threonine-protein kinase mTOR,mTOR
+Q13309,SKP2,SKP2_HUMAN,S-phase kinase-associated protein 2,mTOR
+P62753,RPS6,RS6_HUMAN,40S ribosomal protein S6,mTOR
+Q9UK32,RPS6KA6,KS6A6_HUMAN,Ribosomal protein S6 kinase alpha-6,mTOR
+P42336,PIK3CA,PK3CA_HUMAN,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",mTOR
+P04049,RAF1,RAF1_HUMAN,RAF proto-oncogene serine/threonine-protein kinase,mTOR
+Q8NBW4,SLC38A9,S38A9_HUMAN,Sodium-coupled neutral amino acid transporter 9,mTOR
+O00141,SGK1,SGK1_HUMAN,Serine/threonine-protein kinase Sgk1,mTOR
+Q9BPZ7,MAPKAP1,SIN1_HUMAN,Target of rapamycin complex 2 subunit MAPKAP1,mTOR
+Q8N122,RPTOR,RPTOR_HUMAN,Regulatory-associated protein of mTOR,mTOR
+P01375,TNF,TNFA_HUMAN,Tumor necrosis factor,mTOR
+P19438,TNFRSF1A,TNR1A_HUMAN,Tumor necrosis factor receptor superfamily member 1A,mTOR
+Q92574,TSC1,TSC1_HUMAN,Hamartin,mTOR
+O43156,TTI1,TTI1_HUMAN,TELO2-interacting protein 1 homolog,mTOR
+Q96LB4,ATP6V1G3,VATG3_HUMAN,V-type proton ATPase subunit G 3,mTOR
+P85299,PRR5,PRR5_HUMAN,Proline-rich protein 5,mTOR
+O15530,PDPK1,PDPK1_HUMAN,3-phosphoinositide-dependent protein kinase 1,mTOR
+Q8WTW4,NPRL2,NPRL2_HUMAN,GATOR complex protein NPRL2,mTOR
+P61586,RHOA,RHOA_HUMAN,Transforming protein RhoA,mTOR
+Q6R327,RICTOR,RICTR_HUMAN,Rapamycin-insensitive companion of mTOR,mTOR
+O14640,DVL1,DVL1_HUMAN,Segment polarity protein dishevelled homolog DVL-1,mTOR
+Q8TB45,DEPTOR,DPTOR_HUMAN,DEP domain-containing mTOR-interacting protein,mTOR
+Q9P278,FNIP2,FNIP2_HUMAN,Folliculin-interacting protein 2,mTOR
+P06730,EIF4E,IF4E_HUMAN,Eukaryotic translation initiation factor 4E,mTOR
+A6NHX0,CASTOR2,CAST2_HUMAN,Cytosolic arginine sensor for mTORC1 subunit 2,mTOR
+P05019,IGF1,IGF1_HUMAN,Insulin-like growth factor I,mTOR
+O75581,LRP6,LRP6_HUMAN,Low-density lipoprotein receptor-related protein 6,mTOR
+Q13541,EIF4EBP1,4EBP1_HUMAN,Eukaryotic translation initiation factor 4E-binding protein 1,mTOR
+Q9ULW2,FZD10,FZD10_HUMAN,Frizzled-10,mTOR
+O43504,LAMTOR5,LTOR5_HUMAN,Ragulator complex protein LAMTOR5,mTOR
+Q01650,SLC7A5,LAT1_HUMAN,Large neutral amino acids transporter small subunit 1,mTOR
+Q02750,MAP2K1,MP2K1_HUMAN,Dual specificity mitogen-activated protein kinase kinase 1,mTOR
+Q9NX09,DDIT4,DDIT4_HUMAN,DNA damage-inducible transcript 4 protein,mTOR
+Q13322,GRB10,GRB10_HUMAN,Growth factor receptor-bound protein 10,mTOR
+Q14693,LPIN1,LPIN1_HUMAN,Phosphatidate phosphatase LPIN1,mTOR
+Q9Y376,CAB39,CAB39_HUMAN,Calcium-binding protein 39,mTOR
+Q8WTX7,CASTOR1,CAST1_HUMAN,Cytosolic arginine sensor for mTORC1 subunit 1,mTOR
+Q9BVC4,MLST8,LST8_HUMAN,Target of rapamycin complex subunit LST8,mTOR
+P23443,RPS6KB1,KS6B1_HUMAN,Ribosomal protein S6 kinase beta-1,mTOR
+P35568,IRS1,IRS1_HUMAN,Insulin receptor substrate 1,mTOR
+P30622,CLIP1,CLIP1_HUMAN,CAP-Gly domain-containing linker protein 1,mTOR
+Q8NFG4,FLCN,FLCN_HUMAN,Folliculin,mTOR
+P28482,MAPK1,MK01_HUMAN,Mitogen-activated protein kinase 1,mTOR
+P08069,IGF1R,IGF1R_HUMAN,Insulin-like growth factor 1 receptor,mTOR
+Q9NXC5,MIOS,MIO_HUMAN,GATOR complex protein MIOS,mTOR
+P62993,GRB2,GRB2_HUMAN,Growth factor receptor-bound protein 2,mTOR
+O14920,IKBKB,IKKB_HUMAN,Inhibitor of nuclear factor kappa-B kinase subunit beta,mTOR
+Q8TD86,CALML6,CALL6_HUMAN,Calmodulin-like protein 6,Neutrotrophin
+Q9Y243,AKT3,AKT3_HUMAN,RAC-gamma serine/threonine-protein kinase,Neutrotrophin
+O14492,SH2B2,SH2B2_HUMAN,SH2B adapter protein 2,Neutrotrophin
+Q07889,SOS1,SOS1_HUMAN,Son of sevenless homolog 1,Neutrotrophin
+Q06124,PTPN11,PTN11_HUMAN,Tyrosine-protein phosphatase non-receptor type 11,Neutrotrophin
+Q96GC6,ZNF274,ZN274_HUMAN,Neurotrophin receptor-interacting factor homolog,Neutrotrophin
+P46108,CRK,CRK_HUMAN,Adapter molecule crk,Neutrotrophin
+P60953,CDC42,CDC42_HUMAN,Cell division control protein 42 homolog,Neutrotrophin
+Q92934,BAD,BAD_HUMAN,Bcl2-associated agonist of cell death,Neutrotrophin
+Q16620,NTRK2,NTRK2_HUMAN,BDNF/NT-3 growth factors receptor,Neutrotrophin
+Q16288,NTRK3,NTRK3_HUMAN,NT-3 growth factor receptor,Neutrotrophin
+Q9UKN5,PRDM4,PRDM4_HUMAN,PR domain zinc finger protein 4,Neutrotrophin
+Q13233,MAP3K1,M3K1_HUMAN,Mitogen-activated protein kinase kinase kinase 1,Neutrotrophin
+Q13163,MAP2K5,MP2K5_HUMAN,Dual specificity mitogen-activated protein kinase kinase 5,Neutrotrophin
+Q9Y5V3,MAGED1,MAGD1_HUMAN,Melanoma-associated antigen D1,Neutrotrophin
+Q05655,PRKCD,KPCD_HUMAN,Protein kinase C delta type,Neutrotrophin
+P25963,NFKBIA,IKBA_HUMAN,NF-kappa-B inhibitor alpha,Neutrotrophin
+P01112,HRAS,RASH_HUMAN,GTPase HRas,Neutrotrophin
+O14733,MAP2K7,MP2K7_HUMAN,Dual specificity mitogen-activated protein kinase kinase 7,Neutrotrophin
+P04637,TP53,P53_HUMAN,Cellular tumor antigen p53,Neutrotrophin
+P42679,MATK,MATK_HUMAN,Megakaryocyte-associated tyrosine-protein kinase,Neutrotrophin
+O43353,RIPK2,RIPK2_HUMAN,Receptor-interacting serine/threonine-protein kinase 2,Neutrotrophin
+Q13905,RAPGEF1,RPGF1_HUMAN,Rap guanine nucleotide exchange factor 1,Neutrotrophin
+P49768,PSEN1,PSN1_HUMAN,Presenilin-1,Neutrotrophin
+Q16539,MAPK14,MK14_HUMAN,Mitogen-activated protein kinase 14,Neutrotrophin
+P62834,RAP1A,RAP1A_HUMAN,Ras-related protein Rap-1A,Neutrotrophin
+P00519,ABL1,ABL1_HUMAN,Tyrosine-protein kinase ABL1,Neutrotrophin
+Q9UQQ2,SH2B3,SH2B3_HUMAN,SH2B adapter protein 3,Neutrotrophin
+Q99523,SORT1,SORT_HUMAN,Sortilin,Neutrotrophin
+P63000,RAC1,RAC1_HUMAN,Ras-related C3 botulinum toxin substrate 1,Neutrotrophin
+P04629,NTRK1,NTRK1_HUMAN,High affinity nerve growth factor receptor,Neutrotrophin
+P45983,MAPK8,MK08_HUMAN,Mitogen-activated protein kinase 8,Neutrotrophin
+Q9UK32,RPS6KA6,KS6A6_HUMAN,Ribosomal protein S6 kinase alpha-6,Neutrotrophin
+Q9Y4K3,TRAF6,TRAF6_HUMAN,TNF receptor-associated factor 6,Neutrotrophin
+P42336,PIK3CA,PK3CA_HUMAN,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",Neutrotrophin
+P19838,NFKB1,NFKB1_HUMAN,Nuclear factor NF-kappa-B p105 subunit,Neutrotrophin
+P04049,RAF1,RAF1_HUMAN,RAF proto-oncogene serine/threonine-protein kinase,Neutrotrophin
+Q13164,MAPK7,MK07_HUMAN,Mitogen-activated protein kinase 7,Neutrotrophin
+P98077,SHC2,SHC2_HUMAN,SHC-transforming protein 2,Neutrotrophin
+P48023,FASLG,TNFL6_HUMAN,Tumor necrosis factor ligand superfamily member 6,Neutrotrophin
+O75582,RPS6KA5,KS6A5_HUMAN,Ribosomal protein S6 kinase alpha-5,Neutrotrophin
+P08138,NGFR,TNR16_HUMAN,Tumor necrosis factor receptor superfamily member 16,Neutrotrophin
+P01138,NGF,NGF_HUMAN,Beta-nerve growth factor,Neutrotrophin
+P19174,PLCG1,PLCG1_HUMAN,"1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase gamma-1",Neutrotrophin
+O15530,PDPK1,PDPK1_HUMAN,3-phosphoinositide-dependent protein kinase 1,Neutrotrophin
+P61586,RHOA,RHOA_HUMAN,Transforming protein RhoA,Neutrotrophin
+P23560,BDNF,BDNF_HUMAN,Brain-derived neurotrophic factor,Neutrotrophin
+O43524,FOXO3,FOXO3_HUMAN,Forkhead box protein O3,Neutrotrophin
+Q9ULH0,KIDINS220,KDIS_HUMAN,Kinase D-interacting substrate of 220 kDa,Neutrotrophin
+Q02750,MAP2K1,MP2K1_HUMAN,Dual specificity mitogen-activated protein kinase kinase 1,Neutrotrophin
+Q8WU20,FRS2,FRS2_HUMAN,Fibroblast growth factor receptor substrate 2,Neutrotrophin
+P15056,BRAF,BRAF_HUMAN,Serine/threonine-protein kinase B-raf,Neutrotrophin
+P20783,NTF3,NTF3_HUMAN,Neurotrophin-3,Neutrotrophin
+P05412,JUN,JUN_HUMAN,Transcription factor AP-1,Neutrotrophin
+O15350,TP73,P73_HUMAN,Tumor protein p73,Neutrotrophin
+P34130,NTF4,NTF4_HUMAN,Neurotrophin-4,Neutrotrophin
+P10415,BCL2,BCL2_HUMAN,Apoptosis regulator Bcl-2,Neutrotrophin
+Q00994,BEX3,BEX3_HUMAN,Protein BEX3,Neutrotrophin
+P49137,MAPKAPK2,MAPK2_HUMAN,MAP kinase-activated protein kinase 2,Neutrotrophin
+Q16566,CAMK4,KCC4_HUMAN,Calcium/calmodulin-dependent protein kinase type IV,Neutrotrophin
+Q99759,MAP3K3,M3K3_HUMAN,Mitogen-activated protein kinase kinase kinase 3,Neutrotrophin
+P35568,IRS1,IRS1_HUMAN,Insulin receptor substrate 1,Neutrotrophin
+P62258,YWHAE,1433E_HUMAN,14-3-3 protein epsilon,Neutrotrophin
+Q99683,MAP3K5,M3K5_HUMAN,Mitogen-activated protein kinase kinase kinase 5,Neutrotrophin
+Q13480,GAB1,GAB1_HUMAN,GRB2-associated-binding protein 1,Neutrotrophin
+P28482,MAPK1,MK01_HUMAN,Mitogen-activated protein kinase 1,Neutrotrophin
+Q9Y616,IRAK3,IRAK3_HUMAN,Interleukin-1 receptor-associated kinase 3,Neutrotrophin
+Q07812,BAX,BAX_HUMAN,Apoptosis regulator BAX,Neutrotrophin
+P18848,ATF4,ATF4_HUMAN,Cyclic AMP-dependent transcription factor ATF-4,Neutrotrophin
+P52565,ARHGDIA,GDIR1_HUMAN,Rho GDP-dissociation inhibitor 1,Neutrotrophin
+P62993,GRB2,GRB2_HUMAN,Growth factor receptor-bound protein 2,Neutrotrophin
+O14920,IKBKB,IKKB_HUMAN,Inhibitor of nuclear factor kappa-B kinase subunit beta,Neutrotrophin
+P35555,FBN1,FBN1_HUMAN,Fibrillin-1,TGF-Beta Signaling
+O60565,GREM1,GREM1_HUMAN,Gremlin-1,TGF-Beta Signaling
+Q13145,BAMBI,BAMBI_HUMAN,BMP and activin membrane-bound inhibitor homolog,TGF-Beta Signaling
+P42772,CDKN2B,CDN2B_HUMAN,Cyclin-dependent kinase 4 inhibitor B,TGF-Beta Signaling
+O95405,ZFYVE9,ZFYV9_HUMAN,Zinc finger FYVE domain-containing protein 9,TGF-Beta Signaling
+P36897,TGFBR1,TGFR1_HUMAN,TGF-beta receptor type-1,TGF-Beta Signaling
+P01137,TGFB1,TGFB1_HUMAN,Transforming growth factor beta-1 proprotein,TGF-Beta Signaling
+P28749,RBL1,RBL1_HUMAN,Retinoblastoma-like protein 1,TGF-Beta Signaling
+P07996,THBS1,TSP1_HUMAN,Thrombospondin-1,TGF-Beta Signaling
+Q16671,AMHR2,AMHR2_HUMAN,Anti-Muellerian hormone type-2 receptor,TGF-Beta Signaling
+P36894,BMPR1A,BMR1A_HUMAN,Bone morphogenetic protein receptor type-1A,TGF-Beta Signaling
+P12643,BMP2,BMP2_HUMAN,Bone morphogenetic protein 2,TGF-Beta Signaling
+Q13873,BMPR2,BMPR2_HUMAN,Bone morphogenetic protein receptor type-2,TGF-Beta Signaling
+Q99697,PITX2,PITX2_HUMAN,Pituitary homeobox 2,TGF-Beta Signaling
+Q6NW40,RGMB,RGMB_HUMAN,RGM domain family member B,TGF-Beta Signaling
+P62877,RBX1,RBX1_HUMAN,E3 ubiquitin-protein ligase RBX1,TGF-Beta Signaling
+Q6ZVN8,HJV,RGMC_HUMAN,Hemojuvelin,TGF-Beta Signaling
+P41134,ID1,ID1_HUMAN,DNA-binding protein inhibitor ID-1,TGF-Beta Signaling
+P81172,HAMP,HEPC_HUMAN,Hepcidin,TGF-Beta Signaling
+P67775,PPP2CA,PP2AA_HUMAN,Serine/threonine-protein phosphatase 2A catalytic subunit alpha isoform,TGF-Beta Signaling
+Q6ZMP0,THSD4,THSD4_HUMAN,Thrombospondin type-1 domain-containing protein 4,TGF-Beta Signaling
+Q96S42,NODAL,NODAL_HUMAN,Nodal homolog,TGF-Beta Signaling
+Q13485,SMAD4,SMAD4_HUMAN,Mothers against decapentaplegic homolog 4,TGF-Beta Signaling
+Q13464,ROCK1,ROCK1_HUMAN,Rho-associated protein kinase 1,TGF-Beta Signaling
+Q15796,SMAD2,SMAD2_HUMAN,Mothers against decapentaplegic homolog 2,TGF-Beta Signaling
+P63208,SKP1,SKP1_HUMAN,S-phase kinase-associated protein 1,TGF-Beta Signaling
+P37173,TGFBR2,TGFR2_HUMAN,TGF-beta receptor type-2,TGF-Beta Signaling
+P01375,TNF,TNFA_HUMAN,Tumor necrosis factor,TGF-Beta Signaling
+Q15797,SMAD1,SMAD1_HUMAN,Mothers against decapentaplegic homolog 1,TGF-Beta Signaling
+O43541,SMAD6,SMAD6_HUMAN,Mothers against decapentaplegic homolog 6,TGF-Beta Signaling
+Q14186,TFDP1,TFDP1_HUMAN,Transcription factor Dp-1,TGF-Beta Signaling
+P01106,MYC,MYC_HUMAN,Myc proto-oncogene protein,TGF-Beta Signaling
+P61586,RHOA,RHOA_HUMAN,Transforming protein RhoA,TGF-Beta Signaling
+O75610,LEFTY1,LFTY1_HUMAN,Left-right determination factor 1,TGF-Beta Signaling
+Q8NER5,ACVR1C,ACV1C_HUMAN,Activin receptor type-1C,TGF-Beta Signaling
+Q92793,CREBBP,CBP_HUMAN,CREB-binding protein,TGF-Beta Signaling
+Q13253,NOG,NOGG_HUMAN,Noggin,TGF-Beta Signaling
+Q92859,NEO1,NEO1_HUMAN,Neogenin,TGF-Beta Signaling
+Q16254,E2F4,E2F4_HUMAN,Transcription factor E2F4,TGF-Beta Signaling
+P08476,INHBA,INHBA_HUMAN,Inhibin beta A chain,TGF-Beta Signaling
+Q04771,ACVR1,ACVR1_HUMAN,Activin receptor type-1,TGF-Beta Signaling
+P01579,IFNG,IFNG_HUMAN,Interferon gamma,TGF-Beta Signaling
+Q7Z4P5,GDF7,GDF7_HUMAN,Growth/differentiation factor 7,TGF-Beta Signaling
+P23443,RPS6KB1,KS6B1_HUMAN,Ribosomal protein S6 kinase beta-1,TGF-Beta Signaling
+P27037,ACVR2A,AVR2A_HUMAN,Activin receptor type-2A,TGF-Beta Signaling
+P19883,FST,FST_HUMAN,Follistatin,TGF-Beta Signaling
+P28482,MAPK1,MK01_HUMAN,Mitogen-activated protein kinase 1,TGF-Beta Signaling
+Q06828,FMOD,FMOD_HUMAN,Fibromodulin,TGF-Beta Signaling
+P07585,DCN,PGS2_HUMAN,Decorin,TGF-Beta Signaling
+P05305,EDN1,EDN1_HUMAN,Endothelin-1,TNF Signaling
+P13500,CCL2,CCL2_HUMAN,C-C motif chemokine 2,TNF Signaling
+Q9Y243,AKT3,AKT3_HUMAN,RAC-gamma serine/threonine-protein kinase,TNF Signaling
+Q14790,CASP8,CASP8_HUMAN,Caspase-8,TNF Signaling
+Q13077,TRAF1,TRAF1_HUMAN,TNF receptor-associated factor 1,TNF Signaling
+P01374,LTA,TNFB_HUMAN,Lymphotoxin-alpha,TNF Signaling
+O43915,VEGFD,VEGFD_HUMAN,Vascular endothelial growth factor D,TNF Signaling
+O95429,BAG4,BAG4_HUMAN,BAG family molecular chaperone regulator 4,TNF Signaling
+P04141,CSF2,CSF2_HUMAN,Granulocyte-macrophage colony-stimulating factor,TNF Signaling
+P13501,CCL5,CCL5_HUMAN,C-C motif chemokine 5,TNF Signaling
+P09603,CSF1,CSF1_HUMAN,Macrophage colony-stimulating factor 1,TNF Signaling
+Q13114,TRAF3,TRAF3_HUMAN,TNF receptor-associated factor 3,TNF Signaling
+Q12933,TRAF2,TRAF2_HUMAN,TNF receptor-associated factor 2,TNF Signaling
+P15018,LIF,LIF_HUMAN,Leukemia inhibitory factor,TNF Signaling
+P01574,IFNB1,IFNB_HUMAN,Interferon beta,TNF Signaling
+O15111,CHUK,IKKA_HUMAN,Inhibitor of nuclear factor kappa-B kinase subunit alpha,TNF Signaling
+P17275,JUNB,JUNB_HUMAN,Transcription factor jun-B,TNF Signaling
+P25963,NFKBIA,IKBA_HUMAN,NF-kappa-B inhibitor alpha,TNF Signaling
+O14733,MAP2K7,MP2K7_HUMAN,Dual specificity mitogen-activated protein kinase kinase 7,TNF Signaling
+P05362,ICAM1,ICAM1_HUMAN,Intercellular adhesion molecule 1,TNF Signaling
+Q5VWQ8,DAB2IP,DAB2P_HUMAN,Disabled homolog 2-interacting protein,TNF Signaling
+Q13546,RIPK1,RIPK1_HUMAN,Receptor-interacting serine/threonine-protein kinase 1,TNF Signaling
+O14543,SOCS3,SOCS3_HUMAN,Suppressor of cytokine signaling 3,TNF Signaling
+P78504,JAG1,JAG1_HUMAN,Protein jagged-1,TNF Signaling
+Q16539,MAPK14,MK14_HUMAN,Mitogen-activated protein kinase 14,TNF Signaling
+P45983,MAPK8,MK08_HUMAN,Mitogen-activated protein kinase 8,TNF Signaling
+P25445,FAS,TNR6_HUMAN,Tumor necrosis factor receptor superfamily member 6,TNF Signaling
+P20333,TNFRSF1B,TNR1B_HUMAN,Tumor necrosis factor receptor superfamily member 1B,TNF Signaling
+P42336,PIK3CA,PK3CA_HUMAN,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",TNF Signaling
+P19838,NFKB1,NFKB1_HUMAN,Nuclear factor NF-kappa-B p105 subunit,TNF Signaling
+Q99558,MAP3K14,M3K14_HUMAN,Mitogen-activated protein kinase kinase kinase 14,TNF Signaling
+P01375,TNF,TNFA_HUMAN,Tumor necrosis factor,TNF Signaling
+P21580,TNFAIP3,TNAP3_HUMAN,Tumor necrosis factor alpha-induced protein 3,TNF Signaling
+P19438,TNFRSF1A,TNR1A_HUMAN,Tumor necrosis factor receptor superfamily member 1A,TNF Signaling
+Q15750,TAB1,TAB1_HUMAN,TGF-beta-activated kinase 1 and MAP3K7-binding protein 1,TNF Signaling
+P19320,VCAM1,VCAM1_HUMAN,Vascular cell adhesion protein 1,TNF Signaling
+Q9HC29,NOD2,NOD2_HUMAN,Nucleotide-binding oligomerization domain-containing protein 2,TNF Signaling
+Q15628,TRADD,TRADD_HUMAN,Tumor necrosis factor receptor type 1-associated DEATH domain protein,TNF Signaling
+P78423,CX3CL1,X3CL1_HUMAN,Fractalkine,TNF Signaling
+P35354,PTGS2,PGH2_HUMAN,Prostaglandin G/H synthase 2,TNF Signaling
+Q96HS1,PGAM5,PGAM5_HUMAN,"Serine/threonine-protein phosphatase PGAM5, mitochondrial",TNF Signaling
+Q9Y572,RIPK3,RIPK3_HUMAN,Receptor-interacting serine/threonine-protein kinase 3,TNF Signaling
+Q13478,IL18R1,IL18R_HUMAN,Interleukin-18 receptor 1,TNF Signaling
+P41279,MAP3K8,M3K8_HUMAN,Mitogen-activated protein kinase kinase kinase 8,TNF Signaling
+P16581,SELE,LYAM2_HUMAN,E-selectin,TNF Signaling
+Q13490,BIRC2,BIRC2_HUMAN,Baculoviral IAP repeat-containing protein 2,TNF Signaling
+O15519,CFLAR,CFLAR_HUMAN,CASP8 and FADD-like apoptosis regulator,TNF Signaling
+P40933,IL15,IL15_HUMAN,Interleukin-15,TNF Signaling
+P01584,IL1B,IL1B_HUMAN,Interleukin-1 beta,TNF Signaling
+P50281,MMP14,MMP14_HUMAN,Matrix metalloproteinase-14,TNF Signaling
+P80162,CXCL6,CXCL6_HUMAN,C-X-C motif chemokine 6,TNF Signaling
+Q9Y6K9,IKBKG,NEMO_HUMAN,NF-kappa-B essential modulator,TNF Signaling
+Q02750,MAP2K1,MP2K1_HUMAN,Dual specificity mitogen-activated protein kinase kinase 1,TNF Signaling
+P46734,MAP2K3,MP2K3_HUMAN,Dual specificity mitogen-activated protein kinase kinase 3,TNF Signaling
+P17676,CEBPB,CEBPB_HUMAN,CCAAT/enhancer-binding protein beta,TNF Signaling
+P01100,FOS,FOS_HUMAN,Proto-oncogene c-Fos,TNF Signaling
+P20749,BCL3,BCL3_HUMAN,B-cell lymphoma 3 protein,TNF Signaling
+P78556,CCL20,CCL20_HUMAN,C-C motif chemokine 20,TNF Signaling
+Q92851,CASP10,CASPA_HUMAN,Caspase-10,TNF Signaling
+Q8NB16,MLKL,MLKL_HUMAN,Mixed lineage kinase domain-like protein,TNF Signaling
+P05412,JUN,JUN_HUMAN,Transcription factor AP-1,TNF Signaling
+P02778,CXCL10,CXL10_HUMAN,C-X-C motif chemokine 10,TNF Signaling
+P05231,IL6,IL6_HUMAN,Interleukin-6,TNF Signaling
+Q96J02,ITCH,ITCH_HUMAN,E3 ubiquitin-protein ligase Itchy homolog,TNF Signaling
+O75676,RPS6KA4,KS6A4_HUMAN,Ribosomal protein S6 kinase alpha-4,TNF Signaling
+Q99683,MAP3K5,M3K5_HUMAN,Mitogen-activated protein kinase kinase kinase 5,TNF Signaling
+P08254,MMP3,MMP3_HUMAN,Stromelysin-1,TNF Signaling
+O00429,DNM1L,DNM1L_HUMAN,Dynamin-1-like protein,TNF Signaling
+O43889,CREB3,CREB3_HUMAN,Cyclic AMP-responsive element-binding protein 3,TNF Signaling
+P28482,MAPK1,MK01_HUMAN,Mitogen-activated protein kinase 1,TNF Signaling
+P55210,CASP7,CASP7_HUMAN,Caspase-7,TNF Signaling
+P09341,CXCL1,GROA_HUMAN,Growth-regulated alpha protein,TNF Signaling
+O43318,MAP3K7,M3K7_HUMAN,Mitogen-activated protein kinase kinase kinase 7,TNF Signaling
+Q13158,FADD,FADD_HUMAN,FAS-associated death domain protein,TNF Signaling
+P10914,IRF1,IRF1_HUMAN,Interferon regulatory factor 1,TNF Signaling
+P14780,MMP9,MMP9_HUMAN,Matrix metalloproteinase-9,TNF Signaling
+P42574,CASP3,CASP3_HUMAN,Caspase-3,TNF Signaling
+O14920,IKBKB,IKKB_HUMAN,Inhibitor of nuclear factor kappa-B kinase subunit beta,TNF Signaling
