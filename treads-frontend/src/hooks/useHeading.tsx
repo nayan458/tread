@@ -1,7 +1,7 @@
 // hooks/useHeadings.ts
 import { useEffect } from 'react';
 import { useTOC } from '@context/TOCContext';
-import { TOCItem } from '@context/TOCContext';
+import { TOCItem } from 'src/types';
 
 export const useHeadings = () => {
   const { setTOCItems } = useTOC();

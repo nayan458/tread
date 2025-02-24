@@ -1,8 +1,8 @@
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTable';
 import React from 'react';
 import { AedData, LinkColumn } from 'src/types';
 import AedJsonData from '@db/Browse/AED.json';
 import Section from '@components/Sections/Section';
+import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
 
 const columns: LinkColumn[] = [
     { 
