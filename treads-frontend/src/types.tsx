@@ -10,6 +10,29 @@ export interface searchTermType {
     search_id: string
 }
 
+export interface graphData {
+    data: JSON[] | null
+}
+
+export interface SearchResultType {
+  gene_id?: string | null;
+  label?: string | null;
+  table?: {
+    Value: Record<string, string | number>
+  } | null;
+  aed_dict?: Record<string, string> | null;
+  num_articles?: number | null;
+  graphs?: {
+    graph_1?: graphData,
+    graph_2?: graphData,
+    graph_3?: graphData,
+    graph_4?: graphData,
+    graph_5?: graphData,
+  } | null;
+  epilepsy_associated_pathways?: string | null;
+  ml_predictions?: JSON | null;
+}
+
 export interface BaseColumn {
     id: string;
     label: string;

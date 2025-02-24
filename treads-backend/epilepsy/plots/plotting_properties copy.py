@@ -17,78 +17,6 @@ def frequency(data, column_names):
 
     return dt_info, ndt_info
 
-# def transform_data_for_recharts(ndt_info, dt_info, gene_name, df_gene):
-#     """
-#     Transform Django data format into Recharts-compatible format
-    
-#     Parameters:
-#     ndt_info (dict): Non-drug target information
-#     dt_info (dict): Drug target information
-#     gene_name (str): Name of the gene
-#     df_gene: DataFrame containing gene values
-    
-#     Returns:
-#     list: List of dictionaries in Recharts format
-#     """
-#     # Get all x values (they should be the same for all datasets)
-#     x_values = list(ndt_info.keys())
-    
-#     # Create the transformed data
-#     transformed_data = []
-    
-#     for i, x in enumerate(x_values):
-#         data_point = {
-#             'name': x,
-#             'nonDrugTarget': ndt_info[x],
-#             'drugTarget': dt_info[x],
-#             gene_name.lower(): df_gene.values[0][i]  # Assuming df_gene values align with x_values
-#         }
-#         transformed_data.append(data_point)
-    
-#     return transformed_data
-
-def transform_data_for_recharts(ndt_info, dt_info, gene_name, df_gene):
-    """
-    Transform Django data format into Recharts-compatible format
-    
-    Parameters:
-    ndt_info (dict): Non-drug target information
-    dt_info (dict): Drug target information
-    gene_name (str): Name of the gene
-    df_gene: DataFrame containing gene values
-    
-    Returns:
-    list: List of dictionaries in Recharts format with JSON-serializable values
-    """
-    # Get all x values (they should be the same for all datasets)
-    x_values = list(ndt_info.keys())
-    
-    # Create the transformed data
-    transformed_data = []
-    
-    for i, x in enumerate(x_values):
-        # Convert numpy types to native Python types
-        gene_value = df_gene.values[0][i]
-        if hasattr(gene_value, 'item'):  # Check if it's a numpy type
-            gene_value = gene_value.item()
-            
-        ndt_value = ndt_info[x]
-        if hasattr(ndt_value, 'item'):
-            ndt_value = ndt_value.item()
-            
-        dt_value = dt_info[x]
-        if hasattr(dt_value, 'item'):
-            dt_value = dt_value.item()
-            
-        data_point = {
-            'name': x,
-            'nonDrugTarget': ndt_value,
-            'drugTarget': dt_value,
-            gene_name.lower(): gene_value
-        }
-        transformed_data.append(data_point)
-    
-    return transformed_data
 
 # def amino_acid_frequency_plot(gene_name):
 #     data = pd.read_csv(CSV_FILE_PATH + '20268_reviewed_genes_with_protein_names_and_all_information.csv')
@@ -154,30 +82,88 @@ def amino_acid_frequency_plot(gene_name):
     dt_info, ndt_info = frequency(data, column_names)
     df_gene = data[data['Gene Name'] == gene_name][column_names]
 
-    transformed_data = transform_data_for_recharts(ndt_info, dt_info, gene_name, df_gene)
     # Create the plot data in a format that can be serialized to JSON
     plot_data = {
-        'data': transformed_data,
-        # [
-        #     {
-        #         'x': list(ndt_info.keys()),
-        #         'y': list(ndt_info.values()),
-        #         'name': 'Non-Drug Target',
-        #     },
-        #     {
-        #         'x': list(dt_info.keys()),
-        #         'y': list(dt_info.values()),
-        #         'name': 'Drug Target',
-        #     },
-        #     {
-        #         'x': list(dt_info.keys()),
-        #         'y': df_gene.values[0].tolist(),  # Convert numpy array to list
-        #         'name': gene_name,
-        #     }
-        # ],
+        'data': [
+            {
+                'type': 'bar',
+                'x': list(ndt_info.keys()),
+                'y': list(ndt_info.values()),
+                'name': 'Non-Drug Target',
+                'marker': {
+                    'color': 'seagreen',
+                    'opacity': 0.6
+                }
+            },
+            {
+                'type': 'bar',
+                'x': list(dt_info.keys()),
+                'y': list(dt_info.values()),
+                'name': 'Drug Target',
+                'marker': {
+                    'color': 'powderblue',
+                    'opacity': 0.6
+                }
+            },
+            {
+                'type': 'bar',
+                'x': list(dt_info.keys()),
+                'y': df_gene.values[0].tolist(),  # Convert numpy array to list
+                'name': gene_name,
+                'marker': {
+                    'color': 'lightseagreen'
+                }
+            }
+        ],
         'layout': {
-            'xaxis-title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
-            'yaxis-title': 'Frequency of each Amino Acid',
+            'width': 900,
+            'height': 500,
+            'autosize': False,
+            'hovermode': 'x',
+            'margin': {
+                't': 40
+            },
+            'xaxis': {
+                'title': {
+                    'text': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
+                    'font': {
+                        'family': 'Zilla Slab, serif',
+                        'size': 16,
+                        'color': 'black'
+                    }
+                },
+                'showticklabels': True,
+                'tickangle': 0,
+                'tickfont': {
+                    'family': 'Zilla Slab, serif',
+                    'size': 15,
+                    'color': 'black'
+                },
+                'exponentformat': 'e',
+                'showexponent': 'all'
+            },
+            'yaxis': {
+                'title': {
+                    'text': 'Frequency of each Amino Acid',
+                    'font': {
+                        'family': 'Zilla Slab, serif',
+                        'size': 15,
+                        'color': 'black'
+                    }
+                },
+                'showticklabels': True,
+                'tickangle': 0,
+                'tickfont': {
+                    'family': 'Zilla Slab, serif',
+                    'size': 15,
+                    'color': 'black'
+                },
+                'exponentformat': 'e',
+                'showexponent': 'all'
+            },
+            'font': {
+                'family': 'Zilla Slab, serif'
+            }
         }
     }
 
@@ -252,29 +238,87 @@ def post_translational_modification_frequency_plot(gene_name):
     df_gene = data[data['Gene Name'] == gene_name][column_names]
 
     # Create the plot data in a format that can be serialized to JSON
-    transformed_data = transform_data_for_recharts(ndt_info, dt_info, gene_name, df_gene)
     plot_data = {
-        'data': transformed_data,
-        # [
-        #     {
-        #         'x': list(ndt_info.keys()),
-        #         'y': list(ndt_info.values()),
-        #         'name': 'Non-Drug Target',
-        #     },
-        #     {
-        #         'x': list(dt_info.keys()),
-        #         'y': list(dt_info.values()),
-        #         'name': 'Drug Target',
-        #     },
-        #     {
-        #         'x': list(dt_info.keys()),
-        #         'y': df_gene.values[0].tolist(),  # Convert numpy array to list
-        #         'name': gene_name,
-        #     }
-        # ],
+        'data': [
+            {
+                'type': 'bar',
+                'x': list(ndt_info.keys()),
+                'y': list(ndt_info.values()),
+                'name': 'Non-Drug Target',
+                'marker': {
+                    'color': 'seagreen',
+                    'opacity': 0.6
+                }
+            },
+            {
+                'type': 'bar',
+                'x': list(dt_info.keys()),
+                'y': list(dt_info.values()),
+                'name': 'Drug Target',
+                'marker': {
+                    'color': 'powderblue',
+                    'opacity': 0.6
+                }
+            },
+            {
+                'type': 'bar',
+                'x': list(dt_info.keys()),
+                'y': df_gene.values[0].tolist(),  # Convert numpy array to list
+                'name': gene_name,
+                'marker': {
+                    'color': 'lightseagreen'
+                }
+            }
+        ],
         'layout': {
-            'xaxis-title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
-            'yaxis-title': 'Frequency of each Post-translational Modification',
+            'width': 900,
+            'height': 500,
+            'autosize': False,
+            'hovermode': 'x',
+            'margin': {
+                't': 40
+            },
+            'xaxis': {
+                'title': {
+                    'text': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
+                    'font': {
+                        'family': 'Zilla Slab, serif',
+                        'size': 16,
+                        'color': 'black'
+                    }
+                },
+                'showticklabels': True,
+                'tickangle': 0,
+                'tickfont': {
+                    'family': 'Zilla Slab, serif',
+                    'size': 15,
+                    'color': 'black'
+                },
+                'exponentformat': 'e',
+                'showexponent': 'all'
+            },
+            'yaxis': {
+                'title': {
+                    'text': 'Frequency of each Post-translational Modification',
+                    'font': {
+                        'family': 'Zilla Slab, serif',
+                        'size': 16,
+                        'color': 'black'
+                    }
+                },
+                'showticklabels': True,
+                'tickangle': 0,
+                'tickfont': {
+                    'family': 'Zilla Slab, serif',
+                    'size': 15,
+                    'color': 'black'
+                },
+                'exponentformat': 'e',
+                'showexponent': 'all'
+            },
+            'font': {
+                'family': 'Zilla Slab, serif'
+            }
         }
     }
 
@@ -346,30 +390,88 @@ def secondary_structure_frequency_plot(gene_name):
     dt_info, ndt_info = frequency(data, column_names)
     df_gene = data[data['Gene Name'] == gene_name][column_names]
 
-    transformed_data = transform_data_for_recharts(ndt_info, dt_info, gene_name, df_gene)
     # Create the plot data in a format that can be serialized to JSON
     plot_data = {
-        'data': transformed_data,
-        # [
-        #     {
-        #         'x': list(ndt_info.keys()),
-        #         'y': list(ndt_info.values()),
-        #         'name': 'Non-Drug Target',
-        #     },
-        #     {
-        #         'x': list(dt_info.keys()),
-        #         'y': list(dt_info.values()),
-        #         'name': 'Drug Target',
-        #     },
-        #     {
-        #         'x': list(dt_info.keys()),
-        #         'y': df_gene.values[0].tolist(),  # Convert numpy array to list
-        #         'name': gene_name,
-        #     }
-        # ],
+        'data': [
+            {
+                'type': 'bar',
+                'x': list(ndt_info.keys()),
+                'y': list(ndt_info.values()),
+                'name': 'Non-Drug Target',
+                'marker': {
+                    'color': 'seagreen',
+                    'opacity': 0.6
+                }
+            },
+            {
+                'type': 'bar',
+                'x': list(dt_info.keys()),
+                'y': list(dt_info.values()),
+                'name': 'Drug Target',
+                'marker': {
+                    'color': 'powderblue',
+                    'opacity': 0.6
+                }
+            },
+            {
+                'type': 'bar',
+                'x': list(dt_info.keys()),
+                'y': df_gene.values[0].tolist(),  # Convert numpy array to list
+                'name': gene_name,
+                'marker': {
+                    'color': 'lightseagreen'
+                }
+            }
+        ],
         'layout': {
-            'xaxis-title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
-            'yaxis-title': 'Frequency of each Secondary Structure',
+            'width': 900,
+            'height': 500,
+            'autosize': False,
+            'hovermode': 'x',
+            'margin': {
+                't': 40
+            },
+            'xaxis': {
+                'title': {
+                    'text': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
+                    'font': {
+                        'family': 'Zilla Slab, serif',
+                        'size': 16,
+                        'color': 'black'
+                    }
+                },
+                'showticklabels': True,
+                'tickangle': 0,
+                'tickfont': {
+                    'family': 'Zilla Slab, serif',
+                    'size': 15,
+                    'color': 'black'
+                },
+                'exponentformat': 'e',
+                'showexponent': 'all'
+            },
+            'yaxis': {
+                'title': {
+                    'text': 'Frequency of each Secondary Structure',
+                    'font': {
+                        'family': 'Zilla Slab, serif',
+                        'size': 16,
+                        'color': 'black'
+                    }
+                },
+                'showticklabels': True,
+                'tickangle': 0,
+                'tickfont': {
+                    'family': 'Zilla Slab, serif',
+                    'size': 15,
+                    'color': 'black'
+                },
+                'exponentformat': 'e',
+                'showexponent': 'all'
+            },
+            'font': {
+                'family': 'Zilla Slab, serif'
+            }
         }
     }
 
@@ -459,17 +561,47 @@ def ml_predictions_plot(predictions):
     plot_data = {
         "data": [
             {
+                "type": "bar",
+                "orientation": "horizontal",
                 "name": "Non-Drug Target",
+                "color": "seagreen",
+                "opacity": 0.6,
                 "values": non_drug_targets
             },
             {
+                "type": "bar",
+                "orientation": "horizontal",
                 "name": "Drug Target",
+                "color": "powderblue",
+                "opacity": 0.6,
                 "values": drug_targets
             }
         ],
         "layout": {
-            "xaxis-title": "Accuracy",
-            "yaxis-title": "null"
+            "width": 900,
+            "height": 500,
+            "margin": {
+                "left": 200,
+                "top": 40
+            },
+            "xaxis": {
+                "title": "Accuracy",
+                "font": {
+                    "family": "Zilla Slab, serif",
+                    "size": 15
+                }
+            },
+            "yaxis": {
+                "font": {
+                    "family": "Zilla Slab, serif",
+                    "size": 15
+                },
+                "automargin": True
+            },
+            "font": {
+                "family": "Zilla Slab, serif"
+            },
+            "showLegend": True
         }
     }
     
@@ -543,30 +675,60 @@ def categorized_amino_acid_frequency_plot(gene_name):
     column_names = ['Acidic', 'Basic', 'Aliphatic', 'Aromatic', 'Polar']
     dt_info, ndt_info = frequency(data, column_names)
     df_gene = data[data['Gene Name'] == gene_name][column_names]
-    transformed_data = transform_data_for_recharts(ndt_info, dt_info, gene_name, df_gene)
+    
     # Create the data structure
     plot_data = {
-        "data": transformed_data,
-        # "data": [
-        #     {
-        #         "name": "Non-Drug Target",
-        #         "x": list(ndt_info.keys()),
-        #         "y": list(ndt_info.values())
-        #     },
-        #     {
-        #         "name": "Drug Target",
-        #         "x": list(dt_info.keys()),
-        #         "y": list(dt_info.values())
-        #     },
-        #     {
-        #         "name": gene_name,
-        #         "x": list(dt_info.keys()),
-        #         "y": df_gene.values[0].tolist()
-        #     }
-        # ],
+        "data": [
+            {
+                "type": "bar",
+                "name": "Non-Drug Target",
+                "color": "seagreen",
+                "opacity": 0.6,
+                "x": list(ndt_info.keys()),
+                "y": list(ndt_info.values())
+            },
+            {
+                "type": "bar",
+                "name": "Drug Target",
+                "color": "powderblue",
+                "opacity": 0.6,
+                "x": list(dt_info.keys()),
+                "y": list(dt_info.values())
+            },
+            {
+                "type": "bar",
+                "name": gene_name,
+                "color": "lightseagreen",
+                "opacity": 1.0,
+                "x": list(dt_info.keys()),
+                "y": df_gene.values[0].tolist()
+            }
+        ],
         "layout": {
-            "xaxis-title": f"Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets",
-            "yaxis-title": "Frequency of each Category of Amino Acids",
+            "width": 900,
+            "height": 500,
+            "margin": {
+                "top": 40
+            },
+            "xaxis": {
+                "title": f"Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets",
+                "font": {
+                    "family": "Zilla Slab, serif",
+                    "size": 15
+                }
+            },
+            "yaxis": {
+                "title": "Frequency of each Category of Amino Acids",
+                "font": {
+                    "family": "Zilla Slab, serif",
+                    "size": 15
+                }
+            },
+            "font": {
+                "family": "Zilla Slab, serif"
+            },
+            "showLegend": True,
+            "hovermode": "x"
         }
     }
     
