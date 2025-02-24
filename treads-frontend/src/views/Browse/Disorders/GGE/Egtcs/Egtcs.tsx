@@ -1,8 +1,8 @@
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTable';
 import React from 'react';
 import { BaseColumn, EgtcsData } from 'src/types';
 import EgtcsJsonData from '@db/Browse/Disorders/GGE/EGTCS.json';
 import Section from '@components/Sections/Section';
+import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
 
 const columns: BaseColumn[] = [
     { id: 'uniprotID', label: 'Uniprot\u00a0ID', minWidth: 170 },

@@ -1,8 +1,8 @@
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTable';
 import React from 'react';
 import { BaseColumn, MtleshData } from 'src/types';
 import MtleJsonData from '@db/Browse/Disorders/MTLE.json'
 import Section from '@components/Sections/Section';
+import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
 
 const columns: BaseColumn[] = [
     { id: 'uniprotID', label: 'Uniprot\u00a0ID', minWidth: 170 },

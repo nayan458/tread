@@ -1,13 +1,6 @@
-// types.ts
-export interface TOCItem {
-    id: string;
-    title: string;
-    level: number;
-    element?: HTMLElement;
-  }
-  
 // context/TOCContext.tsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { TOCItem } from 'src/types';
 
 interface TOCContextType {
   tocItems: TOCItem[];

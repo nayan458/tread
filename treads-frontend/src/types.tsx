@@ -1,3 +1,15 @@
+export interface TOCItem {
+    id: string;
+    title: string;
+    level: number;
+    element?: HTMLElement;
+  }
+
+export interface searchTermType {
+    gene: string,
+    search_id: string
+}
+
 export interface BaseColumn {
     id: string;
     label: string;
@@ -133,5 +145,11 @@ export interface EAGData {
     proteinName: string;
     disorder: string;
     reference: string;
+    [key: string]: string | number;
+}
+
+export interface  ResultData {
+    columnOne: string;
+    columnTwo: string;
     [key: string]: string | number;
 }

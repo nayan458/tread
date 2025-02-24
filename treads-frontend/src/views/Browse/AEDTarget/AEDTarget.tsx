@@ -1,8 +1,8 @@
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTable';
 import React from 'react';
 import { AedTargetData, BaseColumn } from 'src/types';
 import AedTargetJsonData from '@db/Browse/AEDTarget.json';
 import Section from '@components/Sections/Section';
+import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
 
 const columns: BaseColumn[] = [
     { 

@@ -1,8 +1,8 @@
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTable';
 import React from 'react';
 import { BaseColumn, DsData } from 'src/types';
 import DSJsonData from '@db/Browse/Disorders/DS.json'
 import Section from '@components/Sections/Section';
+import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
 
 const columns: BaseColumn[] = [
     { id: 'uniprotID', label: 'Uniprot\u00a0ID', minWidth: 170 },

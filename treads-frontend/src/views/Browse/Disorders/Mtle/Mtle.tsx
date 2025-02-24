@@ -1,8 +1,8 @@
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTable';
 import React from 'react';
 import { BaseColumn, MtleData } from 'src/types';
 import Section from '@components/Sections/Section';
 import MtleJsonData from '@db/Browse/Disorders/MTLE.json';
+import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
 
 const columns: BaseColumn[] = [
     { 

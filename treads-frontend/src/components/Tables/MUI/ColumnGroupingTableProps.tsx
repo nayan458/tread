@@ -8,8 +8,8 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { AedData, AedTargetData, BaseColumn, LinkColumn, MirnasData, MtleData } from 'src/types';
-import Dropdown from './Dropdown';
 import SearchBar from '@components/Search/SearchBar';
+import Dropdown from './Dropdown';
 
 interface ColumnGroupingTableProps {
   columns: BaseColumn[] | LinkColumn[];
