@@ -27,12 +27,13 @@ export interface graphData {
 }
 
 export interface SearchResultType {
-  gene_id?: string | null;
+  gene_id?: string;
+  articles?: JSON;
   label?: string | null;
   table?: {
     Value: Record<string, string | number>
   } | null;
-  aed_dict?: Record<string, string> | null;
+  aed_dict?: JSON;
   num_articles?: number | null;
   graphs?: {
     graph_1?: graphData,

@@ -12,6 +12,13 @@ const Home: React.FC = () => {
       description: [
         "TREADS (Target REsearch for Anti-epileptic drugs using Data Science) is a tool developed to enable user to search for known Anti-epileptic drugs (AEDs) & AED targets, and even to identify if a given protein can be a potential drug target or not. Predicting potential drug targets can be helpful in accelerating drug discovery process. "
       ],
+      list: [
+        "For every human protein (reviewed), various properties such as physico-chemical & structural, post-translational modifications etc., have been either extracted or calculated.",
+        "This information is used to train different machine learning algorithms for druggable features.",
+        "In the test data, the number of known drug targets that are accurately predicted are analyzed.",
+        "Different statistical techniques are used to assess the performance of each machine learning algorithm."
+
+      ]
     },
     {
       topic: "About Epilepsy",
@@ -44,7 +51,7 @@ const Home: React.FC = () => {
       <main className="max-w-screen-md lg:max-w-screen-lg mx-auto scrollbar-hide">
         {
           content.map((section, index) => (
-            <Section key={index} topic={section.topic} description={section.description} />
+            <Section key={index} topic={section.topic} description={section.description} list={section.list}/>
           ))
         }
       </main>
