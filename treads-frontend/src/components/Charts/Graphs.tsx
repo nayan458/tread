@@ -11,10 +11,12 @@ import {
 } from 'recharts';
 
 interface GraphProp {
-  data: JSON[] 
+  data: JSON[],
+  xaxis_title: string,
+  yaxis_title: string
 }
 
-const Graphs: React.FC<GraphProp> = ({data}) => {
+const Graphs: React.FC<GraphProp> = ({data, xaxis_title, yaxis_title}) => {
 
   return (
     data &&
@@ -33,14 +35,14 @@ const Graphs: React.FC<GraphProp> = ({data}) => {
           <XAxis 
             dataKey="name"
             label={{ 
-              value: 'Amino Acids',
+              value: {xaxis_title},
               position: 'bottom',
-              offset: 0
+              offset: 2
             }}
           />
           <YAxis
             label={{ 
-              value: 'Frequency',
+              value: {yaxis_title},
               angle: -90,
               position: 'insideLeft'
             }}

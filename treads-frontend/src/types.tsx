@@ -5,13 +5,25 @@ export interface TOCItem {
     element?: HTMLElement;
   }
 
+export enum search_id {
+    'UniprotID',
+    'GeneName',
+    'EnsemblID',
+    'Sequence',
+    ''
+}
+
 export interface searchTermType {
     gene: string,
     search_id: string
 }
 
 export interface graphData {
-    data: JSON[] | null
+    data: JSON[] | null,
+    layout: {
+        xaxis_title: string,
+        yaxis_title: string,
+    }
 }
 
 export interface SearchResultType {

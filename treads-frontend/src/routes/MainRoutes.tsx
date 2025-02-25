@@ -1,6 +1,7 @@
 import ExampleComponent from "@components/research/Example";
 import GraphsLayout from "@components/research/GraphLayout";
 import { SearchProvider } from "@context/SearchContext";
+// import { SearchProvider } from "@context/SearchContext";
 import { TOCProvider } from "@context/TOCContext";
 import BaseLayout from "@layouts/BaseLayout";
 import TableLayout from "@layouts/TableLayout";
@@ -15,7 +16,9 @@ import { Navigate, Outlet } from "react-router-dom";
 const MainRoutes = {
   path: '/',
   element: <>
-    <Outlet/>
+    <SearchProvider>
+      <Outlet/>
+    </SearchProvider>
   </>
   ,
   children: [
@@ -57,9 +60,9 @@ const MainRoutes = {
     {
       path: '/',
       element: 
-        <SearchProvider>
-          <TableLayout/>
-        </SearchProvider>,
+        // <SearchProvider>
+          <TableLayout/>,
+        // </SearchProvider>,
       children: [
         {
           path: '/search',

@@ -1,4 +1,4 @@
-import Graphs from "@components/research/Graphs";
+import Graphs from "@components/Charts/Graphs";
 import Section from "@components/Sections/Section";
 import Load from "@components/Spinner/RiseLoader";
 import StickyHeaderTable from "@components/Tables/StickyHeader/StickyHeaderTable";
@@ -31,22 +31,22 @@ const Result: React.FC = () => {
         <StickyHeaderTable data={searchResult.table.Value} />
       )}
       
-      {
-        searchResult.graphs && Object.entries(searchResult.graphs).map(([key, value]) => {
-            return(
-              <Grid size={{ xs: 12, md: 6 }} key={key}>
-                <Card>
-                  <CardHeader/>
-                  <CardContent>
-                    {value.data && <Graphs data={value.data}/>}
-                  </CardContent>
-                </Card>
-              </Grid>
-            )
-            
-        })
-      }
-
+      <Grid container spacing={3}>
+        {
+          searchResult.graphs && Object.entries(searchResult.graphs).map(([key, value]) => {
+              return(
+                <Grid size={{ xs: 12, md: 6 }} key={key}>
+                  <Card>
+                    <CardHeader/>
+                    <CardContent>
+                      {value.data && <Graphs data={value.data} xaxis_title={value.layout["xaxis_title"]} yaxis_title={value.layout["yaxis_title"]}/>}
+                    </CardContent>
+                  </Card>
+                </Grid>
+              )  
+          })
+        }
+      </Grid>
     </>
   );
 };

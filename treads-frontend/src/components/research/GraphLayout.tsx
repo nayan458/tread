@@ -6,7 +6,7 @@ import {
   Typography,
   Grid,
 } from "@mui/material";
-import Graphs from "./Graphs";
+// import Graphs from "../Charts/Graphs";
 import { AedData, LinkColumn } from "src/types";
 import AedJsonData from '@db/Browse/AED.json';
 import { AxiosResponse } from "axios";
@@ -96,7 +96,7 @@ const GraphsLayout: React.FC = () => {
             <Card>
               <CardHeader title={<Typography variant="h6">Graph {index}</Typography>} />
               <CardContent>
-                <Graphs />
+                {/* <Graphs /> */}
               </CardContent>
             </Card>
           </Grid>

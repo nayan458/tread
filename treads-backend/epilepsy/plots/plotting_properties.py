@@ -176,8 +176,8 @@ def amino_acid_frequency_plot(gene_name):
         #     }
         # ],
         'layout': {
-            'xaxis-title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
-            'yaxis-title': 'Frequency of each Amino Acid',
+            'xaxis_title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
+            'yaxis_title': 'Frequency of each Amino Acid',
         }
     }
 
@@ -273,8 +273,8 @@ def post_translational_modification_frequency_plot(gene_name):
         #     }
         # ],
         'layout': {
-            'xaxis-title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
-            'yaxis-title': 'Frequency of each Post-translational Modification',
+            'xaxis_title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
+            'yaxis_title': 'Frequency of each Post-translational Modification',
         }
     }
 
@@ -368,8 +368,8 @@ def secondary_structure_frequency_plot(gene_name):
         #     }
         # ],
         'layout': {
-            'xaxis-title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
-            'yaxis-title': 'Frequency of each Secondary Structure',
+            'xaxis_title': f'Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets',
+            'yaxis_title': 'Frequency of each Secondary Structure',
         }
     }
 
@@ -468,8 +468,8 @@ def ml_predictions_plot(predictions):
             }
         ],
         "layout": {
-            "xaxis-title": "Accuracy",
-            "yaxis-title": "null"
+            "xaxis_title": "Accuracy",
+            "yaxis_title": "null"
         }
     }
     
@@ -565,8 +565,8 @@ def categorized_amino_acid_frequency_plot(gene_name):
         #     }
         # ],
         "layout": {
-            "xaxis-title": f"Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets",
-            "yaxis-title": "Frequency of each Category of Amino Acids",
+            "xaxis_title": f"Frequency of Gene {gene_name} compared to average frequency of Drug Targets and Non-Drug Targets",
+            "yaxis_title": "Frequency of each Category of Amino Acids",
         }
     }
     
