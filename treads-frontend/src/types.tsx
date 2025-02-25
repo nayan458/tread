@@ -5,9 +5,44 @@ export interface TOCItem {
     element?: HTMLElement;
   }
 
+export enum search_id {
+    'UniprotID',
+    'GeneName',
+    'EnsemblID',
+    'Sequence',
+    ''
+}
+
 export interface searchTermType {
     gene: string,
     search_id: string
+}
+
+export interface graphData {
+    data: JSON[] | null,
+    layout: {
+        xaxis_title: string,
+        yaxis_title: string,
+    }
+}
+
+export interface SearchResultType {
+  gene_id?: string | null;
+  label?: string | null;
+  table?: {
+    Value: Record<string, string | number>
+  } | null;
+  aed_dict?: Record<string, string> | null;
+  num_articles?: number | null;
+  graphs?: {
+    graph_1?: graphData,
+    graph_2?: graphData,
+    graph_3?: graphData,
+    graph_4?: graphData,
+    graph_5?: graphData,
+  } | null;
+  epilepsy_associated_pathways?: string | null;
+  ml_predictions?: JSON | null;
 }
 
 export interface BaseColumn {

@@ -24,7 +24,7 @@ const SearchComponent: React.FC = () => {
         setSearchTerm(updatedData);
         return updatedData;
     });
-};
+  };
 
   return (
     <div className="flex gap-2 p-4">

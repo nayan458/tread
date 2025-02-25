@@ -490,7 +490,7 @@ def result(request):
                     'graph_2': plotting_properties.categorized_amino_acid_frequency_plot(q_set[0].genename),
                     'graph_3': plotting_properties.post_translational_modification_frequency_plot(q_set[0].genename),
                     'graph_4': plotting_properties.secondary_structure_frequency_plot(q_set[0].genename),
-                    'graph_5': plotting_properties.ml_predictions_plot(ml_predictions)
+                    # 'graph_5': plotting_properties.ml_predictions_plot(ml_predictions)
                 }
             except Exception as e:
                 logger.error(f"Error generating graphs: {str(e)}")

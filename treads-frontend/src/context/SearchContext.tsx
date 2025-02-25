@@ -1,13 +1,13 @@
 import axiosInstance from '@api/AxiosInsctance';
 import React, { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchTermType } from 'src/types';
+import { SearchResultType, searchTermType } from 'src/types';
 
 
 interface SearchContextType {
     searchTerm: searchTermType,
     setSearchTerm: React.Dispatch<React.SetStateAction<searchTermType>>,
-    searchResult: JSON | null,
+    searchResult: SearchResultType | null,
     loading: boolean,
     handleSearch:() => Promise<void>;
 }

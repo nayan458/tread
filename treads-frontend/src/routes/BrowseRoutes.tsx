@@ -1,3 +1,4 @@
+import { SearchProvider } from "@context/SearchContext";
 import TableLayout from "@layouts/TableLayout";
 import AED from "@views/Browse/AED/AED";
 import AEDTarget from "@views/Browse/AEDTarget/AEDTarget";
@@ -16,7 +17,10 @@ import { Outlet } from "react-router-dom";
 
 const BrowseRoutes = {
   path: '/Browse',
-  element: <TableLayout/>,
+  element: 
+  <SearchProvider>
+    <TableLayout/>
+  </SearchProvider>,
   children: [
     {
       path: 'AED',

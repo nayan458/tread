@@ -1,3 +1,10 @@
+// PLEASE NOTE THIS IS THE SEARCH BAR FOR TABLES. THERE IS ANOTHER GENERAL SEARCH BAR AS SEARCH COMPONENT.
+
+
+
+
+
+
 import React from 'react';
 import { TextField, MenuItem, ListItemText, Popper } from '@mui/material';
 
