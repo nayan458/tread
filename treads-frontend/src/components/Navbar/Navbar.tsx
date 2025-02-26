@@ -2,6 +2,7 @@ import React from 'react';
 
 import DropDownLinks from './DropDownLinks';
 import LeftNavLink from './LeftNavLink';
+import Search from '@components/Search/Search';
 
 interface URLItem {
   to?: string;
@@ -49,6 +50,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="flex flex-col bg-background-secondary p-4 pt-12 space-y-2">
+      <Search/>
       {urls.map((url, index) => {
         if (url.dropDown) {
           return <DropDownLinks key={index} label={url.label} urls={url.urls!} />;

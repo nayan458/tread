@@ -2,7 +2,8 @@ import React from 'react';
 import { BaseColumn, MtleData } from 'src/types';
 import Section from '@components/Sections/Section';
 import MtleJsonData from '@db/Browse/Disorders/MTLE.json';
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
+import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
+import { useSearch } from '@context/SearchContext';
 
 const columns: BaseColumn[] = [
     { 
@@ -14,7 +15,7 @@ const columns: BaseColumn[] = [
         id: 'gene',
         label: 'Genes',
         minWidth: 170,
-
+        type: 'button'
     },
     { 
         id: 'proteinName',
@@ -49,9 +50,17 @@ const columns: BaseColumn[] = [
   
 
 const Mirnas: React.FC = () => {
+  
+  const { handleSearchByParameter } = useSearch();
+  
+  const submit=(value: string)=>{
+
+    return handleSearchByParameter(value,'GeneName') 
+  }
+
   return(<>
     <Section topic="Mesial Temporal Lobe Epilepsy (MTLE)" />
-    <ColumnGroupingTable columns = {columns} rows={rows} field='uniprotID'/>
+    <ColumnGrouping columns = {columns} rows={rows} field='uniprotID' handleOnClick={submit}/>
   </>);
 };
 

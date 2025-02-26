@@ -2,11 +2,12 @@ import React from 'react';
 import { BaseColumn, FcdData } from 'src/types';
 import FcdJsonData from '@db/Browse/Disorders/FCD.json';
 import Section from '@components/Sections/Section';
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
+import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
+import { useSearch } from '@context/SearchContext';
 
 const columns: BaseColumn[] = [
     { id: 'uniprotID', label: 'Uniprot\u00a0ID', minWidth: 170 },
-    { id: 'gene', label: 'Gene', minWidth: 170 },
+    { id: 'gene', label: 'Gene', minWidth: 170, type: 'button' },
     { id: 'proteinName', label: 'Protein\u00a0Name', minWidth: 170 },
     { id: 'reference', label: 'Reference', minWidth: 170 },
   ];
@@ -36,9 +37,17 @@ const columns: BaseColumn[] = [
   
 
 const Fcd: React.FC = () => {
+
+  const { handleSearchByParameter } = useSearch();
+  
+  const submit=(value: string)=>{
+
+    return handleSearchByParameter(value,'GeneName') 
+  }
+
   return(<>
     <Section topic="Focal Cortical Dysplasia (FCD)" />
-    <ColumnGroupingTable columns = {columns} rows={rows} field='uniprotID'/>
+    <ColumnGrouping columns = {columns} rows={rows} field='uniprotID' handleOnClick={submit}/>
   </>);
 };
 

@@ -1,9 +1,13 @@
+// Table of content Types
+
 export interface TOCItem {
     id: string;
     title: string;
     level: number;
     element?: HTMLElement;
-  }
+}
+
+// Bar Graph Types
 
 export enum search_id {
     'UniprotID',
@@ -46,6 +50,14 @@ export interface SearchResultType {
   ml_predictions?: JSON | null;
 }
 
+// ColumnGroupingTable Content Types
+
+export interface LinkCell {
+    href: string,
+    value: string
+}
+
+
 export interface BaseColumn {
     id: string;
     label: string;
@@ -63,6 +75,7 @@ export interface LinkColumn {
     type?: 'button' | 'link';
     align?: 'right' | 'left' | 'center';
     format?: (value: number) => string;
+    // handleOnClick?: (value: string, searchID: string) => handleSearchByParameter
 }
 
 export interface Data {

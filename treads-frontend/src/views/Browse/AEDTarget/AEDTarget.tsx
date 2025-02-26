@@ -2,12 +2,14 @@ import React from 'react';
 import { AedTargetData, BaseColumn } from 'src/types';
 import AedTargetJsonData from '@db/Browse/AEDTarget.json';
 import Section from '@components/Sections/Section';
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
+import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
+import { useSearch } from '@context/SearchContext';
 
 const columns: BaseColumn[] = [
     { 
         id: 'Protein',
         label: 'Protein',
+        type: 'button',
         minWidth: 170 
     },
     { 
@@ -44,9 +46,17 @@ const columns: BaseColumn[] = [
   
 
 const AEDTarget: React.FC = () => {
+
+  const { handleSearchByParameter } = useSearch();
+
+  const submit=(value: string)=>{
+
+    return handleSearchByParameter(value,'GeneName') 
+  }
+
   return(<>
     <Section topic="Anti-Epileptic Drug Targets" />
-    <ColumnGroupingTable columns = {columns} rows={rows} field='Protein'/>
+    <ColumnGrouping columns = {columns} rows={rows} field='Protein' handleOnClick={submit}/>
   </>);
 };
 

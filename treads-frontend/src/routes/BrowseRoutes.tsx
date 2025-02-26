@@ -12,6 +12,7 @@ import HS from "@views/Browse/Disorders/Hs/Hs";
 import MtleHs from "@views/Browse/Disorders/Mtle-Hs/MtleHs";
 import Mtle from "@views/Browse/Disorders/Mtle/Mtle";
 import Mirnas from "@views/Browse/miRNas/Mirnas";
+import ProtinFamilies from "@views/Browse/Protein-Families/ProtinFamilies";
 import { Outlet } from "react-router-dom";
 
 
@@ -33,6 +34,10 @@ const BrowseRoutes = {
     {
       path: 'Mirnas',
       element: <Mirnas /> ,
+    },
+    {
+      path: 'ProteinFamilies',
+      element: <ProtinFamilies /> ,
     },
     {
       path: 'Disorders',

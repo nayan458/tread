@@ -60,7 +60,7 @@ const Graphs: React.FC<GraphProp> = ({data, xaxis_title, yaxis_title, gene}) => 
               <Legend />
               <Bar dataKey="nonDrugTarget" name="Non-Drug Target" fill="#2e8b57" fillOpacity={0.6} />
               <Bar dataKey="drugTarget" name="Drug Target" fill="#b0e0e6" fillOpacity={0.6} />
-              <Bar dataKey="vdac1" name={gene} fill="#20b2aa" />
+              <Bar dataKey="vdac1" name="vdac1" fill="#20b2aa" />
             </BarChart>
           </ResponsiveContainer>
         </Box>
