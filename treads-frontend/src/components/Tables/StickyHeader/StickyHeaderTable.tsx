@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { Link } from '@mui/material';
 
 interface TableProps {
   data: Record<string, string | number>;
@@ -85,7 +86,23 @@ const StickyHeaderTable: React.FC<TableProps> = ({ data }) => {
                 .map((row) => (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.property}>
                     <TableCell>{row.property}</TableCell>
-                    <TableCell align="left">{row.value}</TableCell>
+                    <TableCell align="left">
+                      { row.property === 'Gene Expression data (Bgee)' ? 
+                        <Link
+                          href={`https://www.bgee.org/gene/${row.value}`}
+                          target="_blank"
+                        >{row.value}
+                        </Link>
+                        : row.property === 'Uniprot ID' ?
+                        <Link 
+                          href={`https://www.uniprot.org/uniprotkb/${row.value}`}
+                          target="_blank"
+                        >
+                          {row.value}
+                        </Link>
+                        : row.value
+                      }
+                    </TableCell>
                   </TableRow>
                 ))}
             </TableBody>

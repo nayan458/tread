@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import { AedData, AedTargetData, BaseColumn, LinkColumn, MirnasData, MtleData } from 'src/types';
 import SearchBar from '@components/Search/SearchBar';
 import Dropdown from './Dropdown';
-import { Button } from '@mui/material';
+import { Button, Link } from '@mui/material';
 
 interface ColumnGroupingTableProps {
   columns: BaseColumn[] | LinkColumn[];
@@ -42,6 +42,19 @@ const ColumnGrouping: React.FC<ColumnGroupingTableProps> = ({ columns, rows, fie
     const value = row[field as keyof typeof row]; // Get value based on the search field
     return value && value.toString().toLowerCase().includes(searchQuery.toLowerCase());
   });
+
+  const extractPMIDData=(str: string)=> {
+    const pmidRegex = /PMID: (\d+);?/g;
+    let match;
+    const data = [];
+    
+    while ((match = pmidRegex.exec(str)) !== null) {
+        const value = parseInt(match[1], 10);
+        data.push({ value, PMID: value });
+    }
+    
+    return data;
+  }
 
   // Generate top 5 suggestions based on the search query and field
   React.useEffect(() => {
@@ -103,17 +116,38 @@ const ColumnGrouping: React.FC<ColumnGroupingTableProps> = ({ columns, rows, fie
                     {columns.map((column) => {
                       const value = row[column.id];
                       if (column.type === 'link')
-                        return (
-                          <TableCell key={column.id} align={column.align} style={{ color: 'blue' }}>
-                            <a
-                              href={typeof row.link === 'string' ? row.link : ''}
-                              target="_blank"
-                              className="hover:underline hover:underline-offset-2 transition"
-                            >
-                              {column.format && typeof value === 'number' ? column.format(value) : value}
-                            </a>
-                          </TableCell>
-                        )
+                        if(column.label === 'Reference'){
+                          const data = extractPMIDData(value.toString());
+                          return (
+                            <TableCell key={column.id} align={column.align} style={{ color: 'blue' }}>
+                                {
+                                  data.map((item,index)=>{
+                                    return (<>
+                                        <Link
+                                          key={index}
+                                          href={`${column.baseUrl}${item.value}`}
+                                          target="_blank"
+                                        >
+                                          PMID: {item.PMID}
+                                        </Link> <br/>
+                                    </>)
+                                  })
+                                }
+                            </TableCell>
+                          )
+                        }
+                        else
+                          return (
+                            <TableCell key={column.id} align={column.align} style={{ color: 'blue' }}>
+                              <a
+                                href={`${column.baseUrl}${value}`}
+                                target="_blank"
+                                className="hover:underline hover:underline-offset-2 transition"
+                              >
+                                {column.format && typeof value === 'number' ? column.format(value) : value}
+                              </a>
+                            </TableCell>
+                          )
                       else if (column.type === 'button')
                         return (
                           <TableCell key={column.id} align={column.align}>

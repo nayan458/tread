@@ -26,6 +26,8 @@ const columns: BaseColumn[] = [
         id: 'reference',
         label: 'Reference',
         minWidth: 170,
+        type: 'link',
+        baseUrl: 'https://pubmed.ncbi.nlm.nih.gov/'
 
     },
   ];

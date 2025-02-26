@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 // import { Menu } from "lucide-react";
 
 const TableLayout: React.FC = () => {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(true);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   return (
     <div className="w-screen h-screen flex flex-col">
@@ -15,7 +15,7 @@ const TableLayout: React.FC = () => {
       <div className="flex flex-1 overflow-hidden pt-4">
         {/* Mobile Navbar Toggle */}
         <button
-          className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-700 text-white rounded"
+          className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-gray-700 text-white rounded"
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
         >
           x

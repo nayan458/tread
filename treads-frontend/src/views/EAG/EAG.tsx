@@ -7,11 +7,11 @@ import { useSearch } from '@context/SearchContext';
 
 
 const columns: BaseColumn[] = [
-    { id: 'uniprotID', label: 'Uniprot\u00a0ID', minWidth: 170 },
+    { id: 'uniprotID', label: 'Uniprot\u00a0ID', minWidth: 170, type: 'link', baseUrl: 'https://www.uniprot.org/uniprotkb/'},
     { id: 'gene', label: 'Gene', minWidth: 170, type: 'button' },
     { id: 'proteinName', label: 'Protein\u00a0Name', minWidth: 170 },
     { id: 'disorder', label: 'Disorder', minWidth: 170 },
-    { id: 'reference', label: 'Reference', minWidth: 170 },
+    { id: 'reference', label: 'Reference', minWidth: 170, type: 'link', baseUrl: 'https://pubmed.ncbi.nlm.nih.gov/'},
   ];
 
   function createData(

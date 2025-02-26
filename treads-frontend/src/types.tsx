@@ -62,6 +62,7 @@ export interface BaseColumn {
     id: string;
     label: string;
     minWidth?: number;
+    baseUrl?: string | '#';
     type?: 'button' | 'link';
     align?: 'right' | 'left' | 'center';
     format?: (value: number) => string;
@@ -70,10 +71,11 @@ export interface BaseColumn {
 export interface LinkColumn {
     id: string;
     label: string;
-    link?: string;
     minWidth?: number;
     type?: 'button' | 'link';
     align?: 'right' | 'left' | 'center';
+    link?: string;
+    baseUrl?: string;
     format?: (value: number) => string;
     // handleOnClick?: (value: string, searchID: string) => handleSearchByParameter
 }
