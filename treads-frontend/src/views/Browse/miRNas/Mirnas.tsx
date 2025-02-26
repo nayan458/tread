@@ -2,7 +2,8 @@ import React from 'react';
 import { MirnasData, BaseColumn } from 'src/types';
 import MirnaJsonData from '@db/Browse/Mirnas.json';
 import Section from '@components/Sections/Section';
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
+import { useSearch } from '@context/SearchContext';
+import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 
 const columns: BaseColumn[] = [
     { 
@@ -14,7 +15,7 @@ const columns: BaseColumn[] = [
         id: 'targetGenes',
         label: 'Target\u00a0Genes',
         minWidth: 170,
-
+        type: 'button'
     },
     { 
         id: 'experiment',
@@ -44,9 +45,16 @@ const columns: BaseColumn[] = [
   
 
 const Mirnas: React.FC = () => {
+  const { handleSearchByParameter } = useSearch();
+  
+  const submit=(value: string)=>{
+
+    return handleSearchByParameter(value,'GeneName') 
+  }
+
   return(<>
     <Section topic="miRNAs and their Target Genes (Epilepsy Associated)" />
-    <ColumnGroupingTable columns = {columns} rows={rows} field='targetGenes'/>
+    <ColumnGrouping columns = {columns} rows={rows} field='targetGenes' handleOnClick={submit}/>
   </>);
 };
 

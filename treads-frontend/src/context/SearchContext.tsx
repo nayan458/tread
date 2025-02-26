@@ -10,6 +10,7 @@ interface SearchContextType {
     searchResult: SearchResultType | null,
     loading: boolean,
     handleSearch:() => Promise<void>;
+    handleSearchByParameter:(gene: string, searchID: string) => Promise<void>
 }
 
 // Create Context
@@ -47,8 +48,38 @@ export const SearchProvider: React.FC<{children: React.ReactNode}> = ({ children
     }
   };
 
+  const handleSearchByParameter = async (gene: string, searchID: string) => {
+
+
+    if (!gene.trim() || !searchID.trim()) return;
+    
+    navigate('/result')
+
+    setLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append('gene',gene)
+      formData.append('search_id',searchID)
+      const response = await axiosInstance.post('/result', formData);
+      const data = await response.data;
+      setSearchResult(data);
+    } catch (error) {
+      console.error('Error fetching gene data:', error);
+      setSearchResult(null);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <SearchContext.Provider value={{searchTerm,setSearchTerm,searchResult,loading,handleSearch  }}>
+    <SearchContext.Provider value={{
+          searchTerm,
+          setSearchTerm,
+          searchResult,
+          loading,
+          handleSearch,
+          handleSearchByParameter
+        }}>
       {children}
     </SearchContext.Provider>
   );

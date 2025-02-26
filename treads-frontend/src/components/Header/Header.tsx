@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 hidden md:block">
               <Search/>
         </div>
 

@@ -1,9 +1,13 @@
+// Table of content Types
+
 export interface TOCItem {
     id: string;
     title: string;
     level: number;
     element?: HTMLElement;
-  }
+}
+
+// Bar Graph Types
 
 export enum search_id {
     'UniprotID',
@@ -27,12 +31,13 @@ export interface graphData {
 }
 
 export interface SearchResultType {
-  gene_id?: string | null;
+  gene_id?: string;
+  articles?: JSON;
   label?: string | null;
   table?: {
     Value: Record<string, string | number>
   } | null;
-  aed_dict?: Record<string, string> | null;
+  aed_dict?: JSON;
   num_articles?: number | null;
   graphs?: {
     graph_1?: graphData,
@@ -44,6 +49,14 @@ export interface SearchResultType {
   epilepsy_associated_pathways?: string | null;
   ml_predictions?: JSON | null;
 }
+
+// ColumnGroupingTable Content Types
+
+export interface LinkCell {
+    href: string,
+    value: string
+}
+
 
 export interface BaseColumn {
     id: string;
@@ -62,6 +75,7 @@ export interface LinkColumn {
     type?: 'button' | 'link';
     align?: 'right' | 'left' | 'center';
     format?: (value: number) => string;
+    // handleOnClick?: (value: string, searchID: string) => handleSearchByParameter
 }
 
 export interface Data {
