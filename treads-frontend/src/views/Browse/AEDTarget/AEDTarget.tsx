@@ -15,12 +15,14 @@ const columns: BaseColumn[] = [
     { 
         id: 'AntiEpilepticDrug',
          label: 'Anti\u00a0Epileptic\u00a0Drug',
-         minWidth: 100 
+         minWidth: 100,
     },
     { 
         id: 'DrugBankID',
         label: 'Drug\u00a0Bank\u00a0ID',
         minWidth: 170,
+        type: 'link',
+        baseUrl: 'https://go.drugbank.com/drugs/'
 
     },
     { 

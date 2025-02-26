@@ -103,7 +103,7 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows
                       return column.type === 'link' ? (
                         <TableCell key={column.id} align={column.align} style={{ color: 'blue' }}>
                           <a
-                            href={typeof row.link === 'string' ? row.link : ''}
+                            href={`${column.baseUrl}${value}`}
                             target="_blank"
                             className="hover:underline hover:underline-offset-2 transition"
                           >

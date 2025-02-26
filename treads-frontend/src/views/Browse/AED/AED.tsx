@@ -9,7 +9,8 @@ const columns: LinkColumn[] = [
         id: 'drugBankID',
         label: 'Drug\u00a0Bank\u00a0ID',
         type: 'link',
-        minWidth: 170 
+        minWidth: 170,
+        baseUrl:  'https://go.drugbank.com/drugs/'
     },
     { 
         id: 'AEDName',
