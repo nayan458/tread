@@ -64,7 +64,7 @@ const EAP: React.FC = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [expanded, setExpanded] = React.useState<string | false>(false);
 
-    const handleAccordionChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    const handleAccordionChange = (panel: string) => (_: React.SyntheticEvent, isExpanded: boolean) => {
         setExpanded(isExpanded ? panel : false);
     };
 

@@ -18,7 +18,7 @@ interface GraphProp {
   gene: string
 }
 
-const Graphs: React.FC<GraphProp> = ({data, xaxis_title, yaxis_title, gene}) => {
+const Graphs: React.FC<GraphProp> = ({data, xaxis_title, yaxis_title}) => {
   // Increase margins to accommodate titles
   return (
     data &&

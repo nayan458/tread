@@ -24,7 +24,7 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows
   const [suggestions, setSuggestions] = React.useState<string[]>([]); // State for suggestions
 
   // Handle page change
-  const handleChangePage = (event: unknown, newPage: number) => {
+  const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
 

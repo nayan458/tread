@@ -53,7 +53,7 @@ const StickyHeaderTable: React.FC<TableProps> = ({ data }) => {
 
   const rows = Object.entries(data).map(([property, value]) => ({ property, value }));
 
-  const handleChangePage = (event: unknown, newPage: number) => {
+  const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
 
