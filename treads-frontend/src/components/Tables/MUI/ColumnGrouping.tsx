@@ -7,14 +7,15 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { AedData, AedTargetData, BaseColumn, LinkColumn, MirnasData, MtleData } from 'src/types';
+import { AedData, AedTargetData, BaseColumn, EAPData, LinkColumn, MirnasData, MtleData } from 'src/types';
 import SearchBar from '@components/Search/SearchBar';
 import Dropdown from './Dropdown';
 import { Button, Link } from '@mui/material';
 
 interface ColumnGroupingTableProps {
   columns: BaseColumn[] | LinkColumn[];
-  rows: AedData[] | AedTargetData[] | MirnasData[] | MtleData[];
+  rows: AedData[] | AedTargetData[] | MirnasData[] | MtleData[] | EAPData[];
+  // rows: EAPData;
   field?: string; // Field passed from the parent component
   handleOnClick: (value: string) => Promise<void>;
 }

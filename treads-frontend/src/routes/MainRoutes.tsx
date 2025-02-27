@@ -1,15 +1,12 @@
-import ExampleComponent from "@components/research/Example";
-import GraphsLayout from "@components/research/GraphLayout";
 import { SearchProvider } from "@context/SearchContext";
-// import { SearchProvider } from "@context/SearchContext";
 import { TOCProvider } from "@context/TOCContext";
 import BaseLayout from "@layouts/BaseLayout";
 import TableLayout from "@layouts/TableLayout";
 import EAG from "@views/EAG/EAG";
+import EAP from "@views/EAP/EAP";
 import PageNotFound from "@views/Error/PageNotFound";
 import Home from "@views/Home/Home";
 import Result from "@views/Result/Result";
-import SearchComponent from "@views/Search/Search";
 import { Navigate, Outlet } from "react-router-dom";
 
 
@@ -48,25 +45,8 @@ const MainRoutes = {
           element: <EAG/>,
         },
         {
-          path: '/results',
-          element: <GraphsLayout />
-        },
-        {
-          path: '/example',
-          element: <ExampleComponent />
-        }
-      ]
-    },
-    {
-      path: '/',
-      element: 
-        // <SearchProvider>
-          <TableLayout/>,
-        // </SearchProvider>,
-      children: [
-        {
-          path: '/search',
-          element: <SearchComponent/>
+          path: '/EpilepsyAssociatedPathways',
+          element: <EAP/>,
         },
         {
           path: '/result',

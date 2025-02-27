@@ -204,3 +204,12 @@ export interface  ResultData {
     columnTwo: string;
     [key: string]: string | number;
 }
+
+// EAP
+
+export interface EAPData {
+    uniprotid: string;
+    genename: string;
+    uniprotname: string;
+    [key: string]: string | number;
+}
