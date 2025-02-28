@@ -1,4 +1,4 @@
-{
+const AEDJsonData = {
     "AED":[
      {
       "drugBankID": "DB08838",
@@ -323,4 +323,6 @@
       "link": "https://go.drugbank.com/drugs/DB00909"
      }
     ]
-    }
+};
+
+export default AEDJsonData

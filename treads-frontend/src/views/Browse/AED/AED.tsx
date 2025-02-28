@@ -1,8 +1,8 @@
 import React from 'react';
 import { AedData, LinkColumn } from 'src/types';
-import AedJsonData from '@db/Browse/AED.json';
 import Section from '@components/Sections/Section';
 import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
+import AEDJsonData from '@db/Browse/AED';
 
 const columns: LinkColumn[] = [
     { 
@@ -40,7 +40,7 @@ const columns: LinkColumn[] = [
   ): AedData  {
     return { drugBankID,AEDName,targetGene,status, link};
   }
-  const rows: AedData[] = AedJsonData.AED.map((row: AedData) => {
+  const rows: AedData[] = AEDJsonData.AED.map((row: AedData) => {
     return createData(row.drugBankID,row.AEDName,row.targetGene,row.status,row.link);
   });
 

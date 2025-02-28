@@ -48,25 +48,72 @@ RUN npm run build
 ################################################################################
 # Create a new stage to run the application with minimal runtime dependencies
 # where the necessary files are copied from the build stage.
+# FROM base as final
+
+# # Use production node environment by default.
+# ENV NODE_ENV production
+
+# # Run the application as a non-root user.
+# USER node
+
+# # Copy package.json so that package manager commands can be used.
+# COPY package.json .
+
+# # Copy the production dependencies from the deps stage and also
+# # the built application from the build stage into the image.
+# COPY --from=deps /usr/src/app/node_modules ./node_modules
+# COPY --from=build /usr/src/app/dist ./dist
+
+
+# # Expose the port that the application listens on.
+# EXPOSE 5173
+
+# # Run the application.
+# CMD npm run dev
+
+# # In the final stage
+# FROM base as final
+
+# # Use production node environment by default.
+# ENV NODE_ENV production
+
+# # Run the application as a non-root user.
+# USER node
+
+# # Copy package.json so that package manager commands can be used.
+# COPY package.json .
+
+# # Copy the production dependencies from the deps stage and also
+# # the built application from the build stage into the image.
+# COPY --from=deps /usr/src/app/node_modules ./node_modules
+# COPY --from=build /usr/src/app/dist ./dist
+
+# # Expose the port that the application listens on.
+# EXPOSE 5173
+
+# # Run the application in production mode
+# CMD npm run preview  # or use a static file server like serve
+
+# In the final stage
 FROM base as final
 
-# Use production node environment by default.
-ENV NODE_ENV production
+# Use development node environment
+ENV NODE_ENV development
+
+RUN chown -R node:node /usr/src/app
 
 # Run the application as a non-root user.
 USER node
 
-# Copy package.json so that package manager commands can be used.
-COPY package.json .
+# Copy package.json and lock file
+COPY package.json package-lock.json ./
 
-# Copy the production dependencies from the deps stage and also
-# the built application from the build stage into the image.
-COPY --from=deps /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/dist ./dist
-
+# Copy ALL node_modules including dev dependencies
+COPY --from=build /usr/src/app/node_modules ./node_modules
+COPY . .
 
 # Expose the port that the application listens on.
 EXPOSE 5173
 
-# Run the application.
-CMD  npm run dev
+# Run the application in dev mode
+CMD npm run dev
