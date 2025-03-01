@@ -9,8 +9,8 @@ const DownloadComponent = ({ jsonData }) => {
   const downloadAsExcel = () => {
     const worksheet = XLSX.utils.json_to_sheet(jsonData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Data");
-    XLSX.writeFile(workbook, "data.xlsx");
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Data');
+    XLSX.writeFile(workbook, 'data.xlsx');
   };
 
   const downloadAsCSV = () => {
@@ -28,21 +28,21 @@ const DownloadComponent = ({ jsonData }) => {
 
   const downloadAsPDF = () => {
     const doc = new jsPDF();
-    
+
     // Create table from JSON data
     const columns = Object.keys(jsonData[0]);
-    const rows = jsonData.map(item => Object.values(item));
-    
+    const rows = jsonData.map((item) => Object.values(item));
+
     doc.autoTable({
       head: [columns],
       body: rows,
     });
-    
+
     doc.save('data.pdf');
   };
 
   const handleDownload = () => {
-    switch(downloadType) {
+    switch (downloadType) {
       case 'excel':
         downloadAsExcel();
         break;
@@ -61,8 +61,8 @@ const DownloadComponent = ({ jsonData }) => {
     <div className="p-4">
       <div className="mb-4">
         <label className="mr-2">Select format:</label>
-        <select 
-          value={downloadType} 
+        <select
+          value={downloadType}
           onChange={(e) => setDownloadType(e.target.value)}
           className="border p-2 rounded"
         >
@@ -71,8 +71,8 @@ const DownloadComponent = ({ jsonData }) => {
           <option value="pdf">PDF</option>
         </select>
       </div>
-      
-      <button 
+
+      <button
         onClick={handleDownload}
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
       >

@@ -8,18 +8,19 @@ interface LinksProps {
 }
 
 const LeftNavLink: React.FC<LinksProps> = ({ to, label, dropdown }) => {
-  return (<>
-    <NavLink to={to} style={
-        ({isActive}) => ({
+  return (
+    <>
+      <NavLink
+        to={to}
+        style={({ isActive }) => ({
           color: isActive ? '#D49B17' : 'black',
-          fontWeight: dropdown? isActive ? '600' : '' : '600',
-        })
-      }
-      className={dropdown? 'font-light' : ''}
+          fontWeight: dropdown ? (isActive ? '600' : '') : '600',
+        })}
+        className={dropdown ? 'font-light' : ''}
       >
-      {label}
+        {label}
       </NavLink>
-  </>
+    </>
   );
 };
 

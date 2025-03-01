@@ -4,14 +4,13 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-
 interface LongMenueProp {
-    options: string[];
+  options: string[];
 }
 
 const ITEM_HEIGHT = 48;
 
-const LongMenu:React.FC<LongMenueProp>=({options})=> {
+const LongMenu: React.FC<LongMenueProp> = ({ options }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -51,13 +50,17 @@ const LongMenu:React.FC<LongMenueProp>=({options})=> {
         }}
       >
         {options.map((option) => (
-          <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
+          <MenuItem
+            key={option}
+            selected={option === 'Pyxis'}
+            onClick={handleClose}
+          >
             {option}
           </MenuItem>
         ))}
       </Menu>
     </div>
   );
-}
+};
 
-export default LongMenu
+export default LongMenu;

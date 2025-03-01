@@ -1,10 +1,5 @@
 // PLEASE NOTE THIS IS THE SEARCH BAR FOR TABLES. THERE IS ANOTHER GENERAL SEARCH BAR AS SEARCH COMPONENT.
 
-
-
-
-
-
 import React from 'react';
 import { TextField, MenuItem, ListItemText, Popper } from '@mui/material';
 
@@ -15,7 +10,12 @@ interface SearchBarProps {
   suggestions?: string[];
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery, field, suggestions = [] }) => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  searchQuery,
+  setSearchQuery,
+  field,
+  suggestions = [],
+}) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   // Handle the opening of the suggestions menu
@@ -49,7 +49,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchQuery, setSearchQuery, fiel
 
       {/* Suggestions dropdown using Popper for better positioning */}
       {suggestions.length > 0 && (
-        <Popper open={Boolean(anchorEl)} anchorEl={anchorEl} placement="bottom-start" sx={{zIndex: 50}}>
+        <Popper
+          open={Boolean(anchorEl)}
+          anchorEl={anchorEl}
+          placement="bottom-start"
+          sx={{ zIndex: 50 }}
+        >
           <div
             style={{
               maxHeight: 200,
