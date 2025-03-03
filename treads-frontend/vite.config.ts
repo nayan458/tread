@@ -6,13 +6,13 @@ import path from 'path';
 export default defineConfig({
   base: "/",
   preview: {
-    port: 8080,
+    port: 3000,
     strictPort: true,
    },
   server: {
     host: true,
-    port: 4173,
-    origin: "http://0.0.0.0:4173",
+    port: 3000,
+    origin: "http://0.0.0.0:3000",
     strictPort: true
   },
   plugins: [react()],
