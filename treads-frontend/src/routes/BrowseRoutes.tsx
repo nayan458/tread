@@ -1,99 +1,103 @@
-import { SearchProvider } from "@context/SearchContext";
-import TableLayout from "@layouts/TableLayout";
-import AED from "@views/Browse/AED/AED";
-import AEDTarget from "@views/Browse/AEDTarget/AEDTarget";
-import DS from "@views/Browse/Disorders/Ds/Ds";
-import Fcd from "@views/Browse/Disorders/Fcd/Fcd";
-import Cae from "@views/Browse/Disorders/GGE/Cae/Cae";
-import Egtcs from "@views/Browse/Disorders/GGE/Egtcs/Egtcs";
-import Jae from "@views/Browse/Disorders/GGE/Jae/Jae";
-import Jme from "@views/Browse/Disorders/GGE/Jme/Jme";
-import HS from "@views/Browse/Disorders/Hs/Hs";
-import MtleHs from "@views/Browse/Disorders/Mtle-Hs/MtleHs";
-import Mtle from "@views/Browse/Disorders/Mtle/Mtle";
-import Mirnas from "@views/Browse/miRNas/Mirnas";
-import ProtinFamilies from "@views/Browse/Protein-Families/ProtinFamilies";
-import { Outlet } from "react-router-dom";
-
+import { SearchProvider } from '@context/SearchContext';
+import TableLayout from '@layouts/TableLayout';
+import AED from '@views/Browse/AED/AED';
+import AEDTarget from '@views/Browse/AEDTarget/AEDTarget';
+import DS from '@views/Browse/Disorders/Ds/Ds';
+import Fcd from '@views/Browse/Disorders/Fcd/Fcd';
+import Cae from '@views/Browse/Disorders/GGE/Cae/Cae';
+import Egtcs from '@views/Browse/Disorders/GGE/Egtcs/Egtcs';
+import Jae from '@views/Browse/Disorders/GGE/Jae/Jae';
+import Jme from '@views/Browse/Disorders/GGE/Jme/Jme';
+import HS from '@views/Browse/Disorders/Hs/Hs';
+import MtleHs from '@views/Browse/Disorders/Mtle-Hs/MtleHs';
+import Mtle from '@views/Browse/Disorders/Mtle/Mtle';
+import Mirnas from '@views/Browse/miRNas/Mirnas';
+import ProtinFamilies from '@views/Browse/Protein-Families/ProtinFamilies';
+import { Outlet } from 'react-router-dom';
 
 const BrowseRoutes = {
   path: '/Browse',
-  element: 
-  <SearchProvider>
-    <TableLayout/>
-  </SearchProvider>,
+  element: (
+    <SearchProvider>
+      <TableLayout />
+    </SearchProvider>
+  ),
   children: [
     {
       path: 'AED',
-      element: <AED/> ,
+      element: <AED />,
     },
     {
       path: 'AEDTargets',
-      element: <AEDTarget /> ,
+      element: <AEDTarget />,
     },
     {
       path: 'Mirnas',
-      element: <Mirnas /> ,
+      element: <Mirnas />,
     },
     {
       path: 'ProteinFamilies',
-      element: <ProtinFamilies /> ,
+      element: <ProtinFamilies />,
     },
     {
       path: 'Disorders',
-      element: <>
-        <Outlet/>
-      </> ,
+      element: (
+        <>
+          <Outlet />
+        </>
+      ),
       children: [
         {
           path: 'Dcd',
-          element: <> Need to be completed</>
+          element: <> Need to be completed</>,
         },
         {
           path: 'DS',
-          element: <DS />
+          element: <DS />,
         },
         {
           path: 'FCD',
-          element: <Fcd />
+          element: <Fcd />,
         },
         {
           path: 'HS',
-          element: <HS/>
+          element: <HS />,
         },
         {
           path: 'MTLE-HS',
-          element: <MtleHs/>
+          element: <MtleHs />,
         },
         {
           path: 'MTLE',
-          element: <Mtle/>
+          element: <Mtle />,
         },
         {
           path: 'GGE',
-          element: <>
-            <Outlet/>
-            </>,
+          element: (
+            <>
+              <Outlet />
+            </>
+          ),
           children: [
             {
               path: 'CAE',
-              element: <Cae />
+              element: <Cae />,
             },
             {
               path: 'JAE',
-              element: <Jae />
+              element: <Jae />,
             },
             {
               path: 'JME',
-              element: <Jme />
+              element: <Jme />,
             },
             {
               path: 'EGTCS',
-              element: <Egtcs />
+              element: <Egtcs />,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
   ],
 };

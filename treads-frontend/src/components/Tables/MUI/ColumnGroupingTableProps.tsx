@@ -7,7 +7,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { AedData, AedTargetData, BaseColumn, LinkColumn, MirnasData, MtleData } from 'src/types';
+import {
+  AedData,
+  AedTargetData,
+  BaseColumn,
+  LinkColumn,
+  MirnasData,
+  MtleData,
+} from 'src/types';
 import SearchBar from '@components/Search/SearchBar';
 import Dropdown from './Dropdown';
 
@@ -17,19 +24,25 @@ interface ColumnGroupingTableProps {
   field?: string; // Field passed from the parent component
 }
 
-const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows, field = '' }) => {
+const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({
+  columns,
+  rows,
+  field = '',
+}) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [searchQuery, setSearchQuery] = React.useState<string>('');
   const [suggestions, setSuggestions] = React.useState<string[]>([]); // State for suggestions
 
   // Handle page change
-  const handleChangePage = (event: unknown, newPage: number) => {
+  const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
 
   // Handle rows per page change
-  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
@@ -38,7 +51,10 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows
   const filteredRows = rows.filter((row) => {
     if (!field || !searchQuery) return true; // No search field or query, return all rows
     const value = row[field as keyof typeof row]; // Get value based on the search field
-    return value && value.toString().toLowerCase().includes(searchQuery.toLowerCase());
+    return (
+      value &&
+      value.toString().toLowerCase().includes(searchQuery.toLowerCase())
+    );
   });
 
   // Generate top 5 suggestions based on the search query and field
@@ -47,7 +63,9 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows
       // Extract values for the specified field and get the top 5 matches
       const suggestionsList = rows
         .map((row) => row[field as keyof typeof row]?.toString())
-        .filter((value) => value?.toLowerCase().includes(searchQuery.toLowerCase()))
+        .filter((value) =>
+          value?.toLowerCase().includes(searchQuery.toLowerCase())
+        )
         .slice(0, 5); // Get top 5 matches
 
       setSuggestions(suggestionsList);
@@ -80,7 +98,11 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ top: 57, minWidth: column.minWidth, fontWeight: 600 }}
+                  style={{
+                    top: 57,
+                    minWidth: column.minWidth,
+                    fontWeight: 600,
+                  }}
                 >
                   <div
                     onClick={() => field && setSearchQuery('')} // Clear search if a new field is selected
@@ -101,18 +123,26 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({ columns, rows
                     {columns.map((column) => {
                       const value = row[column.id];
                       return column.type === 'link' ? (
-                        <TableCell key={column.id} align={column.align} style={{ color: 'blue' }}>
+                        <TableCell
+                          key={column.id}
+                          align={column.align}
+                          style={{ color: 'blue' }}
+                        >
                           <a
                             href={`${column.baseUrl}${value}`}
                             target="_blank"
                             className="hover:underline hover:underline-offset-2 transition"
                           >
-                            {column.format && typeof value === 'number' ? column.format(value) : value}
+                            {column.format && typeof value === 'number'
+                              ? column.format(value)
+                              : value}
                           </a>
                         </TableCell>
                       ) : (
                         <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === 'number' ? column.format(value) : value}
+                          {column.format && typeof value === 'number'
+                            ? column.format(value)
+                            : value}
                         </TableCell>
                       );
                     })}

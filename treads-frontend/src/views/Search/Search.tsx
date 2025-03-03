@@ -1,28 +1,28 @@
 // Search Component
-import { useSearch } from "@context/SearchContext";
-import { Button, Input } from "@mui/material";
-import { useState } from "react";
-import { searchTermType } from "src/types";
+import { useSearch } from '@context/SearchContext';
+import { Button, Input } from '@mui/material';
+import { useState } from 'react';
+import { searchTermType } from 'src/types';
 
 const SearchComponent: React.FC = () => {
   const { setSearchTerm, handleSearch, loading } = useSearch();
 
   const [data, setData] = useState<searchTermType>({
-      'gene': '',
-      'search_id': ''
-    });
+    gene: '',
+    search_id: '',
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     setData((prevData) => {
-        const updatedData = {
-            ...prevData,
-            [name]: value
-        };
+      const updatedData = {
+        ...prevData,
+        [name]: value,
+      };
 
-        setSearchTerm(updatedData);
-        return updatedData;
+      setSearchTerm(updatedData);
+      return updatedData;
     });
   };
 
@@ -45,14 +45,11 @@ const SearchComponent: React.FC = () => {
         className="max-w-xs"
       />
 
-      <Button
-        onClick={handleSearch}
-        disabled={loading}
-      >
+      <Button onClick={handleSearch} disabled={loading}>
         {loading ? 'Searching...' : 'Search'}
       </Button>
     </div>
   );
 };
 
-export default SearchComponent
+export default SearchComponent;

@@ -84,6 +84,6 @@ const ProteinPieChart: React.FC = () => {
       />
     </Box>
   );
-}
+};
 
 export default ProteinPieChart;

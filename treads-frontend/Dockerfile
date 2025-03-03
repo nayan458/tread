@@ -1,0 +1,32 @@
+# Base
+ARG NODE_VERSION=22.13.1
+FROM node:${NODE_VERSION}-alpine as base
+
+WORKDIR /app
+
+# Build
+FROM base as build
+
+COPY . .
+
+RUN npm ci
+
+RUN npm run build
+
+# Production
+FROM base as final
+
+ENV NODE_ENV production
+
+RUN npm i -g serve
+
+RUN chown -R node:node /app
+
+# Run the application as a non-root user.
+USER node
+
+COPY --from=build /app/dist ./dist
+
+EXPOSE 3000
+
+CMD ["serve", "-s","dist"]

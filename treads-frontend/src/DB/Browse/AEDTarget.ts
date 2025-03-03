@@ -1,4 +1,4 @@
-{
+const AedTargetJsonData = {
     "AedTargets":[
      {
       "Protein": "VDAC1",
@@ -2341,4 +2341,6 @@
       "Status": "Approved and Investigational and Illicit"
      }
     ]
-    }
+};
+
+export default AedTargetJsonData;

@@ -8,15 +8,18 @@ export const useHeadings = () => {
 
   useEffect(() => {
     const generateTOC = () => {
-      const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-      
+      const headings = Array.from(
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+      );
+
       const items: TOCItem[] = headings.map((heading) => {
         // Get the heading level from the tag name (h1 = 1, h2 = 2, etc.)
         const level = parseInt(heading.tagName[1]);
-        
+
         // Ensure heading has an id
         if (!heading.id) {
-          heading.id = heading.textContent?.toLowerCase().replace(/\s+/g, '-') ?? '';
+          heading.id =
+            heading.textContent?.toLowerCase().replace(/\s+/g, '-') ?? '';
         }
 
         return {
@@ -35,9 +38,9 @@ export const useHeadings = () => {
 
     // Optional: Set up a MutationObserver to watch for content changes
     const observer = new MutationObserver(generateTOC);
-    observer.observe(document.body, { 
-      childList: true, 
-      subtree: true 
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
     });
 
     return () => observer.disconnect();

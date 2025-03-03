@@ -1,81 +1,62 @@
-import ExampleComponent from "@components/research/Example";
-import GraphsLayout from "@components/research/GraphLayout";
-import { SearchProvider } from "@context/SearchContext";
-// import { SearchProvider } from "@context/SearchContext";
-import { TOCProvider } from "@context/TOCContext";
-import BaseLayout from "@layouts/BaseLayout";
-import TableLayout from "@layouts/TableLayout";
-import EAG from "@views/EAG/EAG";
-import PageNotFound from "@views/Error/PageNotFound";
-import Home from "@views/Home/Home";
-import Result from "@views/Result/Result";
-import SearchComponent from "@views/Search/Search";
-import { Navigate, Outlet } from "react-router-dom";
-
+import { SearchProvider } from '@context/SearchContext';
+import { TOCProvider } from '@context/TOCContext';
+import BaseLayout from '@layouts/BaseLayout';
+import TableLayout from '@layouts/TableLayout';
+import EAG from '@views/EAG/EAG';
+import EAP from '@views/EAP/EAP';
+import PageNotFound from '@views/Error/PageNotFound';
+import Home from '@views/Home/Home';
+import Result from '@views/Result/Result';
+import { Navigate, Outlet } from 'react-router-dom';
 
 const MainRoutes = {
   path: '/',
-  element: <>
-    <SearchProvider>
-      <Outlet/>
-    </SearchProvider>
-  </>
-  ,
+  element: (
+    <>
+      <SearchProvider>
+        <Outlet />
+      </SearchProvider>
+    </>
+  ),
   children: [
     {
       path: '/',
-      element: 
+      element: (
         <TOCProvider>
-          <BaseLayout/>
-        </TOCProvider>,
-      children : [
+          <BaseLayout />
+        </TOCProvider>
+      ),
+      children: [
         {
           path: '/',
-          element: <Navigate to='/home'/>,
+          element: <Navigate to="/home" />,
         },
         {
           path: '/home',
-          element: <Home/>,
+          element: <Home />,
         },
-      ]
+      ],
     },
     {
       path: '/',
-      element: <TableLayout/>,
+      element: <TableLayout />,
       children: [
         {
           path: '/EpilepsyAssociatedGenes',
-          element: <EAG/>,
+          element: <EAG />,
         },
         {
-          path: '/results',
-          element: <GraphsLayout />
-        },
-        {
-          path: '/example',
-          element: <ExampleComponent />
-        }
-      ]
-    },
-    {
-      path: '/',
-      element: 
-        // <SearchProvider>
-          <TableLayout/>,
-        // </SearchProvider>,
-      children: [
-        {
-          path: '/search',
-          element: <SearchComponent/>
+          path: '/EpilepsyAssociatedPathways',
+          element: <EAP />,
         },
         {
           path: '/result',
-          element: <Result/>
+          element: <Result />,
         },
-      ]
+      ],
     },
     {
-      path: "*",
+      path: '*',
       element: <PageNotFound />,
     },
   ],

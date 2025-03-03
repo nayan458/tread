@@ -25,7 +25,10 @@ const columns: readonly Column[] = [
   { id: 'value', label: 'Value', minWidth: 170, align: 'left' },
 ];
 
-class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
   constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
@@ -36,7 +39,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("Error caught in ErrorBoundary:", error, errorInfo);
+    console.error('Error caught in ErrorBoundary:', error, errorInfo);
   }
 
   render() {
@@ -51,20 +54,25 @@ const StickyHeaderTable: React.FC<TableProps> = ({ data }) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const rows = Object.entries(data).map(([property, value]) => ({ property, value }));
+  const rows = Object.entries(data).map(([property, value]) => ({
+    property,
+    value,
+  }));
 
-  const handleChangePage = (event: unknown, newPage: number) => {
+  const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
 
   return (
     <ErrorBoundary>
-      <Paper sx={{ width: '100%', overflow: 'hidden' , marginBottom: '20px'}}>
+      <Paper sx={{ width: '100%', overflow: 'hidden', marginBottom: '20px' }}>
         <TableContainer sx={{ maxHeight: 440 }}>
           <Table stickyHeader aria-label="custom table">
             <TableHead>
@@ -73,7 +81,7 @@ const StickyHeaderTable: React.FC<TableProps> = ({ data }) => {
                   <TableCell
                     key={column.id}
                     align={column.align}
-                    style={{ minWidth: column.minWidth, fontWeight: 'bold'}}
+                    style={{ minWidth: column.minWidth, fontWeight: 'bold' }}
                   >
                     {column.label}
                   </TableCell>
@@ -84,24 +92,31 @@ const StickyHeaderTable: React.FC<TableProps> = ({ data }) => {
               {rows
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row) => (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.property}>
+                  <TableRow
+                    hover
+                    role="checkbox"
+                    tabIndex={-1}
+                    key={row.property}
+                  >
                     <TableCell>{row.property}</TableCell>
                     <TableCell align="left">
-                      { row.property === 'Gene Expression data (Bgee)' ? 
+                      {row.property === 'Gene Expression data (Bgee)' ? (
                         <Link
                           href={`https://www.bgee.org/gene/${row.value}`}
                           target="_blank"
-                        >{row.value}
+                        >
+                          {row.value}
                         </Link>
-                        : row.property === 'Uniprot ID' ?
-                        <Link 
+                      ) : row.property === 'Uniprot ID' ? (
+                        <Link
                           href={`https://www.uniprot.org/uniprotkb/${row.value}`}
                           target="_blank"
                         >
                           {row.value}
                         </Link>
-                        : row.value
-                      }
+                      ) : (
+                        row.value
+                      )}
                     </TableCell>
                   </TableRow>
                 ))}

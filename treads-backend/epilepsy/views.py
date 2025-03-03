@@ -522,6 +522,13 @@ def result(request):
         logger.error(f"Unexpected error: {str(e)}", exc_info=True)
         return JsonResponse({'error': 'Internal server error'}, status=500)
 
+def epilepsy_associated_pathways(request):
+    e_a_pathways = pd.read_csv(CSV_FILE_PATH + 'All_genes_falling_into_epilepsy_associated_pathways.csv')
+
+    # Grouping the data
+    grouped = e_a_pathways.groupby('pathway').apply(lambda x: x.to_dict(orient='records')).to_dict()
+
+    return JsonResponse(grouped, safe=False)
 
 # def result(request):
 #     if request.method != 'POST':

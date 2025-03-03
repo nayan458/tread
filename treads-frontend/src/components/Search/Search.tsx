@@ -1,21 +1,28 @@
-import { useSearch } from "@context/SearchContext";
-import { Button, Input, Menu, MenuItem, IconButton, Tooltip } from "@mui/material";
-import { useState } from "react";
-import { searchTermType } from "src/types";
-import FilterListIcon from "@mui/icons-material/FilterList";
+import { useSearch } from '@context/SearchContext';
+import {
+  Button,
+  Input,
+  Menu,
+  MenuItem,
+  IconButton,
+  Tooltip,
+} from '@mui/material';
+import { useState } from 'react';
+import { searchTermType } from 'src/types';
+import FilterListIcon from '@mui/icons-material/FilterList';
 
 const Search: React.FC = () => {
   const { setSearchTerm, handleSearch, loading } = useSearch();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const [data, setData] = useState<searchTermType>({
-    'gene': '',
-    'search_id': 'GeneName' // Default value
+    gene: '',
+    search_id: 'GeneName', // Default value
   });
 
   // Get placeholder text based on selected search_id
   const getPlaceholder = () => {
-    switch(data.search_id) {
+    switch (data.search_id) {
       case 'UniprotID':
         return 'Enter a UniprotID...';
       case 'EnsemblID':
@@ -35,7 +42,7 @@ const Search: React.FC = () => {
     setData((prevData) => {
       const updatedData = {
         ...prevData,
-        [name]: value
+        [name]: value,
       };
 
       setSearchTerm(updatedData);
@@ -58,7 +65,7 @@ const Search: React.FC = () => {
     setData((prevData) => {
       const updatedData = {
         ...prevData,
-        'search_id': value
+        search_id: value,
       };
 
       setSearchTerm(updatedData);
@@ -72,7 +79,7 @@ const Search: React.FC = () => {
       <div className="relative flex-grow max-w-md">
         <div className="flex items-center border rounded-md overflow-hidden">
           <Tooltip title={`Current filter: ${data.search_id}`}>
-            <IconButton 
+            <IconButton
               onClick={handleFilterClick}
               size="small"
               className="ml-1"
@@ -80,7 +87,7 @@ const Search: React.FC = () => {
               <FilterListIcon />
             </IconButton>
           </Tooltip>
-          
+
           <Input
             type="text"
             value={data.gene}
@@ -91,7 +98,7 @@ const Search: React.FC = () => {
             disableUnderline
             fullWidth
           />
-          
+
           <Button
             onClick={handleSearch}
             disabled={loading}
