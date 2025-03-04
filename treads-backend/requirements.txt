@@ -35,8 +35,10 @@ packaging==24.2
 pandas==2.2.3
 parso==0.8.4
 pillow==11.1.0
+platformdirs==4.3.6
 plotly==6.0.0
 prompt_toolkit==3.0.50
+psutil==7.0.0
 psycopg2==2.9.10
 psycopg2-binary==2.9.10
 pure_eval==0.2.3
@@ -44,8 +46,8 @@ Pygments==2.19.1
 pymed==0.8.9
 pyparsing==3.2.1
 python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
 pytz==2025.1
-pywin32==308
 pyzmq==26.2.1
 requests==2.32.3
 six==1.17.0
