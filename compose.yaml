@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./treads-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./treads-frontend:/app
+    networks:
+      - app-network
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "test"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "nayan123"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./treads-backend/backupfile.sql:/docker-entrypoint-initdb.d/backupfile.sql
+    networks:
+      - app-network
+
+  backend:
+    build: ./treads-backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    command: >
+      bash -c "python manage.py makemigrations &&
+               python manage.py migrate &&
+               python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./treads-backend:/app
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
