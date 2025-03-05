@@ -21,6 +21,8 @@ import logging
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
 
+from django.http import HttpResponse
+
 columns = ['Uniprot ID', 'Gene', 'Uniprot Name', 'Protein Name', 'Sequence Length', 'A', 'C', 'D', 'E',
            'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', 'Sequence',
            'Gene Expression data (Bgee)', 'Organ Expression', 'N-linked Glycosylation',
@@ -30,6 +32,9 @@ columns = ['Uniprot ID', 'Gene', 'Uniprot Name', 'Protein Name', 'Sequence Lengt
            'Drug Target', 'Support Vector Machine',
            'Gradient Boosting', 'Random Forest Classifier', 'Multilayer Perceptron', 'Signal Peptide', ]
 
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
 
 @require_http_methods(["GET"])
 def get_csrf_token(request):
