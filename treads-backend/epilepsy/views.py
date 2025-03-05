@@ -12,6 +12,7 @@ from epilepsy.models import Aed
 
 from epilepsy.plots import plotting_properties
 from app.settings import CSV_FILE_PATH
+from app.settings import PICKLE_FILE_PATH
 
 from django.middleware.csrf import get_token
 from django.views.decorators.http import require_http_methods
@@ -283,3 +284,52 @@ def result(request):
     except Exception as e:
         logger.error(f"Unexpected error: {str(e)}", exc_info=True)
         return JsonResponse({'error': 'Internal server error'}, status=500)
+    
+def common_genes(request):
+    try:
+        # Ensure the request method is POST
+        if request.method != "POST":
+            return JsonResponse({"error": "Only POST requests are allowed."}, status=405)
+
+        # Parse the JSON data from the request
+        try:
+            data = json.loads(request.body.decode("utf-8"))
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid JSON format."}, status=400)
+
+        # Extract 'favorite' genes from JSON payload
+        requested_genes = data.get("favorite", [])
+
+        if not isinstance(requested_genes, list) or not requested_genes:
+            return JsonResponse({"error": "Invalid or missing 'favorite' field. It should be a list of genes."}, status=400)
+
+        # Load the required data files
+        try:
+            disorder_data = pd.read_pickle(PICKLE_FILE_PATH + 'All_genes_with_disorders_simple_appeneded_data.pkl')
+            eag = pd.read_pickle(PICKLE_FILE_PATH + 'Epilepsy_Associated_genes_with_all_information_Carpe_DB_and_Disorder_data_with_references_Updated.pkl')
+        except FileNotFoundError:
+            return JsonResponse({"error": "Required data files not found."}, status=500)
+        except Exception as e:
+            return JsonResponse({"error": f"Error loading data files: {str(e)}"}, status=500)
+
+        # Extract gene lists based on the requested disorders
+        result_genes = [
+            list(disorder_data[disorder_data['Disorder'] == gene]['Uniprot ID'].values)
+            for gene in requested_genes
+        ]
+
+        # Ensure result_genes is not empty
+        if not result_genes or all(len(genes) == 0 for genes in result_genes):
+            return JsonResponse({"error": "No matching genes found for the requested disorders."}, status=404)
+
+        # Find common genes across all requested disorders
+        result_genes_common = set(result_genes[0]).intersection(*result_genes)
+
+        if result_genes_common:
+            resultant_df = eag[eag['uniprotid'].isin(result_genes_common)]
+            return JsonResponse(json.loads(resultant_df.to_json(orient='records')), safe=False)
+        else:
+            return JsonResponse({"error": "No common genes found among the requested disorders."}, status=404)
+
+    except Exception as e:
+        return JsonResponse({"error": f"An unexpected error occurred: {str(e)}"}, status=500)
