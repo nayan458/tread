@@ -31,6 +31,9 @@ columns = ['Uniprot ID', 'Gene', 'Uniprot Name', 'Protein Name', 'Sequence Lengt
            'Gradient Boosting', 'Random Forest Classifier', 'Multilayer Perceptron', 'Signal Peptide', ]
 
 
+def index():
+    return "<h1>Welcome<h2>"
+
 @require_http_methods(["GET"])
 def get_csrf_token(request):
     return JsonResponse({'csrf_token': get_token(request)})

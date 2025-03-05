@@ -36,6 +36,7 @@ allowed_hosts = os.getenv("DJANGO_ALLOWED_HOSTS", "")
 
 # Split the string by commas and strip whitespace from each host
 ALLOWED_HOSTS = [host.strip() for host in allowed_hosts.split(",") if host.strip()]
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 
