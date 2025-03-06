@@ -5,12 +5,16 @@ import StickyHeaderTable from '@components/Tables/StickyHeader/StickyHeaderTable
 import { useSearch } from '@context/SearchContext';
 import { Card, CardContent, CardHeader } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import React from 'react';
+import React, { useEffect } from 'react';
 import LiteratureAssociated from './LiteratureAssociated';
 import RelatedAED from './RelatedAED';
 
 const Result: React.FC = () => {
-  const { searchResult, loading } = useSearch();
+  const { searchResult, loading, handleSearch } = useSearch();
+
+  useEffect(() => {
+    handleSearch();
+  },);
 
   if (loading) {
     return (

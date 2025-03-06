@@ -1,15 +1,4 @@
-version: "3.8"
-
 services:
-  frontend:
-    build: ./treads-frontend
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./treads-frontend:/app
-    networks:
-      - app-network
-
   db:
     image: postgres:latest
     environment:
@@ -33,11 +22,32 @@ services:
     command: >
       bash -c "python manage.py makemigrations &&
                python manage.py migrate &&
-               python manage.py runserver 0.0.0.0:8000"
+               gunicorn app.wsgi:application --workers=3 --bind=0.0.0.0:8000 --timeout=60"
     volumes:
       - ./treads-backend:/app
     networks:
       - app-network
+
+  frontend:
+    build: 
+      context: ./treads-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./treads-frontend:/app
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend
+      - backend
+    restart: always
 
 volumes:
   postgres_data:

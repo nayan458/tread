@@ -24,6 +24,7 @@ build/
 
 # Virtual Environment
 venv/
+ubuntuvenv/
 env/
 ENV/
 .env
