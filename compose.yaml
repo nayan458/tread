@@ -29,8 +29,8 @@ services:
   frontend:
     build: 
       context: ./treads-frontend
-    volumes:
-      - ./treads-frontend:/app
+    # volumes:
+    #   - ./treads-frontend:/app
     networks:
       - frontend-network
       - backend-network
