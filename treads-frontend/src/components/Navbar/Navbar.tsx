@@ -14,15 +14,15 @@ interface URLItem {
 const Navbar: React.FC = () => {
   const urls: URLItem[] = [
     { to: '/Home', label: 'Home' },
-    {
-      dropDown: true,
-      label: 'Search',
-      urls: [
-        { to: '/Search/UniProtID', label: 'Uni Prot ID' },
-        { to: '/Search/GeneName', label: 'Gene Name' },
-        { to: '/Search/EnsemblID', label: 'Ensembl ID' },
-      ],
-    },
+    // {
+    //   dropDown: true,
+    //   label: 'Search',
+    //   urls: [
+    //     { to: '/Search/UniProtID', label: 'Uni Prot ID' },
+    //     { to: '/Search/GeneName', label: 'Gene Name' },
+    //     { to: '/Search/EnsemblID', label: 'Ensembl ID' },
+    //   ],
+    // },
     {
       dropDown: true,
       label: 'Browse',
