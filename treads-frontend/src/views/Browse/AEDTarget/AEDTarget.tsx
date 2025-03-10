@@ -51,9 +51,11 @@ const rows: AedTargetData[] = AedTargetJsonData.AedTargets.map(
 );
 
 const AEDTarget: React.FC = () => {
-  const { handleSearchByParameter } = useSearch();
+  const { handleSearchByParameter, saveToCookies, setSearchTerm } = useSearch();
 
   const submit = (value: string) => {
+    setSearchTerm({ gene: value, search_id: 'GeneName' });
+    saveToCookies();
     return handleSearchByParameter(value, 'GeneName');
   };
 

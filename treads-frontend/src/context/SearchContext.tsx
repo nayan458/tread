@@ -1,7 +1,8 @@
 import axiosInstance from '@api/AxiosInsctance';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SearchResultType, searchTermType } from 'src/types';
+import Cookies from 'js-cookie';
 
 interface SearchContextType {
   searchTerm: searchTermType;
@@ -10,26 +11,91 @@ interface SearchContextType {
   loading: boolean;
   handleSearch: () => Promise<void>;
   handleSearchByParameter: (gene: string, searchID: string) => Promise<void>;
+
+  saveToCookies: () => void;
+
+  searchCommonGenes: string[];
+  setSearchCommonGenes: React.Dispatch<React.SetStateAction<string[]>>;
+  handleSetSearchCommonGenes: (disorder: string) => void;
+  handleSearchCommonGenes: () => void;
 }
 
-// Create Context
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
 
-// Context Provider Component
+const COOKIE_EXPIRY = 7;
+const SEARCH_TERM_COOKIE = 'searchTerm';
+const SEARCH_RESULT_COOKIE = 'searchResult';
+const COMMON_GENES_COOKIE = 'searchCommonGenes';
+
 export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const navigate = useNavigate();
-  const [searchTerm, setSearchTerm] = useState({
+  const [searchTerm, setSearchTerm] = useState<searchTermType>({
     gene: '',
     search_id: '',
   });
-  const [searchResult, setSearchResult] = useState(null);
+  const [searchResult, setSearchResult] = useState<SearchResultType | null>(null);
   const [loading, setLoading] = useState(false);
+  const [searchCommonGenes, setSearchCommonGenes] = useState<string[]>([]);
+  
+  // Refs to track if data was loaded from cookies
+  const initialLoadDone = useRef(false);
+
+  // Load data from cookies ONLY on initial render
+  useEffect(() => {
+    if (initialLoadDone.current) return;
+    
+    const savedSearchTerm = Cookies.get(SEARCH_TERM_COOKIE);
+    const savedSearchResult = Cookies.get(SEARCH_RESULT_COOKIE);
+    const savedCommonGenes = Cookies.get(COMMON_GENES_COOKIE);
+    
+    if (savedSearchTerm) {
+      try {
+        setSearchTerm(JSON.parse(savedSearchTerm));
+      } catch (e) {
+        console.error("Error parsing search term cookie:", e);
+      }
+    }
+    
+    if (savedSearchResult) {
+      try {
+        setSearchResult(JSON.parse(savedSearchResult));
+      } catch (e) {
+        console.error("Error parsing search result cookie:", e);
+      }
+    }
+    
+    if (savedCommonGenes) {
+      try {
+        setSearchCommonGenes(JSON.parse(savedCommonGenes));
+      } catch (e) {
+        console.error("Error parsing common genes cookie:", e);
+      }
+    }
+    
+    initialLoadDone.current = true;
+  }, []);
+
+  // Save data to cookies manually instead of with useEffect
+  const saveToCookies = () => {
+    if (searchTerm.gene || searchTerm.search_id) {
+      Cookies.set(SEARCH_TERM_COOKIE, JSON.stringify(searchTerm), { expires: COOKIE_EXPIRY });
+    }
+    
+    if (searchResult) {
+      Cookies.set(SEARCH_RESULT_COOKIE, JSON.stringify(searchResult), { expires: COOKIE_EXPIRY });
+    }
+    
+    if (searchCommonGenes.length > 0) {
+      Cookies.set(COMMON_GENES_COOKIE, JSON.stringify(searchCommonGenes), { expires: COOKIE_EXPIRY });
+    }
+  };
 
   const handleSearch = async () => {
     if (!searchTerm.gene.trim() || !searchTerm.search_id.trim()) return;
 
+    saveToCookies();
     navigate('/result');
 
     setLoading(true);
@@ -40,6 +106,9 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
       const response = await axiosInstance.post('/result', formData);
       const data = await response.data;
       setSearchResult(data);
+      // Save cookies after successful response
+      Cookies.set(SEARCH_TERM_COOKIE, JSON.stringify(searchTerm), { expires: COOKIE_EXPIRY });
+      Cookies.set(SEARCH_RESULT_COOKIE, JSON.stringify(data), { expires: COOKIE_EXPIRY });
     } catch (error) {
       console.error('Error fetching gene data:', error);
       setSearchResult(null);
@@ -51,6 +120,15 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   const handleSearchByParameter = async (gene: string, searchID: string) => {
     if (!gene.trim() || !searchID.trim()) return;
 
+    // Update the searchTerm state
+    const newSearchTerm = {
+      gene: gene,
+      search_id: searchID
+    };
+    
+    setSearchTerm(newSearchTerm);
+
+    saveToCookies();
     navigate('/result');
 
     setLoading(true);
@@ -61,6 +139,46 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
       const response = await axiosInstance.post('/result', formData);
       const data = await response.data;
       setSearchResult(data);
+      // Save cookies after successful response
+      Cookies.set(SEARCH_TERM_COOKIE, JSON.stringify(newSearchTerm), { expires: COOKIE_EXPIRY });
+      Cookies.set(SEARCH_RESULT_COOKIE, JSON.stringify(data), { expires: COOKIE_EXPIRY });
+    } catch (error) {
+      console.error('Error fetching gene data:', error);
+      setSearchResult(null);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+  const handleSetSearchCommonGenes = (disorder: string) => {
+    if (!disorder.trim()) return;
+
+    setSearchCommonGenes((prev) => {
+      const newValue = prev.includes(disorder)
+        ? prev.filter((item) => item !== disorder)
+        : [...prev, disorder];
+      
+      // Save to cookie manually when the state changes
+      Cookies.set(COMMON_GENES_COOKIE, JSON.stringify(newValue), { expires: COOKIE_EXPIRY });
+      
+      return newValue;
+    });
+  };
+
+  const handleSearchCommonGenes = async () => {
+    if (!searchCommonGenes.length) return;
+
+    navigate('/result');
+    
+    setLoading(true);
+    try {
+      const response = await axiosInstance.post('/common_genes', {
+        favorite: searchCommonGenes,
+      });
+      const data = await response.data;
+      setSearchResult(data);
+      // Save cookies after successful response
+      Cookies.set(SEARCH_RESULT_COOKIE, JSON.stringify(data), { expires: COOKIE_EXPIRY });
     } catch (error) {
       console.error('Error fetching gene data:', error);
       setSearchResult(null);
@@ -77,7 +195,14 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
         searchResult,
         loading,
         handleSearch,
-        handleSearchByParameter,
+        handleSearchByParameter,          
+
+        saveToCookies,
+
+        searchCommonGenes,
+        setSearchCommonGenes,
+        handleSetSearchCommonGenes,
+        handleSearchCommonGenes
       }}
     >
       {children}

@@ -2,6 +2,7 @@ import { SearchProvider } from '@context/SearchContext';
 import TableLayout from '@layouts/TableLayout';
 import AED from '@views/Browse/AED/AED';
 import AEDTarget from '@views/Browse/AEDTarget/AEDTarget';
+import CommonGenes from '@views/Browse/Disorders/Common-Genes/CommonGenes';
 import DS from '@views/Browse/Disorders/Ds/Ds';
 import Fcd from '@views/Browse/Disorders/Fcd/Fcd';
 import Cae from '@views/Browse/Disorders/GGE/Cae/Cae';
@@ -70,6 +71,10 @@ const BrowseRoutes = {
         {
           path: 'MTLE',
           element: <Mtle />,
+        },
+        {
+          path: 'CommonGenes',
+          element: <CommonGenes />,
         },
         {
           path: 'GGE',

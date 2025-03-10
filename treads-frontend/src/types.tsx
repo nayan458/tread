@@ -187,6 +187,22 @@ export interface EgtcsData {
   [key: string]: string | number;
 }
 
+export interface CommonGenesData {
+  uniprotid: string;
+  genename: string;
+  proteinname: string;
+  references: string;
+  [key: string]: string;
+}
+
+export interface CommonGenesDataRaw {
+  uniprotid: string;
+  genename: string;
+  proteinname: string;
+  references: string[];
+  [key: string]: string | string[];
+}
+
 // EAG
 
 export interface EAGData {
