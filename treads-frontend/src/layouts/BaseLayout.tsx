@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CircularProgess from '@components/Spinner/CircularProgess';
+import Footer from '@components/Footer/Footer';
 
 const BaseLayout: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -42,6 +43,7 @@ const BaseLayout: React.FC = () => {
             <Suspense fallback={<CircularProgess />}>
               <Outlet />
             </Suspense>
+            <Footer />
           </div>
         </div>
 
