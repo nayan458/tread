@@ -203,6 +203,14 @@ export interface CommonGenesDataRaw {
   [key: string]: string | string[];
 }
 
+export interface CommonDisordersType {
+  uniprotID: string;
+  genen: string;
+  proteinName: string;
+  reference: string;
+  [key: string]: string | number;
+}
+
 // EAG
 
 export interface EAGData {
