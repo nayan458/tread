@@ -11,13 +11,11 @@ interface SearchContextType {
   loading: boolean;
   handleSearch: () => Promise<void>;
   handleSearchByParameter: (gene: string, searchID: string) => Promise<void>;
-
   saveToCookies: () => void;
-
   searchCommonGenes: string[];
   setSearchCommonGenes: React.Dispatch<React.SetStateAction<string[]>>;
   handleSetSearchCommonGenes: (disorder: string) => void;
-  handleSearchCommonGenes: () => void;
+  handleSearchCommonGenes: () => Promise<void>;
 }
 
 const SearchContext = createContext<SearchContextType | undefined>(undefined);
@@ -47,6 +45,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
     if (initialLoadDone.current) return;
     
     const savedSearchTerm = Cookies.get(SEARCH_TERM_COOKIE);
+    // Only load result if we're not going to restore it immediately
     const savedSearchResult = Cookies.get(SEARCH_RESULT_COOKIE);
     const savedCommonGenes = Cookies.get(COMMON_GENES_COOKIE);
     
@@ -58,7 +57,9 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
       }
     }
     
-    if (savedSearchResult) {
+    // Only load the result from cookies if we're not on the result page
+    // This prevents showing old data when we're expecting new data
+    if (savedSearchResult && window.location.pathname !== '/result') {
       try {
         setSearchResult(JSON.parse(savedSearchResult));
       } catch (e) {
@@ -77,7 +78,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
     initialLoadDone.current = true;
   }, []);
 
-  // Save data to cookies manually instead of with useEffect
+  // Save data to cookies manually
   const saveToCookies = () => {
     if (searchTerm.gene || searchTerm.search_id) {
       Cookies.set(SEARCH_TERM_COOKIE, JSON.stringify(searchTerm), { expires: COOKIE_EXPIRY });
@@ -100,6 +101,9 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
 
     setLoading(true);
     try {
+      // Clear previous result
+      setSearchResult(null);
+      
       const formData = new FormData();
       formData.append('gene', searchTerm.gene);
       formData.append('search_id', searchTerm.search_id);
@@ -118,7 +122,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const handleSearchByParameter = async (gene: string, searchID: string) => {
-    if (!gene.trim() || !searchID.trim()) return;
+    if (!gene.trim() || !searchID.trim()) return Promise.resolve();
 
     // Update the searchTerm state
     const newSearchTerm = {
@@ -128,10 +132,16 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
     
     setSearchTerm(newSearchTerm);
 
-    saveToCookies();
-    navigate('/result');
+    // Don't navigate if we're already on the result page
+    if (window.location.pathname !== '/result') {
+      navigate('/result');
+    }
 
     setLoading(true);
+    
+    // Clear previous result to prevent showing old data
+    setSearchResult(null);
+    
     try {
       const formData = new FormData();
       formData.append('gene', gene);
@@ -166,11 +176,14 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const handleSearchCommonGenes = async () => {
-    if (!searchCommonGenes.length) return;
+    if (!searchCommonGenes.length) return Promise.resolve();
 
     navigate('/result');
     
     setLoading(true);
+    // Clear previous result to prevent showing old data
+    setSearchResult(null);
+    
     try {
       const response = await axiosInstance.post('/common_genes', {
         favorite: searchCommonGenes,
@@ -196,9 +209,7 @@ export const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
         loading,
         handleSearch,
         handleSearchByParameter,          
-
         saveToCookies,
-
         searchCommonGenes,
         setSearchCommonGenes,
         handleSetSearchCommonGenes,

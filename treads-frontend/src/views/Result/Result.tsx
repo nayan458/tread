@@ -5,15 +5,50 @@ import StickyHeaderTable from '@components/Tables/StickyHeader/StickyHeaderTable
 import { useSearch } from '@context/SearchContext';
 import { Card, CardContent, CardHeader } from '@mui/material';
 import Grid from '@mui/material/Grid2';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import LiteratureAssociated from './LiteratureAssociated';
 import RelatedAED from './RelatedAED';
+import Cookies from 'js-cookie';
 
 const Result: React.FC = () => {
-  const { searchResult, loading} = useSearch();
+  const { searchResult, loading, handleSearchByParameter } = useSearch();
+  const hasAttemptedRestore = useRef(false);
+  // Add state to track if we're currently restoring from cookies
+  const [isRestoring, setIsRestoring] = useState(false);
 
+  // Only run this effect once to prevent infinite loops
+  useEffect(() => {
+    // Skip if already loading or if we have search results
+    if (loading || searchResult || hasAttemptedRestore.current) {
+      return;
+    }
+    
+    hasAttemptedRestore.current = true;
+    
+    const searchTermCookie = Cookies.get('searchTerm');
+    
+    if (searchTermCookie) {
+      try {
+        const parsedTerm = JSON.parse(searchTermCookie);
+        if (parsedTerm.gene && parsedTerm.search_id) {
+          console.log('Restoring search from cookies:', parsedTerm);
+          setIsRestoring(true);
+          // Clear previous cookies to prevent old data display
+          Cookies.remove('searchResult');
+          handleSearchByParameter(parsedTerm.gene, parsedTerm.search_id)
+            .finally(() => {
+              setIsRestoring(false);
+            });
+        }
+      } catch (e) {
+        console.error('Error parsing search term cookie:', e);
+        setIsRestoring(false);
+      }
+    }
+  }, [loading, searchResult]); // Dependencies that will prevent this from running if we already have results
 
-  if (loading) {
+  // Show loader if either global loading state is true OR we're restoring from cookies
+  if (loading || isRestoring) {
     return (
       <div className="w-[100%] min-h-screen flex justify-center items-center">
         <Load />
@@ -69,14 +104,3 @@ const Result: React.FC = () => {
 };
 
 export default Result;
-
-{
-  /* <Card className="m-4">
-      <CardContent className="p-4">
-        <h3 className="font-bold mb-2">Gene Information</h3>
-        <pre className="bg-gray-100 p-2 rounded">
-          {JSON.stringify(searchResult, null, 2)}
-        </pre>
-      </CardContent>
-    </Card> */
-}
