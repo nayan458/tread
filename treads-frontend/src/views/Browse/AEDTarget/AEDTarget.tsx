@@ -31,37 +31,19 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  Protein: string,
-  AntiEpilepticDrug: string,
-  DrugBankID: string,
-  Status: string
-): AedTargetData {
-  return { Protein, AntiEpilepticDrug, DrugBankID, Status };
-}
-const rows: AedTargetData[] = AedTargetJsonData.AedTargets.map(
-  (row: AedTargetData) => {
-    return createData(
-      row.Protein,
-      row.AntiEpilepticDrug,
-      row.DrugBankID,
-      row.Status
-    );
-  }
-);
+const rows: AedTargetData[] = AedTargetJsonData?.AedTargets || [];
 
 const AEDTarget: React.FC = () => {
-  const { handleSearchByParameter, saveToCookies, setSearchTerm } = useSearch();
+  const { handleSearchByParameter } = useSearch();
 
   const submit = (value: string) => {
-    setSearchTerm({ gene: value, search_id: 'GeneName' });
-    saveToCookies();
     return handleSearchByParameter(value, 'GeneName');
   };
 
   return (
     <>
       <Section topic="Anti-Epileptic Drug Targets" />
+      
       <ColumnGrouping
         columns={columns}
         rows={rows}

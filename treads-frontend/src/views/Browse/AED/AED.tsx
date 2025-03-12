@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { AedData, LinkColumn } from 'src/types';
 import Section from '@components/Sections/Section';
-import ColumnGroupingTable from '@components/Tables/MUI/ColumnGroupingTableProps';
+
 import AEDJsonData from '@db/Browse/AED';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGroupingTable = lazy(() => import('@components/Tables/MUI/ColumnGroupingTableProps'));
 
 const columns: LinkColumn[] = [
   {
@@ -29,30 +32,18 @@ const columns: LinkColumn[] = [
   },
 ];
 
-function createData(
-  drugBankID: string,
-  AEDName: string,
-  targetGene: string,
-  status: string,
-  link: string
-): AedData {
-  return { drugBankID, AEDName, targetGene, status, link };
-}
-const rows: AedData[] = AEDJsonData.AED.map((row: AedData) => {
-  return createData(
-    row.drugBankID,
-    row.AEDName,
-    row.targetGene,
-    row.status,
-    row.link
-  );
-});
+const rows: AedData[] = AEDJsonData?.AED?.map((row) => ({
+  ...row,
+  drugBankID: row.drugBankID, // Ensure it's correctly mapped
+})) || []; // Prevent errors if AEDJsonData.AED is undefined
 
 const AED: React.FC = () => {
   return (
     <>
       <Section topic="Anti-Epileptic Drugs" />
-      <ColumnGroupingTable columns={columns} rows={rows} field="drugBankID" />
+      <Suspense fallback={<CircularProgess/>}>
+        <ColumnGroupingTable columns={columns} rows={rows} field="drugBankID" />
+      </Suspense>
     </>
   );
 };

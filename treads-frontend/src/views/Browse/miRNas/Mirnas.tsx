@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { MirnasData, BaseColumn } from 'src/types';
 import MirnaJsonData from '@db/Browse/Mirnas';
 import Section from '@components/Sections/Section';
 import { useSearch } from '@context/SearchContext';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
 
 const columns: BaseColumn[] = [
   {
@@ -31,17 +33,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  mirna: string,
-  experiment: string,
-  targetGenes: string,
-  reference: string
-): MirnasData {
-  return { mirna, experiment, targetGenes, reference };
-}
-const rows: MirnasData[] = MirnaJsonData.data.map((row: MirnasData) => {
-  return createData(row.mirna, row.experiment, row.targetGenes, row.reference);
-});
+const rows: MirnasData[] = MirnaJsonData?.data || [];
 
 const Mirnas: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -53,12 +45,14 @@ const Mirnas: React.FC = () => {
   return (
     <>
       <Section topic="miRNAs and their Target Genes (Epilepsy Associated)" />
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="targetGenes"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess />}>
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          field="targetGenes"
+          handleOnClick={submit}
+        />
+      </Suspense>
     </>
   );
 };

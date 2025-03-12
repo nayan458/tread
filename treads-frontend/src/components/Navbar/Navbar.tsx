@@ -55,7 +55,6 @@ const Navbar: React.FC = () => {
         },
       ],
     },
-    { to: '/MLPredictions', label: 'ML Predictions' },
     { to: '/EpilepsyAssociatedGenes', label: 'Epilepsy Associated Genes' },
     {
       to: '/EpilepsyAssociatedPathways',

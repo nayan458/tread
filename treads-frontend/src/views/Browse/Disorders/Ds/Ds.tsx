@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, DsData } from 'src/types';
 import DSJsonData from '@db/Browse/Disorders/DS';
 import Section from '@components/Sections/Section';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 import { useSearch } from '@context/SearchContext';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
 
 const columns: BaseColumn[] = [
   {
@@ -24,22 +26,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  uniprotID: string,
-  gene: string,
-  proteinName: string,
-  reference: string
-): DsData {
-  return {
-    uniprotID,
-    gene,
-    proteinName,
-    reference,
-  };
-}
-const rows: DsData[] = DSJsonData.data.map((row: DsData) => {
-  return createData(row.uniprotID, row.gene, row.proteinName, row.reference);
-});
+const rows: DsData[] = DSJsonData?.data || [];
 
 const DS: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -51,12 +38,14 @@ const DS: React.FC = () => {
   return (
     <>
       <Section topic="Dravet Syndrome" />
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="uniprotID"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess/>}>
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          field="uniprotID"
+          handleOnClick={submit}
+        />
+      </Suspense>
     </>
   );
 };

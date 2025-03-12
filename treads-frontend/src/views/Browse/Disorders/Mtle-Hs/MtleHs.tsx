@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, MtleshData } from 'src/types';
 import MtleHsJsonData from '@db/Browse/Disorders/MTLEHS';
 import Section from '@components/Sections/Section';
 import { useSearch } from '@context/SearchContext';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
 
 const columns: BaseColumn[] = [
   {
@@ -24,22 +26,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  uniprotID: string,
-  gene: string,
-  proteinName: string,
-  reference: string
-): MtleshData {
-  return {
-    uniprotID,
-    gene,
-    proteinName,
-    reference,
-  };
-}
-const rows: MtleshData[] = MtleHsJsonData.data.map((row: MtleshData) => {
-  return createData(row.uniprotID, row.gene, row.proteinName, row.reference);
-});
+const rows: MtleshData[] = MtleHsJsonData?.data || [];
 
 const MtleHs: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -51,12 +38,14 @@ const MtleHs: React.FC = () => {
   return (
     <>
       <Section topic="Mesial Temporal Lobe Epilepsy-Hippocampal Sclerosis (HS)" />
+      <Suspense fallback={<CircularProgess/>}>
       <ColumnGrouping
         columns={columns}
         rows={rows}
         field="uniprotID"
         handleOnClick={submit}
       />
+      </Suspense>
     </>
   );
 };

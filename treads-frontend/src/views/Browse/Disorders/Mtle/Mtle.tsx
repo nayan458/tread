@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, MtleData } from 'src/types';
 import Section from '@components/Sections/Section';
 import MtleJsonData from '@db/Browse/Disorders/MTLE';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 import { useSearch } from '@context/SearchContext';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
 
 const columns: BaseColumn[] = [
   {
@@ -31,17 +33,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  uniprotID: string,
-  gene: string,
-  proteinName: string,
-  reference: string
-): MtleData {
-  return { uniprotID, gene, proteinName, reference };
-}
-const rows: MtleData[] = MtleJsonData.data.map((row: MtleData) => {
-  return createData(row.uniprotID, row.gene, row.proteinName, row.reference);
-});
+const rows: MtleData[] = MtleJsonData?.data || [];
 
 const Mirnas: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -53,12 +45,14 @@ const Mirnas: React.FC = () => {
   return (
     <>
       <Section topic="Mesial Temporal Lobe Epilepsy (MTLE)" />
+      <Suspense fallback={<CircularProgess/>}>
       <ColumnGrouping
         columns={columns}
         rows={rows}
         field="uniprotID"
         handleOnClick={submit}
       />
+      </Suspense>
     </>
   );
 };
