@@ -9,7 +9,8 @@ const JaeJsonData = {
     {
       uniprotID: 'O00555',
       gene: 'CACNA1A',
-      proteinName: 'Voltage-dependent P/Q-type calcium channel subunit alpha-1A',
+      proteinName:
+        'Voltage-dependent P/Q-type calcium channel subunit alpha-1A',
       reference: 'PMID: 29924869',
     },
     {

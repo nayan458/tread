@@ -23,7 +23,13 @@ import { Button, Link } from '@mui/material';
 
 interface ColumnGroupingTableProps {
   columns: BaseColumn[] | LinkColumn[];
-  rows: AedData[] | AedTargetData[] | MirnasData[] | MtleData[] | EAPData[] | CommonGenesData[];
+  rows:
+    | AedData[]
+    | AedTargetData[]
+    | MirnasData[]
+    | MtleData[]
+    | EAPData[]
+    | CommonGenesData[];
   // rows: EAPData;
   field?: string; // Field passed from the parent component
   handleOnClick: (value: string) => Promise<void>;

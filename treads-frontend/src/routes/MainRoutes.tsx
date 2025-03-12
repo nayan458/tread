@@ -33,9 +33,7 @@ const MainRoutes = {
         },
         {
           path: 'home',
-          element: (
-              <Home />
-          ),
+          element: <Home />,
         },
       ],
     },
@@ -44,29 +42,21 @@ const MainRoutes = {
       children: [
         {
           path: 'EpilepsyAssociatedGenes',
-          element: (
-              <EAG />
-          ),
+          element: <EAG />,
         },
         {
           path: 'EpilepsyAssociatedPathways',
-          element: (
-              <EAP />
-          ),
+          element: <EAP />,
         },
         {
           path: 'result',
-          element: (
-              <Result />
-          ),
+          element: <Result />,
         },
       ],
     },
     {
       path: '*',
-      element: (
-          <PageNotFound />
-      ),
+      element: <PageNotFound />,
     },
   ],
 };

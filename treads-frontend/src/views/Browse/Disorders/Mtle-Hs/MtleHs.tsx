@@ -5,7 +5,9 @@ import Section from '@components/Sections/Section';
 import { useSearch } from '@context/SearchContext';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -38,13 +40,13 @@ const MtleHs: React.FC = () => {
   return (
     <>
       <Section topic="Mesial Temporal Lobe Epilepsy-Hippocampal Sclerosis (HS)" />
-      <Suspense fallback={<CircularProgess/>}>
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="uniprotID"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess />}>
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          field="uniprotID"
+          handleOnClick={submit}
+        />
       </Suspense>
     </>
   );

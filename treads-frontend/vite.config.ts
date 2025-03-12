@@ -4,16 +4,16 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/",
+  base: '/',
   preview: {
     port: 3000,
     strictPort: true,
-   },
+  },
   server: {
     host: true,
     port: 3000,
-    origin: "http://0.0.0.0:3000",
-    strictPort: true
+    origin: 'http://0.0.0.0:3000',
+    strictPort: true,
   },
   plugins: [react()],
   resolve: {

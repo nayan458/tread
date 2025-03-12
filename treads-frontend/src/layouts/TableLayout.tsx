@@ -7,7 +7,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-
 const TableLayout: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
@@ -22,9 +21,7 @@ const TableLayout: React.FC = () => {
           className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-gray-700 text-white rounded"
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
         >
-          {
-            isNavbarOpen ? <CloseIcon /> : <MenuRoundedIcon />
-          }
+          {isNavbarOpen ? <CloseIcon /> : <MenuRoundedIcon />}
         </button>
 
         {/* Left Sidebar (Navigation) */}
@@ -41,7 +38,7 @@ const TableLayout: React.FC = () => {
         {/* Main Content Area */}
         <div className="flex-1 overflow-y-auto bg-background-tertiary scrollbar-hide px-4 sm:px-6 lg:px-8 ">
           <div className="text-text-secondary py-8 sm:py-12">
-            <Suspense fallback={<CircularProgess/>}>
+            <Suspense fallback={<CircularProgess />}>
               <Outlet />
             </Suspense>
           </div>

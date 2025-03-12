@@ -7,13 +7,17 @@ import TableLayout from '@layouts/TableLayout';
 const AED = lazy(() => import('@views/Browse/AED/AED'));
 const AEDTarget = lazy(() => import('@views/Browse/AEDTarget/AEDTarget'));
 const Mirnas = lazy(() => import('@views/Browse/miRNas/Mirnas'));
-const ProtinFamilies = lazy(() => import('@views/Browse/Protein-Families/ProtinFamilies'));
+const ProtinFamilies = lazy(
+  () => import('@views/Browse/Protein-Families/ProtinFamilies')
+);
 const DS = lazy(() => import('@views/Browse/Disorders/Ds/Ds'));
 const Fcd = lazy(() => import('@views/Browse/Disorders/Fcd/Fcd'));
 const HS = lazy(() => import('@views/Browse/Disorders/Hs/Hs'));
 const MtleHs = lazy(() => import('@views/Browse/Disorders/Mtle-Hs/MtleHs'));
 const Mtle = lazy(() => import('@views/Browse/Disorders/Mtle/Mtle'));
-const CommonGenes = lazy(() => import('@views/Browse/Disorders/Common-Genes/CommonGenes'));
+const CommonGenes = lazy(
+  () => import('@views/Browse/Disorders/Common-Genes/CommonGenes')
+);
 const Cae = lazy(() => import('@views/Browse/Disorders/GGE/Cae/Cae'));
 const Egtcs = lazy(() => import('@views/Browse/Disorders/GGE/Egtcs/Egtcs'));
 const Jae = lazy(() => import('@views/Browse/Disorders/GGE/Jae/Jae'));
@@ -29,27 +33,19 @@ const BrowseRoutes = {
   children: [
     {
       path: 'AED',
-      element: (
-          <AED />
-      ),
+      element: <AED />,
     },
     {
       path: 'AEDTargets',
-      element: (
-          <AEDTarget />
-      ),
+      element: <AEDTarget />,
     },
     {
       path: 'Mirnas',
-      element: (
-          <Mirnas />
-      ),
+      element: <Mirnas />,
     },
     {
       path: 'ProteinFamilies',
-      element: (
-          <ProtinFamilies />
-      ),
+      element: <ProtinFamilies />,
     },
     {
       path: 'Disorders',
@@ -57,39 +53,27 @@ const BrowseRoutes = {
       children: [
         {
           path: 'DS',
-          element: (
-              <DS />
-          ),
+          element: <DS />,
         },
         {
           path: 'FCD',
-          element: (
-              <Fcd />
-          ),
+          element: <Fcd />,
         },
         {
           path: 'HS',
-          element: (
-              <HS />
-          ),
+          element: <HS />,
         },
         {
           path: 'MTLE-HS',
-          element: (
-              <MtleHs />
-          ),
+          element: <MtleHs />,
         },
         {
           path: 'MTLE',
-          element: (
-              <Mtle />
-          ),
+          element: <Mtle />,
         },
         {
           path: 'CommonGenes',
-          element: (
-              <CommonGenes />
-          ),
+          element: <CommonGenes />,
         },
         {
           path: 'GGE',
@@ -97,27 +81,19 @@ const BrowseRoutes = {
           children: [
             {
               path: 'CAE',
-              element: (
-                  <Cae />
-              ),
+              element: <Cae />,
             },
             {
               path: 'JAE',
-              element: (
-                  <Jae />
-              ),
+              element: <Jae />,
             },
             {
               path: 'JME',
-              element: (
-                  <Jme />
-              ),
+              element: <Jme />,
             },
             {
               path: 'EGTCS',
-              element: (
-                  <Egtcs />
-              ),
+              element: <Egtcs />,
             },
           ],
         },

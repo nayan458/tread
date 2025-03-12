@@ -5,7 +5,9 @@ import Section from '@components/Sections/Section';
 import { useSearch } from '@context/SearchContext';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {

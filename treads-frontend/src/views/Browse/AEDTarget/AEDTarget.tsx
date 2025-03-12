@@ -43,7 +43,7 @@ const AEDTarget: React.FC = () => {
   return (
     <>
       <Section topic="Anti-Epileptic Drug Targets" />
-      
+
       <ColumnGrouping
         columns={columns}
         rows={rows}

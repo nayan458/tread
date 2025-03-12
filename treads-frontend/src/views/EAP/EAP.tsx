@@ -20,7 +20,9 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -123,12 +125,12 @@ const EAP: React.FC = () => {
                 </AccordionSummary>
                 <AccordionDetails sx={{ p: 0 }}>
                   <Suspense fallback={<CircularProgess />}>
-                  <ColumnGrouping
-                    field="uniprotid"
-                    columns={columns}
-                    rows={group.data}
-                    handleOnClick={submit}
-                  />
+                    <ColumnGrouping
+                      field="uniprotid"
+                      columns={columns}
+                      rows={group.data}
+                      handleOnClick={submit}
+                    />
                   </Suspense>
                 </AccordionDetails>
               </Accordion>
@@ -156,12 +158,12 @@ const EAP: React.FC = () => {
                 />
                 <CardContent sx={{ p: 0 }}>
                   <Suspense fallback={<CircularProgess />}>
-                  <ColumnGrouping
-                    field="uniprotid"
-                    columns={columns}
-                    rows={group.data}
-                    handleOnClick={submit}
-                  />
+                    <ColumnGrouping
+                      field="uniprotid"
+                      columns={columns}
+                      rows={group.data}
+                      handleOnClick={submit}
+                    />
                   </Suspense>
                 </CardContent>
               </Card>

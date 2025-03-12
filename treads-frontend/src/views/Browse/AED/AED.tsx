@@ -5,7 +5,9 @@ import Section from '@components/Sections/Section';
 import AEDJsonData from '@db/Browse/AED';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-const ColumnGroupingTable = lazy(() => import('@components/Tables/MUI/ColumnGroupingTableProps'));
+const ColumnGroupingTable = lazy(
+  () => import('@components/Tables/MUI/ColumnGroupingTableProps')
+);
 
 const columns: LinkColumn[] = [
   {
@@ -32,16 +34,17 @@ const columns: LinkColumn[] = [
   },
 ];
 
-const rows: AedData[] = AEDJsonData?.AED?.map((row) => ({
-  ...row,
-  drugBankID: row.drugBankID, // Ensure it's correctly mapped
-})) || []; // Prevent errors if AEDJsonData.AED is undefined
+const rows: AedData[] =
+  AEDJsonData?.AED?.map((row) => ({
+    ...row,
+    drugBankID: row.drugBankID, // Ensure it's correctly mapped
+  })) || []; // Prevent errors if AEDJsonData.AED is undefined
 
 const AED: React.FC = () => {
   return (
     <>
       <Section topic="Anti-Epileptic Drugs" />
-      <Suspense fallback={<CircularProgess/>}>
+      <Suspense fallback={<CircularProgess />}>
         <ColumnGroupingTable columns={columns} rows={rows} field="drugBankID" />
       </Suspense>
     </>

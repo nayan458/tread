@@ -22,11 +22,11 @@ const Result: React.FC = () => {
     if (loading || searchResult || hasAttemptedRestore.current) {
       return;
     }
-    
+
     hasAttemptedRestore.current = true;
-    
+
     const searchTermCookie = Cookies.get('searchTerm');
-    
+
     if (searchTermCookie) {
       try {
         const parsedTerm = JSON.parse(searchTermCookie);
@@ -35,10 +35,12 @@ const Result: React.FC = () => {
           setIsRestoring(true);
           // Clear previous cookies to prevent old data display
           Cookies.remove('searchResult');
-          handleSearchByParameter(parsedTerm.gene, parsedTerm.search_id)
-            .finally(() => {
-              setIsRestoring(false);
-            });
+          handleSearchByParameter(
+            parsedTerm.gene,
+            parsedTerm.search_id
+          ).finally(() => {
+            setIsRestoring(false);
+          });
         }
       } catch (e) {
         console.error('Error parsing search term cookie:', e);

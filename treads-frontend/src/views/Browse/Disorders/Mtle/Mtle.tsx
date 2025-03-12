@@ -5,7 +5,9 @@ import MtleJsonData from '@db/Browse/Disorders/MTLE';
 import { useSearch } from '@context/SearchContext';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-const ColumnGrouping = React.lazy(() => import('@components/Tables/MUI/ColumnGrouping'));
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -45,13 +47,13 @@ const Mirnas: React.FC = () => {
   return (
     <>
       <Section topic="Mesial Temporal Lobe Epilepsy (MTLE)" />
-      <Suspense fallback={<CircularProgess/>}>
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="uniprotID"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess />}>
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          field="uniprotID"
+          handleOnClick={submit}
+        />
       </Suspense>
     </>
   );
