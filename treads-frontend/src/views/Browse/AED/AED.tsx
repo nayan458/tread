@@ -6,7 +6,7 @@ import AEDJsonData from '@db/Browse/AED';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
 const ColumnGrouping = lazy(
-  () => import('@components/Tables/MUI/ColumnGroupingTableProps')
+  () => import('@components/Tables/MUI/ColumnGrouping')
 );
 
 const columns: LinkColumn[] = [

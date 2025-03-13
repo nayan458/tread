@@ -17,7 +17,7 @@ interface ColumnGroupingTableProps {
   rows: RowType;
   // rows: EAPData;
   field?: string; // Field passed from the parent component
-  handleOnClick: (value: string) => Promise<void> | void;
+  handleOnClick?: (value: string) => Promise<void> | void;
   data: RowType;
 }
 
@@ -177,7 +177,7 @@ const ColumnGrouping: React.FC<ColumnGroupingTableProps> = ({
                               </a>
                             </TableCell>
                           );
-                      else if (column.type === 'button')
+                      else if (column.type === 'button' && handleOnClick)
                         return (
                           <TableCell key={column.id} align={column.align}>
                             <Button
