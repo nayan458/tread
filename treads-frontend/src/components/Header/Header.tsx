@@ -1,6 +1,6 @@
 import React from 'react';
-import CdacLogo from '@assets/CdacLogo.jpeg';
-import TreadsLogo from '@assets/TreadsLogo.png';
+import CdacLogo from '@assets/img/CdacLogo.jpeg';
+import TreadsLogo from '@assets/img/TreadsLogo.png';
 import Search from '@components/Search/Search';
 
 const Header: React.FC = () => {
