@@ -1,8 +1,8 @@
 import React from 'react';
-import AIIMS_Logo from '@assets/AIIMS_Delhi_logo.png';
-import NIAS_Logo from '@assets/NIAS_logo.png';
-import University_Logo from '@assets/University_of_Delhi_logo.png';
-import IITDelhi_Logo from '@assets/IIT_Delhi_logo.png';
+import AIIMS_Logo from '@assets/img/AIIMS_Delhi_logo.png';
+import NIAS_Logo from '@assets/img/NIAS_logo.png';
+import University_Logo from '@assets/img/University_of_Delhi_logo.png';
+import IITDelhi_Logo from '@assets/img/IIT_Delhi_logo.png';
 import { Link } from '@mui/material';
 
 const logos = [AIIMS_Logo, NIAS_Logo, University_Logo, IITDelhi_Logo];
