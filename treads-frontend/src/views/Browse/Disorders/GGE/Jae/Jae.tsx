@@ -46,6 +46,7 @@ const Jae: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={JaeJsonData.data}
         />
       </Suspense>
     </>

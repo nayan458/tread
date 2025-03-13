@@ -5,7 +5,7 @@ import Section from '@components/Sections/Section';
 import AEDJsonData from '@db/Browse/AED';
 import CircularProgess from '@components/Spinner/CircularProgess';
 
-const ColumnGroupingTable = lazy(
+const ColumnGrouping = lazy(
   () => import('@components/Tables/MUI/ColumnGroupingTableProps')
 );
 
@@ -45,7 +45,12 @@ const AED: React.FC = () => {
     <>
       <Section topic="Anti-Epileptic Drugs" />
       <Suspense fallback={<CircularProgess />}>
-        <ColumnGroupingTable columns={columns} rows={rows} field="drugBankID" />
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          data={AEDJsonData.AED}
+          field="drugBankID"
+        />
       </Suspense>
     </>
   );

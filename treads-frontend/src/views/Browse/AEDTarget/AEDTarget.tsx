@@ -49,6 +49,7 @@ const AEDTarget: React.FC = () => {
         rows={rows}
         field="Protein"
         handleOnClick={submit}
+        data={AedTargetJsonData.AedTargets}
       />
     </>
   );

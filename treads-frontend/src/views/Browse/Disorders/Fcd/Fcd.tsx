@@ -46,6 +46,7 @@ const Fcd: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={FcdJsonData.data}
         />
       </Suspense>
     </>

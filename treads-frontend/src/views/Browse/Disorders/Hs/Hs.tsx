@@ -46,6 +46,7 @@ const HS: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={HSJsonData.data}
         />
       </Suspense>
     </>

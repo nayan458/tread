@@ -42,6 +42,7 @@ const Cae: React.FC = () => {
       <Section topic="Childhood Absence Epilepsy" />
       <Suspense fallback={<CircularProgess />}>
         <ColumnGrouping
+          data={CaeJsonData.data}
           columns={columns}
           rows={rows}
           field="uniprotID"

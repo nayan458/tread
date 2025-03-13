@@ -130,6 +130,7 @@ const EAP: React.FC = () => {
                       columns={columns}
                       rows={group.data}
                       handleOnClick={submit}
+                      data={group.data}
                     />
                   </Suspense>
                 </AccordionDetails>
@@ -163,6 +164,7 @@ const EAP: React.FC = () => {
                       columns={columns}
                       rows={group.data}
                       handleOnClick={submit}
+                      data={group.data}
                     />
                   </Suspense>
                 </CardContent>

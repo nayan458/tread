@@ -46,6 +46,7 @@ const DS: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={DSJsonData.data}
         />
       </Suspense>
     </>

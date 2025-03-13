@@ -53,6 +53,7 @@ const Mirnas: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={MtleJsonData.data}
         />
       </Suspense>
     </>

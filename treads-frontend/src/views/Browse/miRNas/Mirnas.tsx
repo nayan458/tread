@@ -53,6 +53,7 @@ const Mirnas: React.FC = () => {
           rows={rows}
           field="targetGenes"
           handleOnClick={submit}
+          data={MirnaJsonData.data}
         />
       </Suspense>
     </>

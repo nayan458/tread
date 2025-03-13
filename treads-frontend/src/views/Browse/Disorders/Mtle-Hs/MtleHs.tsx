@@ -46,6 +46,7 @@ const MtleHs: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={MtleHsJsonData.data}
         />
       </Suspense>
     </>

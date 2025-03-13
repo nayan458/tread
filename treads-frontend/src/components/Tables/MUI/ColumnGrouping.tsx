@@ -7,32 +7,18 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import {
-  AedData,
-  AedTargetData,
-  BaseColumn,
-  CommonGenesData,
-  EAPData,
-  LinkColumn,
-  MirnasData,
-  MtleData,
-} from 'src/types';
+import { BaseColumn, LinkColumn, RowType } from 'src/types';
 import SearchBar from '@components/Search/SearchBar';
 import Dropdown from './Dropdown';
 import { Button, Link } from '@mui/material';
 
 interface ColumnGroupingTableProps {
   columns: BaseColumn[] | LinkColumn[];
-  rows:
-    | AedData[]
-    | AedTargetData[]
-    | MirnasData[]
-    | MtleData[]
-    | EAPData[]
-    | CommonGenesData[];
+  rows: RowType;
   // rows: EAPData;
   field?: string; // Field passed from the parent component
-  handleOnClick: (value: string) => Promise<void>;
+  handleOnClick: (value: string) => Promise<void> | void;
+  data: RowType;
 }
 
 const ColumnGrouping: React.FC<ColumnGroupingTableProps> = ({
@@ -40,6 +26,7 @@ const ColumnGrouping: React.FC<ColumnGroupingTableProps> = ({
   rows,
   field = '',
   handleOnClick,
+  data,
 }) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -115,7 +102,7 @@ const ColumnGrouping: React.FC<ColumnGroupingTableProps> = ({
                 />
               </TableCell>
               <TableCell align="center" colSpan={3}>
-                <Dropdown />
+                <Dropdown data={data} />
               </TableCell>
             </TableRow>
             <TableRow>

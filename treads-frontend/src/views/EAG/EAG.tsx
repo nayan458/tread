@@ -46,6 +46,7 @@ const EAG: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={EAGJsonData.data}
         />
       </Suspense>
     </>

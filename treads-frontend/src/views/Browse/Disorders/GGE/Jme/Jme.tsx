@@ -46,6 +46,7 @@ const Jme: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={JmeJsonData.data}
         />
       </Suspense>
     </>

@@ -96,16 +96,6 @@ DATABASES = {
         'PORT': os.getenv("DATABASE_PORT")
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'test',
-#         'USER': 'postgres',
-#         'PASSWORD': 'nayan123',
-#         'HOST': 'localhost',
-#         'PORT': '5432',  # Adding default PostgreSQL port
-#     }
-# }
 
 
 # Password validation
@@ -149,22 +139,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Manual setup for CORS
+# Manual setup for CORS 
+cors_allowed_origin = os.getenv("CORS_ALLOWED_ORIGINS", "")
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost",
-    "http://127.0.0.1",
-    "http://localhost:80",
-    "http://127.0.0.1:80",
-    "http://localhost:5174",
-    "http://127.0.0.1:5174",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+# Split the string by commas and strip whitespace from each host
+CORS_ALLOWED_HOSTS = [origin.strip() for origin in cors_allowed_origin.split(",") if origin.strip()]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -174,17 +153,7 @@ SECURE_SSL_REDIRECT = False
 CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = False
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost",
-    "http://127.0.0.1",
-    "http://localhost:80",
-    "http://127.0.0.1:80",
-    "http://localhost:5174",
-    "http://127.0.0.1:5174",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+
+csrf_trusted_origins = os.getenv("CSRF_TRUSTED_ORIGINS")
+
+CSRF_TRUSTED_ORIGINS = [csrf_origin.strip() for csrf_origin in csrf_trusted_origins.split(",") if csrf_origin.strip()]

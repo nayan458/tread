@@ -45,20 +45,6 @@ def search(request, search_id=None):
     return render(request, 'index.html', {'search_id': search_id})
 
 
-def aedtargetpage(request):
-    # dt_data = Drugtarget.objects.all()
-    dt_data = Drugtarget.objects.all()
-    dt_df = pd.DataFrame(list(dt_data.values()))
-
-    dt_df['aed'] = [aed.replace('(', ' ').replace(')', '').split(',') for aed in dt_df['aed']]
-    # print(dt_df)
-    dt_data = UniprotAed.objects.all()
-    dt_df = pd.DataFrame(
-        list(dt_data.values('uniprotid', 'uniprotid__genename', 'aedname__drugbankid', 'aedname__status', 'aedname')))
-    # grp_df = dt_df.groupby(['uniprotid__genename'])
-
-    return render(request, 'aedtarget.html', {'dt_df': dt_df})
-
 def pubmed_articles(query):
     # Create a PubMed object that GraphQL can use to query
     # Note that the parameters are not required but kindly requested by PubMed Central
@@ -67,7 +53,6 @@ def pubmed_articles(query):
 
     # Create a GraphQL query in plain text
     query = '"' + query + '" and "epilepsy"'
-    # print(query)
 
     limit = 500
 

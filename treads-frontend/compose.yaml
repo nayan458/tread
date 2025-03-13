@@ -1,5 +1,6 @@
 services:
   web:
-    build: .
+    build:
+      context: .
     ports:
       - '3000:3000'

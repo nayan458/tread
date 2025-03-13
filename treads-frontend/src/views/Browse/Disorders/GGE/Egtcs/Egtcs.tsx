@@ -46,6 +46,7 @@ const Egtcs: React.FC = () => {
           rows={rows}
           field="uniprotID"
           handleOnClick={submit}
+          data={EgtcsJsonData.data}
         />
       </Suspense>
     </>

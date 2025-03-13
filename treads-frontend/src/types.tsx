@@ -222,17 +222,35 @@ export interface EAGData {
   [key: string]: string | number;
 }
 
-export interface ResultData {
-  columnOne: string;
-  columnTwo: string;
-  [key: string]: string | number;
-}
-
 // EAP
 
 export interface EAPData {
   uniprotid: string;
   genename: string;
   uniprotname: string;
+  [key: string]: string | number;
+}
+
+export type RowType =
+  | AedData[]
+  | AedTargetData[]
+  | CommonDisordersType[]
+  | CaeData[]
+  | CommonGenesData[]
+  | DsData[]
+  | EgtcsData[]
+  | EAGData[]
+  | EAPData[]
+  | FcdData[]
+  | HsData[]
+  | JaeData[]
+  | JmeData[]
+  | MtleshData[]
+  | MirnasData[]
+  | MtleData[];
+
+export interface ResultData {
+  columnOne: string;
+  columnTwo: string;
   [key: string]: string | number;
 }

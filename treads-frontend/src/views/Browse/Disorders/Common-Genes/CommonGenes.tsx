@@ -83,7 +83,6 @@ const CommonGenes: React.FC = () => {
   const [showFilters, setShowFilters] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   // Function to fetch common genes via API
   const fetchCommonGenes = async () => {
     if (selectedDisorders.length === 0) {
@@ -100,10 +99,10 @@ const CommonGenes: React.FC = () => {
         favorite: selectedDisorders,
       });
 
-      const data = response.data;
+      const result = response.data;
 
       // Transform API response to match table structure
-      const formattedRows = data.map((row: CommonGenesDataRaw) => {
+      const formattedRows = result.map((row: CommonGenesDataRaw) => {
         const references = row.references
           .map((ref: string) => `PMID: ${ref}`)
           .join('; ');
@@ -361,6 +360,7 @@ const CommonGenes: React.FC = () => {
                   columns={columns}
                   rows={filteredRows}
                   handleOnClick={submit}
+                  data={filteredRows}
                 />
               </Suspense>
             ) : (
