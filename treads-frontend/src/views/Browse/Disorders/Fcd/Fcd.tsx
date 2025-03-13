@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, FcdData } from 'src/types';
 import FcdJsonData from '@db/Browse/Disorders/FCD';
 import Section from '@components/Sections/Section';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 import { useSearch } from '@context/SearchContext';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -24,22 +28,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  uniprotID: string,
-  gene: string,
-  proteinName: string,
-  reference: string
-): FcdData {
-  return {
-    uniprotID,
-    gene,
-    proteinName,
-    reference,
-  };
-}
-const rows: FcdData[] = FcdJsonData.data.map((row: FcdData) => {
-  return createData(row.uniprotID, row.gene, row.proteinName, row.reference);
-});
+const rows: FcdData[] = FcdJsonData?.data || [];
 
 const Fcd: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -51,12 +40,15 @@ const Fcd: React.FC = () => {
   return (
     <>
       <Section topic="Focal Cortical Dysplasia (FCD)" />
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="uniprotID"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess />}>
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          field="uniprotID"
+          handleOnClick={submit}
+          data={FcdJsonData.data}
+        />
+      </Suspense>
     </>
   );
 };

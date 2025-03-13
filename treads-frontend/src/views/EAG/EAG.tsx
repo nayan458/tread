@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, EAGData } from 'src/types';
 import EAGJsonData from '@db/EAG/EAG';
 import Section from '@components/Sections/Section';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 import { useSearch } from '@context/SearchContext';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -25,30 +29,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  uniprotID: string,
-  gene: string,
-  proteinName: string,
-  disorder: string,
-  reference: string
-): EAGData {
-  return {
-    uniprotID,
-    gene,
-    proteinName,
-    disorder,
-    reference,
-  };
-}
-const rows: EAGData[] = EAGJsonData.data.map((row: EAGData) => {
-  return createData(
-    row.uniprotID,
-    row.gene,
-    row.proteinName,
-    row.disorder,
-    row.reference
-  );
-});
+const rows: EAGData[] = EAGJsonData?.data || [];
 
 const EAG: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -59,12 +40,15 @@ const EAG: React.FC = () => {
   return (
     <>
       <Section topic="Epilepsy Associated Genes" />
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="uniprotID"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess />}>
+        <ColumnGrouping
+          columns={columns}
+          rows={rows}
+          field="uniprotID"
+          handleOnClick={submit}
+          data={EAGJsonData.data}
+        />
+      </Suspense>
     </>
   );
 };

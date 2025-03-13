@@ -1,11 +1,11 @@
 # Base
 ARG NODE_VERSION=22.13.1
-FROM node:${NODE_VERSION}-alpine as base
+FROM node:${NODE_VERSION}-alpine AS base
 
 WORKDIR /app
 
 # Build
-FROM base as build
+FROM base AS build
 
 COPY . .
 
@@ -14,7 +14,7 @@ RUN npm ci
 RUN npm run build
 
 # Production
-FROM base as final
+FROM base AS final
 
 ENV NODE_ENV production
 

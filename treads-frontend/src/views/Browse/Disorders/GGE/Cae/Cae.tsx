@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, CaeData } from 'src/types';
 import CaeJsonData from '@db/Browse/Disorders/GGE/CAE';
 import Section from '@components/Sections/Section';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 import { useSearch } from '@context/SearchContext';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -24,22 +28,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  uniprotID: string,
-  gene: string,
-  proteinName: string,
-  reference: string
-): CaeData {
-  return {
-    uniprotID,
-    gene,
-    proteinName,
-    reference,
-  };
-}
-const rows: CaeData[] = CaeJsonData.data.map((row: CaeData) => {
-  return createData(row.uniprotID, row.gene, row.proteinName, row.reference);
-});
+const rows: CaeData[] = CaeJsonData?.data || [];
 
 const Cae: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -51,12 +40,15 @@ const Cae: React.FC = () => {
   return (
     <>
       <Section topic="Childhood Absence Epilepsy" />
-      <ColumnGrouping
-        columns={columns}
-        rows={rows}
-        field="uniprotID"
-        handleOnClick={submit}
-      />
+      <Suspense fallback={<CircularProgess />}>
+        <ColumnGrouping
+          data={CaeJsonData.data}
+          columns={columns}
+          rows={rows}
+          field="uniprotID"
+          handleOnClick={submit}
+        />
+      </Suspense>
     </>
   );
 };

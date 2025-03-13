@@ -187,6 +187,30 @@ export interface EgtcsData {
   [key: string]: string | number;
 }
 
+export interface CommonGenesData {
+  uniprotid: string;
+  genename: string;
+  proteinname: string;
+  references: string;
+  [key: string]: string;
+}
+
+export interface CommonGenesDataRaw {
+  uniprotid: string;
+  genename: string;
+  proteinname: string;
+  references: string[];
+  [key: string]: string | string[];
+}
+
+export interface CommonDisordersType {
+  uniprotID: string;
+  genen: string;
+  proteinName: string;
+  reference: string;
+  [key: string]: string | number;
+}
+
 // EAG
 
 export interface EAGData {
@@ -198,17 +222,35 @@ export interface EAGData {
   [key: string]: string | number;
 }
 
-export interface ResultData {
-  columnOne: string;
-  columnTwo: string;
-  [key: string]: string | number;
-}
-
 // EAP
 
 export interface EAPData {
   uniprotid: string;
   genename: string;
   uniprotname: string;
+  [key: string]: string | number;
+}
+
+export type RowType =
+  | AedData[]
+  | AedTargetData[]
+  | CommonDisordersType[]
+  | CaeData[]
+  | CommonGenesData[]
+  | DsData[]
+  | EgtcsData[]
+  | EAGData[]
+  | EAPData[]
+  | FcdData[]
+  | HsData[]
+  | JaeData[]
+  | JmeData[]
+  | MtleshData[]
+  | MirnasData[]
+  | MtleData[];
+
+export interface ResultData {
+  columnOne: string;
+  columnTwo: string;
   [key: string]: string | number;
 }

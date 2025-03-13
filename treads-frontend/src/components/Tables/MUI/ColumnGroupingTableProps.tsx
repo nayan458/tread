@@ -7,27 +7,22 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import {
-  AedData,
-  AedTargetData,
-  BaseColumn,
-  LinkColumn,
-  MirnasData,
-  MtleData,
-} from 'src/types';
+import { BaseColumn, LinkColumn, RowType } from 'src/types';
 import SearchBar from '@components/Search/SearchBar';
 import Dropdown from './Dropdown';
 
 interface ColumnGroupingTableProps {
   columns: BaseColumn[] | LinkColumn[];
-  rows: AedData[] | AedTargetData[] | MirnasData[] | MtleData[];
+  rows: RowType;
   field?: string; // Field passed from the parent component
+  data: RowType;
 }
 
 const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({
   columns,
   rows,
   field = '',
+  data,
 }) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -90,7 +85,7 @@ const ColumnGroupingTable: React.FC<ColumnGroupingTableProps> = ({
                 />
               </TableCell>
               <TableCell align="center" colSpan={3}>
-                <Dropdown />
+                <Dropdown data={data} />
               </TableCell>
             </TableRow>
             <TableRow>

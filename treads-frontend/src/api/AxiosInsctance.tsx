@@ -1,7 +1,6 @@
-// src/api/axios.js
 import axios from 'axios';
 
-const baseURL = 'http://localhost:8000';
+const baseURL = '/api/';
 
 const axiosInstance = axios.create({
   baseURL,
@@ -44,30 +43,3 @@ axiosInstance.interceptors.request.use(
 );
 
 export default axiosInstance;
-
-// import axios from "axios";
-
-// axios.defaults.baseURL = 'http://localhost:8000';
-// axios.defaults.withCredentials = true;
-
-// axios.defaults.xsrfCookieName = 'csrftoken';
-// axios.defaults.xsrfHeaderName = 'X-CSRFToken';
-
-// function getCsrfToken() {
-//     const name = 'csrftoken';
-//     const cookieValue = document.cookie
-//       .split('; ')
-//       .find(row => row.startsWith(name))
-//       ?.split('=')[1];
-//     return cookieValue;
-//   }
-
-//   // Set the CSRF token in Axios headers
-// axios.defaults.headers.common['X-CSRFToken'] = getCsrfToken();
-
-// const djangoWebInstance = axios.create({
-//     baseURL: 'http://localhost:8000',
-
-// });
-
-// export default djangoWebInstance;

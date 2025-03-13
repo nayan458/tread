@@ -1,7 +1,6 @@
 import Section from '@components/Sections/Section';
-import ColumnGrouping from '@components/Tables/MUI/ColumnGrouping';
 import { useSearch } from '@context/SearchContext';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BaseColumn, EAPData } from 'src/types';
 import EAPJsonData from '@db/EAP/EAP';
 import {
@@ -19,6 +18,11 @@ import {
   useTheme,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CircularProgess from '@components/Spinner/CircularProgess';
+
+const ColumnGrouping = React.lazy(
+  () => import('@components/Tables/MUI/ColumnGrouping')
+);
 
 const columns: BaseColumn[] = [
   {
@@ -120,12 +124,15 @@ const EAP: React.FC = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails sx={{ p: 0 }}>
-                  <ColumnGrouping
-                    field="uniprotid"
-                    columns={columns}
-                    rows={group.data}
-                    handleOnClick={submit}
-                  />
+                  <Suspense fallback={<CircularProgess />}>
+                    <ColumnGrouping
+                      field="uniprotid"
+                      columns={columns}
+                      rows={group.data}
+                      handleOnClick={submit}
+                      data={group.data}
+                    />
+                  </Suspense>
                 </AccordionDetails>
               </Accordion>
             ))}
@@ -151,12 +158,15 @@ const EAP: React.FC = () => {
                   }}
                 />
                 <CardContent sx={{ p: 0 }}>
-                  <ColumnGrouping
-                    field="uniprotid"
-                    columns={columns}
-                    rows={group.data}
-                    handleOnClick={submit}
-                  />
+                  <Suspense fallback={<CircularProgess />}>
+                    <ColumnGrouping
+                      field="uniprotid"
+                      columns={columns}
+                      rows={group.data}
+                      handleOnClick={submit}
+                      data={group.data}
+                    />
+                  </Suspense>
                 </CardContent>
               </Card>
             ))}

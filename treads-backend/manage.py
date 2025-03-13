@@ -2,6 +2,8 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+# import subprocess
+
 
 
 def main():
@@ -15,6 +17,15 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+    # lock = int(os.environ["lockfile"])
+    # if lock == 1:
+    #     pass
+    # else:
+    #     os.environ["lockfile"] = "1"
+    #     cmd = ["python3", "manage.py", "makemigrations"]
+    #     cmd2 = ["python3", "manage.py", "migrate"]
+    #     subprocess.run(cmd)
+    #     subprocess.run(cmd2)
     execute_from_command_line(sys.argv)
 
 

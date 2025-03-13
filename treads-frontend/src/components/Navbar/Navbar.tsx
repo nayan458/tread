@@ -14,15 +14,15 @@ interface URLItem {
 const Navbar: React.FC = () => {
   const urls: URLItem[] = [
     { to: '/Home', label: 'Home' },
-    {
-      dropDown: true,
-      label: 'Search',
-      urls: [
-        { to: '/Search/UniProtID', label: 'Uni Prot ID' },
-        { to: '/Search/GeneName', label: 'Gene Name' },
-        { to: '/Search/EnsemblID', label: 'Ensembl ID' },
-      ],
-    },
+    // {
+    //   dropDown: true,
+    //   label: 'Search',
+    //   urls: [
+    //     { to: '/Search/UniProtID', label: 'Uni Prot ID' },
+    //     { to: '/Search/GeneName', label: 'Gene Name' },
+    //     { to: '/Search/EnsemblID', label: 'Ensembl ID' },
+    //   ],
+    // },
     {
       dropDown: true,
       label: 'Browse',
@@ -50,13 +50,11 @@ const Navbar: React.FC = () => {
                 { to: '/Browse/Disorders/GGE/EGTCS', label: 'EGTCS' },
               ],
             },
-            { to: '/Browse/Disorders/Common', label: '' },
-            { to: '/Browse/Disorders/Genes', label: '' },
+            { to: '/Browse/Disorders/CommonGenes', label: 'Common Genes' },
           ],
         },
       ],
     },
-    { to: '/MLPredictions', label: 'ML Predictions' },
     { to: '/EpilepsyAssociatedGenes', label: 'Epilepsy Associated Genes' },
     {
       to: '/EpilepsyAssociatedPathways',

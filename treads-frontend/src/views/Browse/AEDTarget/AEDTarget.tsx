@@ -31,24 +31,7 @@ const columns: BaseColumn[] = [
   },
 ];
 
-function createData(
-  Protein: string,
-  AntiEpilepticDrug: string,
-  DrugBankID: string,
-  Status: string
-): AedTargetData {
-  return { Protein, AntiEpilepticDrug, DrugBankID, Status };
-}
-const rows: AedTargetData[] = AedTargetJsonData.AedTargets.map(
-  (row: AedTargetData) => {
-    return createData(
-      row.Protein,
-      row.AntiEpilepticDrug,
-      row.DrugBankID,
-      row.Status
-    );
-  }
-);
+const rows: AedTargetData[] = AedTargetJsonData?.AedTargets || [];
 
 const AEDTarget: React.FC = () => {
   const { handleSearchByParameter } = useSearch();
@@ -60,11 +43,13 @@ const AEDTarget: React.FC = () => {
   return (
     <>
       <Section topic="Anti-Epileptic Drug Targets" />
+
       <ColumnGrouping
         columns={columns}
         rows={rows}
         field="Protein"
         handleOnClick={submit}
+        data={AedTargetJsonData.AedTargets}
       />
     </>
   );

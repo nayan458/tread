@@ -11,28 +11,32 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 CSV_FILE_PATH = os.path.join(BASE_DIR,'epilepsy/csv_files/')
-
-JSON_FILE_PATH = os.path.join(BASE_DIR,'epilepsy/json_files/')
-
 PICKLE_FILE_PATH = os.path.join(BASE_DIR,'epilepsy/pickle_files/')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7aey8x_l&1y_kt4$&_tlulr303%(yi5*q%-mr88e&qw%j%-3ik'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
 
+# Get the DJANGO_ALLOWED_HOSTS environment variable
+allowed_hosts = os.getenv("DJANGO_ALLOWED_HOSTS", "")
+
+# Split the string by commas and strip whitespace from each host
+ALLOWED_HOSTS = [host.strip() for host in allowed_hosts.split(",") if host.strip()]
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -84,24 +88,14 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
-        'USER': 'postgres',
-        'PASSWORD': 'nayan123',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'ENGINE': os.getenv("DATABASE_ENGINE"),
+        'NAME': os.getenv("DATABASE_NAME"),
+        'USER': os.getenv("DATABASE_USERNAME"),
+        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'HOST': os.getenv("DATABASE_HOST"),
+        'PORT': os.getenv("DATABASE_PORT")
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'test',
-#         'USER': 'postgres',
-#         'PASSWORD': 'nayan123',
-#         'HOST': 'localhost',
-#         'PORT': '5432',  # Adding default PostgreSQL port
-#     }
-# }
 
 
 # Password validation
@@ -145,26 +139,21 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Manual setup for CORS
+# Manual setup for CORS 
+cors_allowed_origin = os.getenv("CORS_ALLOWED_ORIGINS", "")
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5174",
-    "http://127.0.0.1:5174",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+# Split the string by commas and strip whitespace from each host
+CORS_ALLOWED_HOSTS = [origin.strip() for origin in cors_allowed_origin.split(",") if origin.strip()]
 
 CORS_ALLOW_CREDENTIALS = True
 
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False
+
 CSRF_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = False
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5174",
-    "http://127.0.0.1:5174",
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-]
+
+csrf_trusted_origins = os.getenv("CSRF_TRUSTED_ORIGINS")
+
+CSRF_TRUSTED_ORIGINS = [csrf_origin.strip() for csrf_origin in csrf_trusted_origins.split(",") if csrf_origin.strip()]

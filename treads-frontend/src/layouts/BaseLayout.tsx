@@ -1,9 +1,13 @@
 import Header from '@components/Header/Header';
 import Navbar from '@components/Navbar/Navbar';
 import RightSidebar from '@components/RightSidebar/RightSidebar';
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-// import { Menu } from "lucide-react";
+
+import CloseIcon from '@mui/icons-material/Close';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import CircularProgess from '@components/Spinner/CircularProgess';
+import Footer from '@components/Footer/Footer';
 
 const BaseLayout: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -19,7 +23,7 @@ const BaseLayout: React.FC = () => {
           className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-gray-700 text-white rounded"
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
         >
-          x
+          {isNavbarOpen ? <CloseIcon /> : <MenuRoundedIcon />}
         </button>
 
         {/* Left Sidebar (Navigation) */}
@@ -36,7 +40,10 @@ const BaseLayout: React.FC = () => {
         {/* Main Content Area */}
         <div className="flex-1 overflow-y-auto bg-background-tertiary scrollbar-hide px-4 sm:px-6 lg:px-8 ">
           <div className="text-text-secondary py-8 sm:py-12">
-            <Outlet />
+            <Suspense fallback={<CircularProgess />}>
+              <Outlet />
+            </Suspense>
+            <Footer />
           </div>
         </div>
 
